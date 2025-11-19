@@ -21,7 +21,7 @@ Enthusiastic and result-driven **Test Manager with 18+ years of experience** in 
 
 Expertise includes:
 
-- 📌 E2E Test Management (SIT, UAT, Production Sanity)  
+- 📌 E2E Test Management 
 - 📌 Automation: UFT/QTP, Selenium, VBScript, Excel VBA  
 - 📌 Test Strategy, Test Planning, Risk-Based Testing  
 - 📌 API & Webservice Testing – Postman, SOAP UI, Rest Assured  
@@ -105,17 +105,6 @@ Expertise includes:
   <a href="mailto:Neeraj19.job@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge"/></a>
   <a href="https://github.com/neerajgaur"><img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge"/></a>
 </p>
-
----
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=neerajgaur&show_icons=true&theme=default" />
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=neerajgaur&layout=compact&theme=default" />
-</p>
-
----
 
 ## 🧠 Fun Fact  
 I love innovation, AI-driven testing, and simplifying complex processes with smart automation and data-driven insights.
