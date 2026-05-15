@@ -1,10 +1,8 @@
 <!-- Banner / Header -->
-<p align="center">
-  <img src="https://img.shields.io/badge/Test%20Manager-18%2B%20Years%20Experience-blue?style=for-the-badge" />
-</p>
+
 
 <h1 align="center">Hi 👋, I'm <span style="color:#0A84FF">Neeraj Gaur</span></h1>
-<h3 align="center">Test Manager | E2E Test Management | Automation Expert | GenAI for Software Testing</h3>
+<h3 align="center">Aspiring AI & Machine Learning Engineer</h3>
 
 ---
 
@@ -17,7 +15,43 @@
 
 ## 🔹 About Me
 
-Enthusiastic and result-driven **Test Manager with 18+ years of experience** in end-to-end test management, team leadership, automation frameworks, and enterprise-scale delivery across **Telecom, Healthcare, BFSI, Insurance, Capital Markets** and more.
+I am passionate about:
+- Artificial Intelligence
+- Machine Learning
+- Data Science
+- Data Visualization
+
+## Technologies & Tools
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
+- Scikit-Learn
+- SQL
+
+## Machine Learning Topics
+- Regression
+- Classification
+- Clustering
+- Decision Trees
+- Random Forest
+- AdaBoost
+- Gradient Boosting
+
+## Current Focus
+- Building ML Projects
+- Improving Data Analysis Skills
+- Learning Deep Learning
+- Working on Real Datasets
+
+## Featured Projects
+- House Price Prediction
+- Heart Disesase Prediction
+- Customer Churn Prediction
+- Movie Recommendation Sytem
+  
+Previously worked as result-driven in end-to-end test management, team leadership, automation frameworks, and enterprise-scale delivery across **Telecom, Healthcare, BFSI, Insurance, Capital Markets** and more.
 
 Expertise includes:
 
@@ -86,7 +120,8 @@ Expertise includes:
 - Scrum Foundation Professional Certificate (SFPC)  
 - Kanban Foundation  
 - Python, Data Science, Analytics (IBM, Johns Hopkins)  
-- AWS Partner – Data Analytics  
+- AWS Partner – Data Analytics
+- Udemy - Python Bootcamp Beginner to Master Programming  
 
 ---
 
