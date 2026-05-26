@@ -36,7 +36,7 @@ I am passionate about:
   
     ####Regression
   
-      - Linear Regression
+      - <a href = 'https://github.com/NeerajGaur19/DSAIML/blob/85c0c4fa38b689325ab2e755c5adaae8a0bf982b/01-SF%20Salaries%20Exercise.ipynb'>Linear Regression</a>
       - Multiple Linear Regression
       - Ridge Regression
       - Lasso Regression
