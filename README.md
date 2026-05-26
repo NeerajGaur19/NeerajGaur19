@@ -33,9 +33,7 @@ I am passionate about:
 ## Machine Learning Topics
 
   ###Supervised Learning
-
     ####Regression
-    
       - Linear Regression
       - Multiple Linear Regression
       - Ridge Regression
