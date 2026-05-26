@@ -33,7 +33,9 @@ I am passionate about:
 ## Machine Learning Topics
 
   ###Supervised Learning
+  
     ####Regression
+  
       - Linear Regression
       - Multiple Linear Regression
       - Ridge Regression
@@ -45,7 +47,9 @@ I am passionate about:
       - XGBoost Regression
       - Neural Network Regression
       - Deep Learning Regression
+    
     ####Classification
+    
       - Logistic Regression
       - K-Nearest Neighbors (KNN)
       - Support Vector Machine (SVM)
@@ -57,19 +61,25 @@ I am passionate about:
       - ADABoost
       - Neural Networks (MLP)
       - Deep Learning (CNN, RNN etc)
+
 ###Unsupervised Learning
+
     ####Clustering
+    
       - K-Means
       - Hierarchical Clustering
       - DBSCAN
       - Gaussian Mixture Model (GMM)
+    
     ####Dimensionality Reduction
+    
       - Princial Component Analysis (PCA)
       - Distributed Stochastic Neighbor Embedding (SNE)
       - Linear Discriminant Analysis (LDA)
       - Singular Value Decomposition (SVD)
     
 ###Reinforcement Learning
+      
       - TBD
       - TBD
       - TBD
