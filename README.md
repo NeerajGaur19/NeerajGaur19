@@ -31,14 +31,48 @@ I am passionate about:
 - SQL
 
 ## Machine Learning Topics
-- Regression
-- Classification
-- Clustering
-- Decision Trees
-- Random Forest
-- AdaBoost
-- Gradient Boosting
-
+  ###Supervised Learning
+    ####Regression
+      - Linear Regression
+      - Multiple Linear Regression
+      - Ridge Regression
+      - Lasso Regression
+      - Support Vector Regression
+      - Decision Tree Regression
+      - Random Forest Regression
+      - Gradient Boosting Regression
+      - XGBoost Regression
+      - Neural Network Regression
+      - Deep Learning Regression
+    ####Classification
+      - Logistic Regression
+      - K-Nearest Neighbors (KNN)
+      - Support Vector Machine (SVM)
+      - Naive Bayes
+      - Decision Tree
+      - Random Forest
+      - Gradient Boosting
+      - XGBoost
+      - ADABoost
+      - Neural Networks (MLP)
+      - Deep Learning (CNN, RNN etc)
+###Unsupervised Learning
+    ####Clustering
+      - K-Means
+      - Hierarchical Clustering
+      - DBSCAN
+      - Gaussian Mixture Model (GMM)
+    ####Dimensionality Reduction
+      - Princial Component Analysis (PCA)
+      - Distributed Stochastic Neighbor Embedding (SNE)
+      - Linear Discriminant Analysis (LDA)
+      - Singular Value Decomposition (SVD)
+    
+###Reinforcement Learning
+      - TBD
+      - TBD
+      - TBD
+     
 ## Current Focus
 - Building ML Projects
 - Improving Data Analysis Skills
