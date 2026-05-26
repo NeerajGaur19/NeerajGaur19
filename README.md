@@ -2,7 +2,7 @@
 
 
 <h1 align="center">Hi 👋, I'm <span style="color:#0A84FF">Neeraj Gaur</span></h1>
-<h3 align="center">Aspiring AI & Machine Learning Engineer</h3>
+<h3 align="center">AI & Machine Learning Engineer | Data Scientist | Test Manager | QA Delivery | AI-Assisted Testing</h3>
 
 ---
 
