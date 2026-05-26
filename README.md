@@ -32,54 +32,53 @@ I am passionate about:
 
 ## Machine Learning Topics
 
-  ###Supervised Learning
+  1. Supervised Learning
   
-    ####Regression
+      1.1. Regression
   
-      - <a href = 'https://github.com/NeerajGaur19/DSAIML/blob/85c0c4fa38b689325ab2e755c5adaae8a0bf982b/01-SF%20Salaries%20Exercise.ipynb'>Linear Regression</a>
-      - Multiple Linear Regression
-      - Ridge Regression
-      - Lasso Regression
-      - Support Vector Regression
-      - Decision Tree Regression
-      - Random Forest Regression
-      - Gradient Boosting Regression
-      - XGBoost Regression
-      - Neural Network Regression
-      - Deep Learning Regression
+        - <a href = https://github.com/NeerajGaur19/DSAIML/blob/85c0c4fa38b689325ab2e755c5adaae8a0bf982b/01-SF%20Salaries%20Exercise.ipynb>Linear Regression</a>
+        - Multiple Linear Regression
+        - Ridge Regression
+        - Lasso Regression
+        - Support Vector Regression
+        - Decision Tree Regression
+        - Random Forest Regression
+        - Gradient Boosting Regression
+        - XGBoost Regression
+        - Neural Network Regression
+        - Deep Learning Regression
+      
+      1.2  Classification
     
-    ####Classification
-    
-      - Logistic Regression
-      - K-Nearest Neighbors (KNN)
-      - Support Vector Machine (SVM)
-      - Naive Bayes
-      - Decision Tree
-      - Random Forest
-      - Gradient Boosting
-      - XGBoost
-      - ADABoost
-      - Neural Networks (MLP)
-      - Deep Learning (CNN, RNN etc)
+        - Logistic Regression
+        - K-Nearest Neighbors (KNN)
+        - Support Vector Machine (SVM)
+        - Naive Bayes
+        - Decision Tree
+        - Random Forest
+        - Gradient Boosting
+        - XGBoost
+        - ADABoost
+        - Neural Networks (MLP)
+        - Deep Learning (CNN, RNN etc)
 
-###Unsupervised Learning
+2. Unsupervised Learning
 
-    ####Clustering
+    2.1  Clustering
     
       - K-Means
       - Hierarchical Clustering
       - DBSCAN
       - Gaussian Mixture Model (GMM)
     
-    ####Dimensionality Reduction
+    2.2  Dimensionality Reduction
     
       - Princial Component Analysis (PCA)
       - Distributed Stochastic Neighbor Embedding (SNE)
       - Linear Discriminant Analysis (LDA)
       - Singular Value Decomposition (SVD)
     
-###Reinforcement Learning
-      
+3.  Reinforcement Learning
       - TBD
       - TBD
       - TBD
