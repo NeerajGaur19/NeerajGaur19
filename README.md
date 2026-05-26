@@ -68,6 +68,14 @@ Expertise includes:
 
 ## 🚀 Tech Stack & Tools
 
+### **💡 GenAI & Data**
+<p>
+  <img src="https://img.shields.io/badge/ChatGPT-0A8A13?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Data%20Science-Python-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/IBM%20Cognos-purple?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Google%20Looker%20Studio-blue?style=for-the-badge"/>
+</p>
+
 ### **🔧 Testing & Automation**
 <p>
   <img src="https://img.shields.io/badge/UFT/QTP-orange?style=for-the-badge"/>
@@ -90,14 +98,6 @@ Expertise includes:
   <img src="https://img.shields.io/badge/SOAP--UI-green?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Informatica-red?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/SQL-blue?style=for-the-badge"/>
-</p>
-
-### **💡 GenAI & Data**
-<p>
-  <img src="https://img.shields.io/badge/ChatGPT-0A8A13?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Data%20Science-Python-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/IBM%20Cognos-purple?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Google%20Looker%20Studio-blue?style=for-the-badge"/>
 </p>
 
 ---
