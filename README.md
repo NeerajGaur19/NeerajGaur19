@@ -21,6 +21,8 @@ I am passionate about:
 - Data Science
 - Data Visualization
 
+---
+
 ## Technologies & Tools
 - Python
 - NumPy
@@ -29,6 +31,8 @@ I am passionate about:
 - Seaborn
 - Scikit-Learn
 - SQL
+
+---
 
 ## Machine Learning Topics
 
@@ -82,6 +86,8 @@ I am passionate about:
       - TBD
       - TBD
       - TBD
+
+---
      
 ## Current Focus
 - Building ML Projects
@@ -89,11 +95,19 @@ I am passionate about:
 - Learning Deep Learning
 - Working on Real Datasets
 
+
+---
+
+
 ## Featured Projects
 - House Price Prediction
 - Heart Disesase Prediction
 - Customer Churn Prediction
 - Movie Recommendation Sytem
+
+
+---
+
   
 Previously worked as result-driven in end-to-end test management, team leadership, automation frameworks, and enterprise-scale delivery across **Telecom, Healthcare, BFSI, Insurance, Capital Markets** and more.
 
