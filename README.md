@@ -17,7 +17,7 @@
 
 I am passionate about:
 - Artificial Intelligence
-- Machine Learning
+- <a href = 'https://github.com/NeerajGaur19/NeerajGaur19/wiki/Machine-Learning-Theory'>Machine Learning</a>
 - Data Science
 - Data Visualization
 
