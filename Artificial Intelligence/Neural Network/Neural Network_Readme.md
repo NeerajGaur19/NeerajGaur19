@@ -1,0 +1,372 @@
+### 1. Neural Network
+
+It is a computer system inspired by the human brain that helps machines learn patterns from data.
+It is one of the main technologies behind:
+
+* Image recognition
+
+* ChatGPT
+
+* Voice assistants
+
+* Self-driving cars
+
+* Recommendation systems
+
+
+***
+
+
+### 2. Simple Definition
+
+A neural network learns:
+
+Input → Pattern → Prediction
+
+#### 2.1 Example:
+
+* Input: Picture of animal
+* Output: “Cat”
+
+
+***
+
+
+### 3. Why Are Neural Networks Needed?
+
+Traditional programming:
+
+Rules + Data → Output
+
+But for complex tasks like:
+
+* Face recognition
+* Speech understanding
+* Language translation
+
+writing manual rules is very difficult.
+
+So neural networks **learn rules automatically from data**.
+
+
+***
+
+
+### 4. Inspiration from Human Brain
+
+Human brain contains:
+
+* Neurons (brain cells)
+
+Neural networks use:
+
+* Artificial neurons
+
+These neurons connect and pass information.
+
+
+***
+
+
+### 5. Basic Structure of Neural Network
+
+A neural network has layers:
+
+#### Input Layer → Hidden Layer(s) → Output Layer
+
+#### 5.1 Input Layer
+
+Receives data.
+
+##### Example: Age, Salary, Experience
+
+or image pixels.
+
+#### 5.2 Hidden Layers
+
+This is where learning happens.
+
+The network:
+
+* Finds patterns
+* Learns relationships
+* Extracts important information
+
+More hidden layers = deeper learning.
+
+#### 5.3 Output Layer
+
+Produces final prediction.
+
+Example:
+
+Spam / Not Spam
+
+or:
+
+Dog / Cat
+
+
+***
+
+
+### 6. Visual Structure
+
+Input → Hidden → Hidden → Output
+
+Each circle is called a: Neuron (node)
+
+
+***
+
+
+### 7. How a Neuron Works
+
+Each neuron:
+
+1. Receives inputs
+1. Applies weights
+1. Calculates result
+1. Passes output forward
+
+
+***
+
+
+### 8. Mathematical Idea
+
+A neuron calculates:
+
+y=f(w1x1+w2x2+b)
+
+Where:
+
+* x = inputs
+* w = weights
+* b = bias
+* f = activation function
+
+
+***
+
+
+### 9. What are Weights?
+
+Weights decide:
+
+* Which input is important
+
+Example:
+
+* Salary may matter more than age
+
+The model learns correct weights during training
+
+
+***
+
+
+### 10. What is Bias?
+
+Bias helps:
+
+* Shift predictions
+* Improve flexibility
+
+Think of it as an adjustment value.
+
+
+***
+
+
+### 11. Activation Function
+
+Activation function decides: Should neuron activate or not? Also, activation function allows to cover non-linear relationship between data.
+
+Common activation functions:
+
+* ReLU
+* Sigmoid
+* Tanh
+
+<img width="543" height="633" alt="image" src="https://github.com/user-attachments/assets/30ddac2a-3985-4a84-872e-abd23f0f9fc2" />
+
+
+
+***
+
+
+### 12. Forward Propagation
+
+Data moves forward through layers: Input → Hidden Layers → Output
+
+Prediction is generated.
+
+
+***
+
+
+### 13. Backpropagation
+
+After prediction:
+
+* Error is calculated
+* Network updates weights
+
+Goal: Reduce error
+
+This learning process repeats many times.
+
+
+***
+
+
+### 14. Training Process
+
+**Step 1**
+
+Give input data.
+
+**Step 2**
+
+Network predicts output.
+
+**Step 3**
+
+Compare prediction with actual answer.
+
+**Step 4**
+
+Calculate error.
+
+**Step 5**
+
+Update weights.
+
+Repeat thousands of times.
+
+
+***
+
+
+### 15. Types of Neural Networks
+
+#### 15.1. ANN (Artificial Neural Network)
+
+Basic neural network.
+
+Used for:
+
+* Tabular data
+* Basic prediction tasks
+
+#### 15.2. CNN (Convolutional Neural Network)
+
+Best for images.
+
+Applications:
+
+* Face recognition
+* Medical imaging
+
+#### 15.3. RNN (Recurrent Neural Network)
+
+Best for sequential data.
+
+Applications:
+
+* Text
+* Speech
+* Time series
+
+#### 15.4. Transformers
+
+Modern architecture used in:
+
+* ChatGPT
+* Gemini
+* Claude
+
+Very powerful for language understanding.
+
+
+***
+
+
+### 16. Deep Neural Network
+
+If neural network has many hidden layers: Deep Neural Network
+
+This is called:
+* Deep Learning
+
+
+***
+
+### 17. Advantages of Neural Networks
+
+* earns complex patterns	:    Better for difficult problems
+* Automatic feature learning    :    Less manual work
+* High accuracy                 :    Especially with large data
+* Works on images/audio/text    :    Very flexible
+
+
+***
+
+### 18. Disadvantages
+
+* Needs lots of data    :    Training large models requires data
+* Slow training	        :    Especially deep networks
+* Requires GPUs	        :    Computationally expensive
+* Hard to interpret	:    “Black box” problem
+
+***
+
+### 19. Real-Life Applications
+
+* Healthcare         :   Disease prediction
+* Banking	     :   Fraud detection
+* Social Media       :   Feed recommendations
+* NLP                :   ChatGPT
+* Self-driving Cars  :   Object detection
+* E-commerce         :   Product recommendations
+
+
+***
+
+
+### 20. Neural Network         vs          Traditional ML
+
+* Manual feature engineering	    :     Automatic feature learning
+* Good for small structured data    :     Excellent for complex data
+* Faster training	            :     Slower training
+* Easier to explain	            :     Harder to explain
+
+
+***
+
+
+### 21. Popular Frameworks
+
+* TensorFlow	:     Deep learning
+* PyTorch	:     Research + production
+* Keras	        :     Beginner friendly
+* JAX	        :     High-performance ML
+
+
+***
+
+
+### 22. Final Summary
+
+* Neuron	        :       Small computing unit
+* Layer	                :       Group of neurons
+* Weight	        :       Importance of input
+* Bias	                :       Adjustment value
+* Activation Function	:       Decision maker
+* Forward Propagation	:       Prediction step
+* Backpropagation	:       Learning step
+
+
+
+
