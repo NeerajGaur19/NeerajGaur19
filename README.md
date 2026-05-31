@@ -196,7 +196,7 @@ Expertise includes:
 <p align="left">
   <a href="https://linkedin.com/in/neerajgaur82"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge"/></a>
   <a href="mailto:Neeraj19.job@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge"/></a>
-  <a href="https://github.com/neerajgaur"><img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge"/></a>
+  <a href="https://github.com/neerajgaur19"><img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge"/></a>
 </p>
 
 ## 🧠 Fun Fact  
