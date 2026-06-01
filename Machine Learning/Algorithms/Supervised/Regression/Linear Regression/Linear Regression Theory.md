@@ -8,6 +8,8 @@ Examples:
 
 The algorithm tries to find the best-fit line that represents the relationship between input and output variables.
 
+This is implemented on data where output column is numerical and not categories.
+
 Example:
 
 <img width="634" height="312" alt="image" src="https://github.com/user-attachments/assets/9608c335-05ac-402d-a3cf-a0cdb9379107" />
@@ -36,20 +38,8 @@ Instead of manually guessing:
 
 Imagine plotting data points:
 
-Salary
- ^
- |
-11      *
- |
-9     *
- |
-7   *
- |
-5 *
- |
-3*
- +---------------------> Experience
- 1 2 3 4 5
+<img width="469" height="420" alt="image" src="https://github.com/user-attachments/assets/124602ec-2fb9-4099-9969-29ac5c24799f" />
+
 
 Linear Regression draws the best possible line through these points.
 
