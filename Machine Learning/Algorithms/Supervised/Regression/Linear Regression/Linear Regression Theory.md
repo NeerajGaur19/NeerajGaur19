@@ -1,3 +1,5 @@
+# Overview of Linear Regression 
+
 ## 1. What is Linear Regression?
 
 Linear Regression is one of the simplest and most widely used Machine Learning algorithms used to predict a continuous numeric value.
@@ -7,7 +9,6 @@ Examples:
 <img width="772" height="274" alt="image" src="https://github.com/user-attachments/assets/06d0204f-19b0-4430-973c-c750fcc0ece4" />
 
 The algorithm tries to find the best-fit line that represents the relationship between input and output variables.
-
 This is implemented on data where output column is numerical and not categories.
 
 Example:
@@ -25,14 +26,11 @@ Salary = 2(6) + 1 = 13 LPA
 ## 2. Why Linear Regression?
 
 Suppose a company wants to estimate salary based on experience.
-
 Instead of manually guessing:
 
-(i) 6 years → ?
-
-(ii) 8 years → ?
-
-(iii) 10 years → ?
+* 6 years → ?
+* 8 years → ?
+* 10 years → ?
 
 ## 3. Intuition Behind Linear Regression
 
@@ -40,12 +38,19 @@ Imagine plotting data points:
 
 <img width="469" height="420" alt="image" src="https://github.com/user-attachments/assets/124602ec-2fb9-4099-9969-29ac5c24799f" />
 
-
-Linear Regression draws the best possible line through these points.
+Linear Regression draws the best possible line through these points. This line is called: Best Fit Line. We train a Linear Regression model that learns the pattern automatically.
 
 <img width="666" height="670" alt="image" src="https://github.com/user-attachments/assets/8373fd97-44a4-431d-8338-536888abb160" />
 
 
-This line is called: Best Fit Line
 
-We train a Linear Regression model that learns the pattern automatically.
+## 4. What Happens Internally
+
+Linear regression repeatedly:
+
+* Guesses a line. 
+* Measures how wrong the line is.
+* Calculates how the line should move.
+* Adjusts the line slightly.
+* Repeats until the error becomes minimal.
+
