@@ -32,7 +32,7 @@ Instead of manually guessing:
 
 (iii) 10 years → ?
 
-##3. Intuition Behind Linear Regression
+## 3. Intuition Behind Linear Regression
 
 Imagine plotting data points:
 
