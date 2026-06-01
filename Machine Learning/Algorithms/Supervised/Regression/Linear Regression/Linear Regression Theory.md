@@ -43,19 +43,8 @@ Imagine plotting data points:
 
 Linear Regression draws the best possible line through these points.
 
-Salary
- ^
- |
-11      *
- |      /
-9     */
- |   /
-7  */
- |/
-5*
- |
-3*
- +---------------------> Experience
+<img width="666" height="670" alt="image" src="https://github.com/user-attachments/assets/8373fd97-44a4-431d-8338-536888abb160" />
+
 
 This line is called: Best Fit Line
 
