@@ -1,4 +1,4 @@
-##1. What is Linear Regression?
+## 1. What is Linear Regression?
 
 Linear Regression is one of the simplest and most widely used Machine Learning algorithms used to predict a continuous numeric value.
 
@@ -6,7 +6,7 @@ Examples:
 
 <img width="772" height="274" alt="image" src="https://github.com/user-attachments/assets/06d0204f-19b0-4430-973c-c750fcc0ece4" />
 
-The algorithm tries to find the best-fit line that represents the relationship between input variables and output variables.
+The algorithm tries to find the best-fit line that represents the relationship between input and output variables.
 
 Example:
 
@@ -20,7 +20,7 @@ If Experience = 6:
 
 Salary = 2(6) + 1 = 13 LPA
 
-##2. Why Linear Regression?
+## 2. Why Linear Regression?
 
 Suppose a company wants to estimate salary based on experience.
 
@@ -67,10 +67,6 @@ Salary
 3*
  +---------------------> Experience
 
-This line is called:
-
-Best Fit Line
-
+This line is called: Best Fit Line
 
 We train a Linear Regression model that learns the pattern automatically.
-
