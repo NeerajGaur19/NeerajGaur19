@@ -2,7 +2,7 @@
 
 ## 1. What is Linear Regression?
 
-Linear Regression is one of the simplest and most widely used Machine Learning algorithms used to predict a continuous numeric value.
+Linear Regression is one of the simplest and most widely used Machine Learning algorithms used to predict a continuous numeric value based on the given input value(s).
 
 Examples:
 
@@ -43,7 +43,6 @@ Linear Regression draws the best possible line through these points. This line i
 <img width="666" height="670" alt="image" src="https://github.com/user-attachments/assets/8373fd97-44a4-431d-8338-536888abb160" />
 
 
-
 ## 4. What Happens Internally
 
 Linear regression repeatedly:
@@ -54,3 +53,35 @@ Linear regression repeatedly:
 * Adjusts the line slightly.
 * Repeats until the error becomes minimal.
 
+## 5. Linear equation
+
+Core Idea
+
+Linear regression assumes that the target variable can be approximated as a weighted sum of the input features:
+
+y=β0+β1x1+β2x2+⋯+βnxn
+
+Where:
+
+* y = predicted output
+* x1,x2,...,xn = input features
+* β0 = intercept (bias term)
+* β1,β2,...,βn = coefficients (weights)
+
+For example, to predict house prices:
+
+Price=β0+β1(Area)+β2(Bedrooms)
+
+## Advantages
+
+* Simple and fast.
+* Easy to interpret.
+* Works well when relationships are approximately linear.
+* Requires relatively little training data.
+
+## Limitations
+
+* Assumes linear relationships.
+* Sensitive to outliers.
+* Can struggle with highly complex patterns.
+* Multicollinearity (highly correlated features) can make coefficients unstable.
