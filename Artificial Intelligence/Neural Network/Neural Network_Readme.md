@@ -64,6 +64,8 @@ Neural networks use:
 
 These neurons connect and pass information.
 
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/175a11d8-99e9-48e9-a59b-a6e9bbb1b84a" />
+
 
 ***
 
