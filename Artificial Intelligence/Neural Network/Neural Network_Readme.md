@@ -302,6 +302,8 @@ If neural network has many hidden layers: Deep Neural Network
 This is called:
 * Deep Learning
 
+<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/ec055550-ba2e-4005-bf10-85ba1b69ae32" />
+
 
 ***
 
