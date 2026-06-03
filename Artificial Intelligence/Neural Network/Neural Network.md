@@ -6,4 +6,3 @@ https://medium.com/@piyushkashyap045/understanding-nesterov-accelerated-gradient
 
 accelerated gradient descent, nesterov gradient descent
 
-https://colab.research.google.com/drive/1t7vgqTKSrr5_zyjtvDbmpPQjqfCVWCwm?usp=sharing#scrollTo=M2KlnWHgJbU-
