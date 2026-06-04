@@ -8,7 +8,7 @@ Machine learning is used to solve real-world problems automatically.
 
 Real-Life Examples
 
-## Machine learning is used in:
+## Machine learning is used in: 
 
 1. YouTube recommendations
 1. Netflix movie suggestions
