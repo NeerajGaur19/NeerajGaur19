@@ -8,7 +8,7 @@
 * Making decisions
 * Learning from data
 * Playing games
-* Driving cars
+* Driving cars 
 
 ## Simple Idea
 
