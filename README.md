@@ -41,7 +41,6 @@ I am passionate about:
       1.1. Regression
   
         - <a href='Machine Learning/Algorithms/Supervised/Regression/Linear Regression'>Linear Regression</a>
-        - Multiple Linear Regression
         - Ridge Regression
         - Lasso Regression
         - Support Vector Regression
