@@ -8,8 +8,11 @@ https://medium.com/@piyushkashyap045/understanding-nesterov-accelerated-gradient
 
 #all libraries are imported here
 import pandas as pd
+
 import numpy as np
+
 from sklearn.feature_selection import RFE
+
 from sklearn.ensemble import RandomForestClassifier
 
 url ="https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/refs/heads/master/data/Telco-Customer-Churn.csv"
@@ -29,7 +32,9 @@ df.isnull().sum() # this is bad
 df['gender'].value_counts()
 
 df['Churn'] = df['Churn'].map({"No":0, "Yes":1})
+
 df['gender'] = df['gender'].map({"Female":0, "Male":1})
+
 df['TotalCharges'] = pd.to_numeric(df['TotalCharges'],errors='coerce')
 
 df.isnull().sum() # this is bad
@@ -51,35 +56,47 @@ numerical_features = ['gender', 'SeniorCitizen', 'Partner', 'Dependents',
        'PaymentMethod', 'MonthlyCharges', 'TotalCharges']
 
 for col in numerical_features:
+  
   if df[col].dtype == "object":
+
     df[col] = pd.factorize(df[col])[0]
 
 numerical_features = [f for f in numerical_features if f in df.columns]
 
 X = df[numerical_features]
+
 y = df['Churn']
 
 #data leakage -> split the data first
+
 from sklearn.model_selection import train_test_split
+
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.20, stratify=y)
 
 rf = RandomForestClassifier(n_estimators=200)
+
 rfe = RFE(estimator=rf, n_features_to_select=5) #6,7,8
+
 rfe.fit(X_train,y_train) #use only train data
 
 selected_features = [f for f,sel in zip(numerical_features,rfe.support_) if sel]
 selected_features
 
 # fname = ['sandra','natasha','shivam']
+
 # lname = ['r','mishra','dubey']
 
 # list(zip(fname,lname))
 
 #another model - rfe output
+
 rf.fit(X_train,y_train)
+
 importances = pd.DataFrame({'feature':numerical_features,
                             'importance':rf.feature_importances_})
+
 importances = importances.sort_values('importance',ascending=False)
+
 importances
 
 import seaborn as sns
@@ -89,14 +106,19 @@ sns.barplot(x='importance',y='feature',data=importances)
 selected_features
 
 from sklearn.preprocessing import StandardScaler
+
 #model building
+
 X = df[selected_features]
+
 y = df['Churn']
 
 X_train,X_test, y_train, y_test = train_test_split(X,y, test_size=0.20)
 
 scaler = StandardScaler()
+
 X_train_scaled = scaler.fit_transform(X_train)
+
 X_test_scaled = scaler.transform(X_test)
 
 import pickle
@@ -104,51 +126,79 @@ import pickle
 #save it , scaler
 
 with open('scaler.pkl', 'wb') as f:
+
   pickle.dump(scaler,f)
 
 import tensorflow as tf
+
 from tensorflow.keras import layers, models
 
 #based on my data what is feature? 5 input layer 5 nodes?
 
 #you create your first ever neural network
+
 def create_model():
+
   model = models.Sequential([
+  
       layers.Dense(64, activation='relu',input_shape = (5,)),
+      
       layers.Dense(32, activation='relu'),
+      
       layers.Dense(16,activation='relu'),
+      
       layers.Dense(1, activation='sigmoid')
+  
   ])
+  
   model.compile(optimizer='adam',loss='binary_crossentropy',
                 metrics=['accuracy'])
   return model
 
 ann_model = create_model()
+
 ann_model.summary()
 
 history = ann_model.fit(
+
     X_train_scaled, y_train,
+    
     epochs=50,
+    
     batch_size=32,
+    
     validation_split=0.20,
+
 )
 
 import matplotlib.pyplot as plt
 
 plt.figure(figsize=(8,4))
+
 plt.plot(history.history['loss'], label='Training Loss')
+
 plt.plot(history.history['val_loss'], label='Validation Loss')
+
 plt.grid(alpha=0.4)
+
 plt.legend()
+
 plt.xlabel("Epoch")
+
 plt.ylabel("Loss")
 
 plt.figure(figsize=(8,4))
+
 plt.plot(history.history['accuracy'], label='Training accuracy')
+
 plt.plot(history.history['val_accuracy'], label='Validation accuracy')
+
 plt.grid(alpha=0.4)
+
 plt.legend()
+
 plt.xlabel("Epoch")
+
 plt.ylabel("Accuracy")
 
 #bayesian optimization -> rfe, rf, tain, nwu - production nn - toy program
