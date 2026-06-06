@@ -104,6 +104,7 @@ I am passionate about:
 ## Featured Projects
 - <a href='Machine Learning/Algorithms/Supervised/Classification/Logistic Regression/LR_Customer Churn Project.py'>Customer Churn Prediction</a>
 - <a href='Machine Learning/Algorithms/Supervised/Classification/Logistic Regression/LR_VIF_Census Project.py'>Census Project</a>
+- <a href='Machine Learning/Algorithms/Supervised/Classification/Decision Tree/DT_SMOTE_Credit Card Fraud Detection.py'>Credit Card Fraud Detection Project</a>
 - House Price Prediction
 - Heart Disesase Prediction
 - Movie Recommendation Sytem
