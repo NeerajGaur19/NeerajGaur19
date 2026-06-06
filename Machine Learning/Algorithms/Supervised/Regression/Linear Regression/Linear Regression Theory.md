@@ -85,4 +85,7 @@ Price=β0+β1(Area)+β2(Bedrooms)
 * Sensitive to outliers.
 * Can struggle with highly complex patterns.
 * Multicollinearity (highly correlated features) can make coefficients unstable.
-* 
+
+<img width="1536" height="1024" alt="Linear Regression Algorithm Workflow" src="https://github.com/user-attachments/assets/f0097652-1172-4ceb-a018-eebaff0108af" />
+
+
