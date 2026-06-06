@@ -244,3 +244,13 @@ CNN learns in a similar hierarchical way.
 <br>
 ✅ Learns complex visual patterns
 
+## 6. Applications of CNN
+
+        Face Recognition
+        Object Detection
+        Medical Imaging
+        Self-Driving Cars
+        OCR (Text Recognition)
+        Security Systems
+        Satellite Image Analysis
+
