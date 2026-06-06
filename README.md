@@ -104,7 +104,7 @@ I am passionate about:
 ## Featured Projects
 - House Price Prediction
 - Heart Disesase Prediction
-- Customer Churn Prediction
+- <a href='Machine Learning/Algorithms/Supervised/Classification/Logistic Regression/Customer Churn Project.md'>Customer Churn Prediction</a>
 - Movie Recommendation Sytem
 
 
