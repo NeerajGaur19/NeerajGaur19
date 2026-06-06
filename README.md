@@ -102,9 +102,10 @@ I am passionate about:
 
 
 ## Featured Projects
+- <a href='Machine Learning/Algorithms/Supervised/Classification/Logistic Regression/Customer Churn Project.md'>Customer Churn Prediction</a>
+- <a href='Machine Learning/Algorithms/Supervised/Classification/Logistic Regression/LR_VIF_Census Project.py'>Census Project</a>
 - House Price Prediction
 - Heart Disesase Prediction
-- <a href='Machine Learning/Algorithms/Supervised/Classification/Logistic Regression/Customer Churn Project.md'>Customer Churn Prediction</a>
 - Movie Recommendation Sytem
 
 
