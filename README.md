@@ -74,14 +74,14 @@ I am passionate about:
       - DBSCAN
       - Gaussian Mixture Model (GMM)
     
-    2.2  Dimensionality Reduction
+3. Dimensionality Reduction
     
       - Princial Component Analysis (PCA)
       - Distributed Stochastic Neighbor Embedding (SNE)
       - Linear Discriminant Analysis (LDA)
       - Singular Value Decomposition (SVD)
     
-3.  Reinforcement Learning
+4.  Reinforcement Learning
       - TBD
       - TBD
       - TBD
