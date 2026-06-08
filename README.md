@@ -74,7 +74,7 @@ I am passionate about:
       - DBSCAN
       - Gaussian Mixture Model (GMM)
     
-3. Dimensionality Reduction
+3. <a href = 'Machine Learning/Algorithms/Unsupervised/Dimensionality Reduction Technique.md'>Dimensionality Reduction</a>
     
       - Princial Component Analysis (PCA)
       - Distributed Stochastic Neighbor Embedding (SNE)
