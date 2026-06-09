@@ -235,22 +235,28 @@ CNN learns in a similar hierarchical way.
 ## 5. Advantages of CNN
 
 ✅ Automatic feature extraction
-<br>
+
 ✅ Excellent for images
-<br>
+
 ✅ Fewer parameters than traditional neural networks
-<br>
+
 ✅ High accuracy in image recognition
-<br>
+
 ✅ Learns complex visual patterns
 
 ## 6. Applications of CNN
 
-        Face Recognition
-        Object Detection
-        Medical Imaging
-        Self-Driving Cars
-        OCR (Text Recognition)
-        Security Systems
-        Satellite Image Analysis
+✅ Face Recognition
+
+✅ Object Detection
+
+✅ Medical Imaging
+
+✅ Self-Driving Cars
+
+✅ OCR (Text Recognition)
+
+✅ Security Systems
+
+✅ Satellite Image Analysis
 
