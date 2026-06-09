@@ -1,5 +1,8 @@
 # Convolutional Neural Network (CNN)
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ef380998-ca19-4d52-b28b-375ea3735568" />
+
+
 ## 1. Description
 
 A Convolutional Neural Network (CNN) is a type of neural network specially designed for working with images.
