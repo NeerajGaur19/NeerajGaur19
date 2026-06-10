@@ -62,7 +62,7 @@ I am passionate about:
         - Gradient Boosting
         - XGBoost
         - ADABoost
-        - Neural Networks (MLP)
+        - <A href = 'Artificial Intelligence/Neural Network'>Neural Networks (MLP)</a>
         - Deep Learning (CNN, RNN etc)
 
 2. Unsupervised Learning
