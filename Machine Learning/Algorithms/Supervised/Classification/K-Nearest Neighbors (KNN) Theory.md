@@ -151,5 +151,84 @@ K = 50
 Usually select K using cross-validation.
 
 
+## KNN Classification Example in Python
 
+        from sklearn.neighbors import KNeighborsClassifier
+        from sklearn.model_selection import train_test_split
+        from sklearn.preprocessing import StandardScaler
+        from sklearn.metrics import accuracy_score
+        
+        # Split
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=0.2, random_state=42
+        )
+        
+        # Scaling
+        scaler = StandardScaler()
+        
+        X_train_scaled = scaler.fit_transform(X_train)
+        X_test_scaled = scaler.transform(X_test)
+        
+        # Model
+        knn = KNeighborsClassifier(n_neighbors=5)
+        
+        # Training
+        knn.fit(X_train_scaled, y_train)
+        
+        # Prediction
+        y_pred = knn.predict(X_test_scaled)
+        
+        # Accuracy
+        print("Accuracy:", accuracy_score(y_test, y_pred))
+
+### Understanding fit() in KNN
+
+Unlike:
+
+* Linear Regression
+* Decision Tree
+* Random Forest
+* Neural Networks
+
+KNN does not actually learn equations or weights.
+
+When you run:
+
+    knn.fit(X_train, y_train)
+
+It simply stores all training data in memory.
+
+During prediction:
+
+    knn.predict(X_test)
+
+It calculates distances to all stored points.
+
+This is called a Lazy Learner.
+
+
+## Advantages of KNN
+
+✅ Easy to understand
+
+✅ Easy to implement
+
+✅ No training phase
+
+✅ Works for classification and regression
+
+✅ Can model complex boundaries
+
+
+## Disadvantages of KNN
+
+❌ Slow on large datasets
+
+❌ Requires scaling
+
+❌ Sensitive to noise
+
+❌ Memory intensive
+
+❌ Performance decreases with many features (Curse of Dimensionality)
 
