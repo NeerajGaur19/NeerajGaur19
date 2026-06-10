@@ -54,7 +54,7 @@ I am passionate about:
       1.2  Classification
     
         - Logistic Regression
-        - K-Nearest Neighbors (KNN)
+        - <a href='Machine Learning/Algorithms/Supervised/Classification/K-Nearest Neighbors (KNN) Theory.md'>K-Nearest Neighbors (KNN)</a>
         - Support Vector Machine (SVM)
         - Naive Bayes
         - Decision Tree
