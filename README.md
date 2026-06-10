@@ -48,7 +48,7 @@ I am passionate about:
         - Random Forest Regression
         - Gradient Boosting Regression
         - XGBoost Regression
-        - <a href='https://github.com/NeerajGaur19/NeerajGaur19/wiki/Neural-Network'>Neural Network Regression</a>
+        - <a href='Artificial Intelligence/Neural Network'>Neural Network Regression</a>
         - Deep Learning Regression
       
       1.2  Classification
