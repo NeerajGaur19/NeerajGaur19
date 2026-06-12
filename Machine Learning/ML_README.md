@@ -6,7 +6,7 @@
 It is a branch of Artificial Intelligence that enables computers to learn **patterns** from data and make decisions or predictions without being explicitly programmed for every task.
 Machine learning is used to solve real-world problems automatically.
 
-Real-Life Examples
+Real-Life Examples 
 
 ## Machine learning is used in: 
 
