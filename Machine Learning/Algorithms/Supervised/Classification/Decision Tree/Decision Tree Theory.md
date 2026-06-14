@@ -314,3 +314,59 @@ Limit tree growth using:
     min_samples_leaf
 
 This produces a simpler tree.
+
+## Advantages
+
+✅ Easy to understand
+
+✅ Easy to visualize
+
+✅ No feature scaling needed
+
+✅ Works with numerical and categorical data
+
+✅ Handles nonlinear relationships
+
+## Disadvantages
+
+❌ Can overfit easily
+
+❌ Small data changes can create different trees
+
+❌ Usually less accurate than Random Forest
+
+## Decision Tree vs Logistic Regression
+
+<img width="841" height="331" alt="image" src="https://github.com/user-attachments/assets/522cac6f-befb-4fd8-b154-f272860cdd58" />
+
+## Complete Flow
+
+        Training Data
+              ↓
+        Find Best Feature
+              ↓
+        Split Data
+              ↓
+        Find Best Feature Again
+              ↓
+        Split Again
+              ↓
+        Create Leaf Nodes
+              ↓
+        Decision Tree Ready
+
+## Easy Analogy
+
+Imagine a doctor diagnosing a patient:
+
+        Fever?
+           |
+        Yes/No
+           |
+        Cough?
+           |
+        Yes/No
+           |
+        COVID?
+
+The doctor is following a series of decision rules.
