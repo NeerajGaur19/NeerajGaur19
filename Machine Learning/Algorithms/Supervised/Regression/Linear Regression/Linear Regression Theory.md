@@ -86,6 +86,86 @@ Price=β0+β1(Area)+β2(Bedrooms)
 * Can struggle with highly complex patterns.
 * Multicollinearity (highly correlated features) can make coefficients unstable.
 
+## 1. MAE (Mean Absolute Error)
+
+Most intuitive metric.
+
+Formula:
+
+<img width="377" height="92" alt="image" src="https://github.com/user-attachments/assets/cbd3b644-977a-4948-a018-649a1248ce12" />
+
+Example:
+
+<img width="742" height="216" alt="image" src="https://github.com/user-attachments/assets/39adf6e8-e113-420a-b55b-e631f0c74d44" />
+
+MAE:
+
+(10 + 20 + 20) / 3 = 16.67
+
+### Interpretation
+
+On average, predictions are off by 16.67 units.
+
 <img width="1536" height="1024" alt="Linear Regression Algorithm Workflow" src="https://github.com/user-attachments/assets/f0097652-1172-4ceb-a018-eebaff0108af" />
 
+## 2. MSE (Mean Squared Error)
 
+Instead of absolute values, errors are squared.
+
+Example:
+
+<img width="607" height="212" alt="image" src="https://github.com/user-attachments/assets/dce6bc9c-339f-4074-bbc4-a42ab38f8202" />
+
+### Why square?
+
+Large mistakes get punished heavily.
+
+Example:
+
+    Error = 2
+    Squared = 4
+    
+    Error = 20
+    Squared = 400
+
+The bigger error hurts much more.
+
+## 3. RMSE (Root Mean Squared Error)
+
+Most commonly used metric.
+
+Take square root of MSE.
+
+<img width="197" height="41" alt="image" src="https://github.com/user-attachments/assets/ee54eb4b-206d-42a8-bef8-f1d2627fdaad" />
+
+If:
+
+    MSE = 300
+
+Then:
+
+    RMSE = √300 ≈ 17.32
+
+### Interpretation
+
+    Predictions are off by about 17.32 units on average.
+
+### Why RMSE is Popular?
+
+    Same unit as target variable
+    Punishes large errors
+    Easy to compare models
+
+## 4. R² Score (Coefficient of Determination)
+
+Most important interview metric.
+
+Question:
+
+    How much of the variation in the target variable is explained by the model?
+
+Range:
+
+    0 to 1
+
+Sometimes negative.
