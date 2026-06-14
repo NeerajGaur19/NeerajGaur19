@@ -337,7 +337,7 @@ Meaning:
 
 This is heavily used in banking, healthcare, and risk modeling.
 
-## 2. Logit Function
+### 2. Logit Function
 
 Before applying the sigmoid function, Logistic Regression models:
 
@@ -348,4 +348,58 @@ called the log-odds (logit).
 The actual equation is:
 
 <img width="397" height="60" alt="image" src="https://github.com/user-attachments/assets/883c8888-8a8e-490a-937b-bf5846ce0b23" />
+
+### 3. Coefficient Interpretation ⭐
+
+Suppose:
+
+    Age coefficient = 0.2
+
+Interpretation:
+
+    As Age increases,
+    probability of class 1 increases.
+
+If coefficient is negative:
+
+    Age coefficient = -0.2
+
+Probability decreases.
+
+This is very important in interviews.
+
+## 4. Regularization
+
+Used to prevent overfitting.
+
+Types:
+
+### L1 Regularization (Lasso)
+
+Can remove unimportant features.
+
+### L2 Regularization (Ridge)
+
+Shrinks coefficients.
+
+Example:
+
+    LogisticRegression(penalty='l2')
+
+## 5. Multiclass Logistic Regression
+
+Not all problems are Yes/No.
+
+Example:
+
+    Cat
+    Dog
+    Bird
+
+Three classes.
+
+Techniques:
+
+* One-vs-Rest (OvR)
+* Multinomial Logistic Regression
 
