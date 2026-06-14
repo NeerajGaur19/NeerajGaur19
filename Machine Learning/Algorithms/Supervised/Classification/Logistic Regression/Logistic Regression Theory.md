@@ -256,3 +256,64 @@ Examples:
     
     Class 0 or Class 1
 
+## Metrics for Logistic Regression
+
+These are extremely important.
+
+Because Logistic Regression is a classification algorithm, we use classification metrics.
+
+### Confusion Matrix
+
+Example:
+
+<img width="762" height="150" alt="image" src="https://github.com/user-attachments/assets/d573a7da-3a5a-453e-9554-b529150ab178" />
+
+Where:
+
+* TP = True Positive
+* TN = True Negative
+* FP = False Positive
+* FN = False Negative
+
+### Accuracy
+
+    (TP + TN) / Total
+
+Measures overall correctness.
+
+Problem:
+
+Accuracy can be misleading on imbalanced datasets.
+
+### Precision
+
+    TP / (TP + FP)
+
+Question:
+
+Of all positive predictions, how many were actually positive?
+
+Example:
+
+Spam detection.
+
+### Recall
+
+TP / (TP + FN)
+
+Question:
+
+Of all actual positives, how many did we find?
+
+Example:
+
+Disease detection.
+
+### F1 Score
+
+Balance between Precision and Recall.
+
+<img width="268" height="67" alt="image" src="https://github.com/user-attachments/assets/3b214d9a-50dc-4cbd-82a2-ffd5a6dc1b83" />
+
+Used when classes are imbalanced.
+
