@@ -169,3 +169,24 @@ Range:
     0 to 1
 
 Sometimes negative.
+
+## Interpretation
+
+<img width="696" height="352" alt="image" src="https://github.com/user-attachments/assets/41e54862-9f09-412a-b0d0-b95d1f71db1c" />
+
+### Example
+
+House prices depend on:
+        
+        Area
+        Bedrooms
+        Location
+        Age
+
+If:
+
+        R² = 0.85
+
+Meaning:
+
+    85% of house price variation is explained by the model.
