@@ -317,3 +317,35 @@ Balance between Precision and Recall.
 
 Used when classes are imbalanced.
 
+## Important Topics Still Remaining
+
+### 1. Odds and Odds Ratio
+
+Logistic Regression actually predicts odds.
+
+Example:
+
+Probability of subscription = 0.8
+
+    Odds = P/(1-P)
+    
+    Odds = 0.8/0.2 = 4
+
+Meaning:
+
+    The customer is 4 times more likely to subscribe than not subscribe.
+
+This is heavily used in banking, healthcare, and risk modeling.
+
+## 2. Logit Function
+
+Before applying the sigmoid function, Logistic Regression models:
+
+    log(P/(1-P))
+
+called the log-odds (logit).
+
+The actual equation is:
+
+<img width="397" height="60" alt="image" src="https://github.com/user-attachments/assets/883c8888-8a8e-490a-937b-bf5846ce0b23" />
+
