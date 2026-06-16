@@ -111,3 +111,153 @@ Examples:
 * Sentiment classification
 * Speech transcription
 
+
+# Types of RNN
+
+## 1. One-to-One
+
+Traditional Neural Network
+
+    Input → Output
+
+Example:
+
+    Image → Label
+
+Not truly an RNN use case.
+
+## 2. One-to-Many
+
+Single input produces sequence output.
+
+    Input → Output1 Output2 Output3 ...
+
+### Example
+
+Image Captioning
+
+    Image →
+    "A dog is running"
+
+Diagram:
+
+    Image
+       |
+       V
+    RNN → word1
+         → word2
+         → word3
+
+## 3. Many-to-One
+
+Sequence input, single output.
+
+### Example
+
+Sentiment Analysis
+
+    "I love this movie"
+
+Output:
+
+    Positive
+
+Diagram:
+
+    x1 → x2 → x3 → x4
+                |
+             Output
+
+Applications:
+
+* Sentiment Analysis
+* Spam Detection
+* Document Classification
+
+## 4. One-to-Many (Sequence Generation)
+
+Example:
+
+    Start token
+
+Generate:
+
+    Hello → How → Are → You
+
+Applications:
+
+* Text Generation
+* Music Generation
+
+## 5. Many-to-Many (Synchronized)
+
+Input and output lengths are same.
+
+Example:
+
+Part-of-Speech Tagging
+
+    I      love    AI
+    PRON   VERB   NOUN
+
+Diagram:
+
+    x1 → y1
+    x2 → y2
+    x3 → y3
+
+## 6. Many-to-Many (Encoder-Decoder)
+
+Input and output lengths differ.
+
+Example: Machine Translation
+
+English:
+
+    I love AI
+
+French:
+
+    J'aime l'IA
+
+Architecture:
+
+    Encoder RNN
+    Input Sequence
+          ↓
+    Context Vector
+          ↓
+    Decoder RNN
+    Output Sequence
+
+Applications:
+
+* Translation
+* Chatbots
+* Summarization
+
+# Problems with Vanilla RNN
+
+Although powerful, RNNs have major limitations.
+
+## 1. Vanishing Gradient Problem
+
+During backpropagation, gradients become extremely small.
+
+Example:
+
+    Word1 → Word2 → Word3 → ... → Word100
+
+The network forgets early words.
+
+Result:
+    * Cannot learn long-term dependencies.
+
+## 2. Exploding Gradient Problem
+
+Gradients become extremely large.
+
+Results:
+
+* Unstable training
+* Numerical overflow
