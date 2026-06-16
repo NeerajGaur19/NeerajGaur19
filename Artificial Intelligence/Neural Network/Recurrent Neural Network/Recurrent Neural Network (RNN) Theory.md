@@ -445,3 +445,29 @@ Controls what information to forget.
 # RNN vs CNN vs Transformer
 
 <img width="892" height="352" alt="image" src="https://github.com/user-attachments/assets/09ed9996-165d-4d7d-bd7a-c8c037e43e04" />
+
+# Why Transformers Replaced RNNs?
+
+RNN processes sequentially:
+
+    Word1 → Word2 → Word3 → Word4
+
+Cannot fully parallelize.
+
+Transformers use self-attention:
+
+    All words processed simultaneously.
+
+Benefits:
+
+* Faster training
+* Better long-range context understanding
+* Scales to billions of parameters
+
+This is why models such as:
+
+* GPT
+* BERT
+* T5
+
+are based on Transformers rather than RNNs.
