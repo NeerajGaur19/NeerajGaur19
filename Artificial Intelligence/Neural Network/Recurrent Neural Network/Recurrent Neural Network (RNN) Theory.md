@@ -405,3 +405,30 @@ Controls what information to forget.
 
 <img width="875" height="377" alt="image" src="https://github.com/user-attachments/assets/58c0f0d0-a50f-4ad0-ad4b-e7761b92eb48" />
 
+Applications of RNNs
+NLP
+Text Classification
+Chatbots
+Translation
+Question Answering
+Speech Processing
+Speech Recognition
+Voice Assistants
+
+Examples:
+
+Siri
+Alexa
+Google Assistant
+Time Series Forecasting
+Stock Prices
+Weather Prediction
+Demand Forecasting
+Healthcare
+ECG Analysis
+Disease Prediction
+Patient Monitoring
+Video Processing
+Action Recognition
+Video Captioning
+RNN vs CNN vs Transformer
