@@ -400,3 +400,8 @@ Controls what information to keep.
 #### Reset Gate
 
 Controls what information to forget.
+
+## Comparison
+
+<img width="875" height="377" alt="image" src="https://github.com/user-attachments/assets/58c0f0d0-a50f-4ad0-ad4b-e7761b92eb48" />
+
