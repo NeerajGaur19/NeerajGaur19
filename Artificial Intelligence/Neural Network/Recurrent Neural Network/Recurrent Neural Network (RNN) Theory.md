@@ -236,6 +236,8 @@ Applications:
 * Chatbots
 * Summarization
 
+---
+
 # Problems with Vanilla RNN
 
 Although powerful, RNNs have major limitations.
@@ -261,3 +263,81 @@ Results:
 
 * Unstable training
 * Numerical overflow
+
+---
+
+# Advanced Types of RNN
+
+To solve these problems, more sophisticated architectures were developed.
+
+## 1. Bidirectional RNN (BRNN)
+
+Processes sequence in both directions.
+
+    Forward:
+    x1 → x2 → x3 → x4
+    
+    Backward:
+    x4 → x3 → x2 → x1
+
+Final output uses information from both directions.
+
+### Example
+
+Sentence:
+
+    The bank is near the river.
+
+Understanding "bank" requires both previous and future words.
+
+Applications:
+
+* NLP
+* Speech Recognition
+* Named Entity Recognition
+
+## 2. Deep RNN
+
+Multiple recurrent layers stacked together.
+
+    Input
+      ↓
+    RNN Layer 1
+      ↓
+    RNN Layer 2
+      ↓
+    RNN Layer 3
+      ↓
+    Output
+
+Advantages:
+
+* Learns complex patterns
+* Better feature extraction
+
+Disadvantages:
+
+* More computation
+* Harder training
+
+## 3. Long Short-Term Memory (LSTM)
+
+Most important RNN variant.
+
+Introduced by:
+
+### Hochreiter & Schmidhuber (1997)
+
+Designed to remember information for long periods.
+
+### LSTM Architecture
+
+Contains:
+
+ 1. Cell State
+ 2. Forget Gate
+ 3. Input Gate
+ 4. Output Gate
+ 5. Forget Gate
+
+Decides what information to discard.
