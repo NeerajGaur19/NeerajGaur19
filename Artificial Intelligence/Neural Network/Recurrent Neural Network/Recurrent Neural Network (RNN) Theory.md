@@ -14,7 +14,7 @@ Examples of Sequential Data
 * Machine Translation
 * Video Analysis
 * Sensor Data Processing
-
+ 
 ---
 
 # Why Traditional Neural Networks Are Not Enough?
