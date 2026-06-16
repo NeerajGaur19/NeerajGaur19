@@ -338,6 +338,65 @@ Contains:
  2. Forget Gate
  3. Input Gate
  4. Output Gate
- 5. Forget Gate
+  
+ 
+#### Forget Gate
 
 Decides what information to discard.
+
+<img width="270" height="50" alt="image" src="https://github.com/user-attachments/assets/79bdaa01-eaa9-4017-b7db-2fa11bdac2ab" />
+
+Example:
+
+    Forget irrelevant words.
+
+### Input Gate
+
+Decides what new information to store.
+
+<img width="288" height="77" alt="image" src="https://github.com/user-attachments/assets/84aa12a1-69d9-4017-8320-2a721d1e9a36" />
+
+### Cell State Update
+
+<img width="222" height="52" alt="image" src="https://github.com/user-attachments/assets/e8f1aa01-8781-4fa0-8e67-d0ef84d1e3ab" />
+
+### Output Gate
+
+Determines final output.
+
+<img width="277" height="98" alt="image" src="https://github.com/user-attachments/assets/afad7b86-36f6-4bfb-8096-461d5eab85ee" />
+
+### Why LSTM Works Better?
+
+It can remember:
+
+    Important information
+    for hundreds of time steps.
+
+Applications:
+
+    Language Modeling
+    Translation
+    Speech Recognition
+    Time Series Forecasting
+
+
+## 4. Gated Recurrent Unit (GRU)
+
+Introduced by:
+
+### Cho et al. (2014)
+
+Simplified version of LSTM.
+
+### GRU Components
+
+Only two gates:
+
+#### Update Gate
+
+Controls what information to keep.
+
+#### Reset Gate
+
+Controls what information to forget.
