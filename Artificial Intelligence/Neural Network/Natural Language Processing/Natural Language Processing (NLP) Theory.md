@@ -358,3 +358,40 @@ Deep Learning:
     Text → Neural Network → Prediction
 
 No manual feature engineering required.
+
+# Popular NLP Libraries
+
+## NLTK
+
+    import nltk
+
+For:
+
+* Tokenization
+* Stopwords
+* Stemming
+* Lemmatization
+
+## spaCy
+
+    import spacy
+
+Fast industrial NLP library.
+
+Used for:
+
+* NER
+* POS Tagging
+* Dependency Parsing
+
+## Transformers
+
+    from transformers import pipeline
+
+Used for:
+
+* BERT
+* GPT
+* T5
+* RoBERTa
+
