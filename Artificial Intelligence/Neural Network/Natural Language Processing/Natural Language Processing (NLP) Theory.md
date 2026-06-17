@@ -359,6 +359,8 @@ Deep Learning:
 
 No manual feature engineering required.
 
+---
+
 # Popular NLP Libraries
 
 ## NLTK
@@ -394,4 +396,10 @@ Used for:
 * GPT
 * T5
 * RoBERTa
+
+---
+
+# Common NLP Tasks
+
+<img width="742" height="481" alt="image" src="https://github.com/user-attachments/assets/0ca7c3ab-45aa-41cb-8cdc-bb8b40e61a86" />
 
