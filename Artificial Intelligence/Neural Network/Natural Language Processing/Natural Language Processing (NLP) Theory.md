@@ -361,6 +361,85 @@ No manual feature engineering required.
 
 ---
 
+# RNN in NLP
+
+## Recurrent Neural Network (RNN)
+
+Designed for sequential data.
+
+Example:
+
+    I love machine learning
+
+RNN remembers previous words.
+
+    Word1 → Word2 → Word3 → Word4
+
+Memory flows through sequence.
+
+Problem:
+
+    Vanishing Gradient
+
+Cannot remember long-term dependencies.
+
+## LSTM
+
+### Long Short-Term Memory
+
+Improved version of RNN.
+
+Remembers important information for long periods.
+
+Contains:
+
+1. Forget Gate
+2. Input Gate
+3. Output Gate
+4. Cell State
+
+Since you've been studying RNN and LSTM recently, remember:
+
+    Cell State (Ct) = Long-Term Memory
+    Hidden State (ht) = Short-Term Memory
+
+This is exactly the interpretation shown in your preferred LSTM reference diagram.
+
+## GRU
+
+### Gated Recurrent Unit
+
+Simplified version of LSTM.
+
+Advantages:
+
+* Faster training
+* Fewer parameters
+* Similar performance
+
+## Transformers
+
+Current state-of-the-art NLP architecture.
+
+Introduced in the historical event Attention Is All You Need.
+
+Replaced RNN and LSTM in most NLP tasks.
+
+Uses:
+
+    Self-Attention Mechanism
+
+Examples:
+
+* ChatGPT
+* BERT
+* GPT
+* Gemini
+
+
+
+---
+
 # Popular NLP Libraries
 
 ## NLTK
