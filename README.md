@@ -63,7 +63,7 @@ I am passionate about:
         - XGBoost
         - ADABoost
         - <A href = 'Artificial Intelligence/Neural Network'>Neural Networks (MLP)</a>
-        - Deep Learning (CNN, RNN etc)
+        - <a href ='Artificial Intelligence/Neural Network'>Deep Learning (CNN, RNN)</a>
 
 2. Unsupervised Learning
 
