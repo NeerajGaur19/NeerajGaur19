@@ -152,6 +152,102 @@ Example equation:
 #### 3.3 Disadvantage
 * Can overfit easily.
 
+## 4. Ridge Regression
+* Linear regression with L2 regularization.
+* Helps reduce overfitting and multicollinearity.
+
+#### 4.1 Key Idea
+* Adds penalty on large coefficients.
+
+## 5. Lasso Regression
+* Linear regression with L1 regularization.
+
+#### 5.1 Special Feature
+* Can reduce some coefficients to zero → feature selection.
+
+## 6. Elastic Net Regression
+
+#### 6.1 Combination of:
+* Ridge Regression
+* Lasso Regression
+
+#### 6.2 Useful when:
+* many correlated features exist
+
+## 7. Decision Tree Regression
+* Uses tree structure for prediction.
+
+#### 7.1 Advantages
+* Handles non-linear data 
+* No scaling required
+
+Disadvantages
+* Can overfit
+
+## 8. Random Forest Regression
+* Collection of many decision trees.
+
+#### 8.1 Advantages
+* Better accuracy
+* Reduces overfitting
+* Handles complex data
+
+#### 8.2 Disadvantages
+* Slower than linear regression
+* Less interpretable
+
+## 9. Support Vector Regression (SVR)
+Regression version of SVM.
+
+Idea
+Finds a boundary where prediction error stays within a margin.
+
+Advantages
+
+(i) Works well with high-dimensional data
+
+(ii) Handles non-linear relationships using kernels like RBF
+
+Disadvantages
+(i) Slow for large datasets
+
+(ii) Requires scaling
+
+10. K-Nearest Neighbors (KNN) Regression
+Prediction based on nearby data points.
+
+Advantages
+(i) Simple
+
+(ii) No training phase
+
+Disadvantages
+(i) Slow for large datasets
+
+(ii) Sensitive to scaling
+
+11. Gradient Boosting Regression
+Builds models sequentially to reduce errors.
+
+Popular implementations:
+
+(i) XGBoost
+
+(ii) LightGBM
+
+(iii) CatBoost
+
+Advantages
+(i) Very high accuracy
+
+(ii) Widely used in competitions
+
+Disadvantages
+(i) More tuning required
+
+(ii) Slower training    
+
+---
 
 ## 1. MAE (Mean Absolute Error)
 
