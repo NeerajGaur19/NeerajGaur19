@@ -42,7 +42,6 @@ Linear Regression draws the best possible line through these points. This line i
 
 <img width="666" height="670" alt="image" src="https://github.com/user-attachments/assets/8373fd97-44a4-431d-8338-536888abb160" />
 
-
 ## 4. What Happens Internally
 
 Linear regression repeatedly:
@@ -98,27 +97,41 @@ It tries to fit a straight line:
 
 <img width="1006" height="327" alt="image" src="https://github.com/user-attachments/assets/bf21717f-db67-4f2c-92bd-abde5bd1b194" />
 
-### Where:
+#### 1.1 Where:
 
 * y = predicted value
 * m = slope / weightage 
 * b = intercept / base value
 
-### Use Case
+#### 1.2 Use Case
 
 * Predict house prices
 * Predict salary based on experience
 
-### Advantages
+#### 1.3 Advantages
 
 * Simple and fast
 * Easy to interpret
 
-### Disadvantages
+#### 1.4 Disadvantages
 
 * Works poorly with non-linear data
 * Sensitive to outliers
 
+## 2. Multiple Linear Regression
+
+Extension of linear regression with multiple input variables.
+
+y=b0​+b1 ​x1​+b2​ x2​+⋯+bn ​xn​
+
+#### 2.1 Example
+
+Predict house price using:
+
+* area
+* bedrooms
+* location
+* age
 
 ## 1. MAE (Mean Absolute Error)
 
