@@ -199,43 +199,37 @@ Disadvantages
 ## 9. Support Vector Regression (SVR)
 Regression version of SVM.
 
-Idea
+#### 9.1 Idea
 Finds a boundary where prediction error stays within a margin.
 
-Advantages
+#### 9.2 Advantages
 
-(i) Works well with high-dimensional data
+* Works well with high-dimensional data
+* Handles non-linear relationships using kernels like RBF
 
-(ii) Handles non-linear relationships using kernels like RBF
+#### 9.3 Disadvantages
+* Slow for large datasets
+* Requires scaling
 
-Disadvantages
-(i) Slow for large datasets
-
-(ii) Requires scaling
-
-10. K-Nearest Neighbors (KNN) Regression
+## 10. K-Nearest Neighbors (KNN) Regression
 Prediction based on nearby data points.
 
-Advantages
-(i) Simple
+#### 10.1 Advantages
+* Simple
+* No training phase
 
-(ii) No training phase
+#### 10.2 Disadvantages
+* Slow for large datasets
+* Sensitive to scaling
 
-Disadvantages
-(i) Slow for large datasets
-
-(ii) Sensitive to scaling
-
-11. Gradient Boosting Regression
+## 11. Gradient Boosting Regression
 Builds models sequentially to reduce errors.
 
-Popular implementations:
+#### 11.1 Popular implementations:
 
-(i) XGBoost
-
-(ii) LightGBM
-
-(iii) CatBoost
+* XGBoost
+* LightGBM
+* CatBoost
 
 Advantages
 (i) Very high accuracy
