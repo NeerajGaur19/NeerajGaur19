@@ -186,7 +186,7 @@ Disadvantages
 
 ## 8. Random Forest Regression
 * Collection of many decision trees.
-
+ 
 #### 8.1 Advantages
 * Better accuracy
 * Reduces overfitting
