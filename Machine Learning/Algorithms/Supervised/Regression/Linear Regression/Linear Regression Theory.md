@@ -86,6 +86,40 @@ Price=β0+β1(Area)+β2(Bedrooms)
 * Can struggle with highly complex patterns.
 * Multicollinearity (highly correlated features) can make coefficients unstable.
 
+---
+
+# Common Regression Algorithms
+
+## 1. Linear Regression
+
+Simplest regression algorithm.
+
+It tries to fit a straight line:
+
+<img width="1006" height="327" alt="image" src="https://github.com/user-attachments/assets/bf21717f-db67-4f2c-92bd-abde5bd1b194" />
+
+### Where:
+
+* y = predicted value
+* m = slope / weightage 
+* b = intercept / base value
+
+### Use Case
+
+* Predict house prices
+* Predict salary based on experience
+
+### Advantages
+
+* Simple and fast
+* Easy to interpret
+
+### Disadvantages
+
+* Works poorly with non-linear data
+* Sensitive to outliers
+
+
 ## 1. MAE (Mean Absolute Error)
 
 Most intuitive metric.
