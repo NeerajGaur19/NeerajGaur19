@@ -226,20 +226,17 @@ Prediction based on nearby data points.
 Builds models sequentially to reduce errors.
 
 #### 11.1 Popular implementations:
-
 * XGBoost
 * LightGBM
 * CatBoost
 
-Advantages
-(i) Very high accuracy
+#### 11.2 Advantages
+* Very high accuracy
+* Widely used in competitions
 
-(ii) Widely used in competitions
-
-Disadvantages
-(i) More tuning required
-
-(ii) Slower training    
+#### 11.3 Disadvantages
+* More tuning required
+* Slower training    
 
 ---
 
