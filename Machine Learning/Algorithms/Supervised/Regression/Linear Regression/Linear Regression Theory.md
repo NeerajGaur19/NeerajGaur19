@@ -133,6 +133,26 @@ Predict house price using:
 * location
 * age
 
+## 3. Polynomial Regression
+
+Used when relationship is curved instead of straight.
+
+Example equation:
+
+<img width="1171" height="322" alt="image" src="https://github.com/user-attachments/assets/cce1cded-c3f9-4d6c-85bc-8969d46400da" />
+
+#### 3.1 Use Case
+
+* Growth curves
+* Temperature trends
+
+#### 3.2 Advantage
+* Can model non-linear relationships.
+
+#### 3.3 Disadvantage
+* Can overfit easily.
+
+
 ## 1. MAE (Mean Absolute Error)
 
 Most intuitive metric.
