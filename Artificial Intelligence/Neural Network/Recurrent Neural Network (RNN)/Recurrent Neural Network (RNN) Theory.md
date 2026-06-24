@@ -335,6 +335,9 @@ Designed to remember information for long periods.
 
 ### LSTM Architecture
 
+<img width="457" height="262" alt="image" src="https://github.com/user-attachments/assets/8a81a625-7018-498e-af9d-d6b4443f0ca1" />
+
+
 Contains:
 
  1. Cell State
