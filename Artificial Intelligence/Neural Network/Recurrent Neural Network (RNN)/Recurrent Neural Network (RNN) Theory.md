@@ -13,7 +13,7 @@ Examples of Sequential Data
 * Stock Price Prediction
 * Machine Translation
 * Video Analysis
-* Sensor Data Processing
+* Sensor Data Processing 
   
 ---
 
