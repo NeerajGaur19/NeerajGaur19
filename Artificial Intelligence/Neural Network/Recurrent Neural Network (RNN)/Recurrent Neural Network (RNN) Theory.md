@@ -78,6 +78,9 @@ Unrolled structure:
 
 The same network parameters are reused at every time step.
 
+<img width="945" height="292" alt="image" src="https://github.com/user-attachments/assets/de0ebe28-2c4d-4ed4-b73e-9a11338ba454" />
+
+
 # Key Components
 
 ## 1. Input Layer
