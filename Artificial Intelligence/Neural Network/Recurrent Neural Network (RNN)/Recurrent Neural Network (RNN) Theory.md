@@ -476,4 +476,4 @@ This is why models such as:
 * BERT
 * T5
 
-are based on Transformers rather than RNNs.
+are based on Transformers rather than RNNs. 
