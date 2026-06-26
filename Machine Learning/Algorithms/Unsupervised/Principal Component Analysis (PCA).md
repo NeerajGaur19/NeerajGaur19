@@ -4,7 +4,7 @@ PCA is one of the most important dimensionality reduction techniques in Machine 
 
 ### Its goal is to: Reduce the number of features while preserving as much information (variance) as possible.
 
-## The Problem PCA Solves
+## The Problem PCA Solves 
 
 Imagine a dataset with:
 
