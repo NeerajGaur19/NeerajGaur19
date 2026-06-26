@@ -82,7 +82,7 @@ Employee_ID
 * Hyperparameter Tuning
 * Variation Inflation Factor (VIF) - For delaing with multicolinearity
 * Recursive Feature Elimination (RFE)
-* Tree based Algorithms like Decision Tree (DT), Random Forest (RF), XGBoost - These have inbuilt feature selection techniques. 
+* Tree based Algorithms like Decision Tree (DT), Random Forest (RF), XGBoost - These have inbuilt feature selection techniques. (Features at the top of tree have more importance)
 
 ## 2. Feature Extraction
 
