@@ -51,7 +51,7 @@ for plotting and understanding the data.
 
 # Types of Dimensionality Reduction
 
-## 1. Feature Selection
+## 1. Feature Selection or Feature Elimination
 
 Keep the most important existing features and remove the rest.
 
@@ -79,7 +79,10 @@ Employee_ID
 * Correlation
 * Chi-Square Test
 * Mutual Information
+* Hyperparameter Tuning
+* Variation Inflation Factor (VIF) - For delaing with multicolinearity
 * Recursive Feature Elimination (RFE)
+* Tree based Algorithms like Decision Tree (DT), Random Forest (RF), XGBoost - These have inbuilt feature selection techniques. 
 
 ## 2. Feature Extraction
 
