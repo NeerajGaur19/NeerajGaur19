@@ -231,3 +231,104 @@ Traditional AI usually predicts or classifies, while Generative AI creates.
 
 <img width="551" height="312" alt="image" src="https://github.com/user-attachments/assets/a0cfb851-7a0d-4a33-9f15-32eb73b21661" />
 
+# Traditional AI vs Generative AI
+
+<img width="747" height="447" alt="image" src="https://github.com/user-attachments/assets/3d5ad3f3-f4d2-4a26-9972-bcda1994f518" />
+
+# How Does Generative AI Learn?
+
+
+Imagine teaching a child to write stories.
+
+The child reads
+
+Books
+Newspapers
+Websites
+Articles
+
+After reading millions of examples, the child learns
+
+Grammar
+Vocabulary
+Sentence structure
+Writing style
+
+Now the child can write a completely new story.
+
+Generative AI works similarly.
+
+
+# General Workflow
+
+    Huge Dataset
+    
+    ↓
+    
+    Training
+    
+    ↓
+    
+    Patterns Learned
+    
+    ↓
+    
+    Model
+    
+    ↓
+    
+    User Prompt
+    
+    ↓
+    
+    Generated Output
+
+The AI does not memorize every sentence. Instead, it learns statistical patterns in the data and uses them to generate new content.
+
+# Types of Generative AI
+
+## 1. Text Generation
+
+Examples
+
+Chatbots
+Email writing
+Story writing
+Report generation
+Code explanation
+
+Example prompt
+
+    Write an email requesting leave.
+
+## 2. Image Generation
+
+Example prompt
+
+Create an image of a tiger wearing sunglasses.
+
+The AI generates a new image based on the description.
+
+## 3. Video Generation
+
+Example prompt
+
+Create a 30-second animation of Earth rotating.
+
+## 4. Music Generation
+
+Example prompt
+
+Compose relaxing piano music.
+
+## 5. Code Generation
+
+Example prompt
+
+Write Python code for Linear Regression.
+
+
+# Popular Generative AI Models
+
+<img width="945" height="262" alt="image" src="https://github.com/user-attachments/assets/4357573e-eeea-4b97-8c49-873c8907ad8a" />
+
