@@ -235,6 +235,10 @@ Traditional AI usually predicts or classifies, while Generative AI creates.
 
 <img width="747" height="447" alt="image" src="https://github.com/user-attachments/assets/3d5ad3f3-f4d2-4a26-9972-bcda1994f518" />
 
+<img width="677" height="228" alt="image" src="https://github.com/user-attachments/assets/3462938b-39a1-4bfb-bc27-eb49d6a7a485" />
+
+
+
 # How Does Generative AI Learn?
 
 
