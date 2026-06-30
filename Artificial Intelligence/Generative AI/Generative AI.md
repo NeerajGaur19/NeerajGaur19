@@ -336,3 +336,11 @@ Write Python code for Linear Regression.
 
 <img width="945" height="262" alt="image" src="https://github.com/user-attachments/assets/4357573e-eeea-4b97-8c49-873c8907ad8a" />
 
+
+
+# Advantages of Generative AI
+
+
+# Disadvantages of Generative AI
+
+
