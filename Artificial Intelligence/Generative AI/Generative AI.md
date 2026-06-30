@@ -229,3 +229,5 @@ The content can include:
 
 Traditional AI usually predicts or classifies, while Generative AI creates.
 
+<img width="551" height="312" alt="image" src="https://github.com/user-attachments/assets/a0cfb851-7a0d-4a33-9f15-32eb73b21661" />
+
