@@ -254,11 +254,80 @@ Cluster 2
     Clusters Changed?
 
       Yes
+      
        ↓
+    
     Repeat
 
       No
+    
        ↓
 
     Stop
 
+# Small Numerical Example
+
+Suppose we have numbers
+
+    2
+    3
+    4
+    10
+    11
+    12
+
+Choose
+
+    K = 2
+
+Random centroids
+
+    3 and 11
+
+Assign numbers
+
+Cluster 1
+
+    2
+    3
+    4
+
+Cluster 2
+
+    10
+    11
+    12
+
+New centroids
+
+Cluster 1
+
+    (2+3+4)/3 = 3
+
+Cluster 2
+
+    (10+11+12)/3 = 11
+
+No changes.
+
+Algorithm stops.
+
+# Advantages of K-Means
+
+✅ Simple to understand
+
+✅ Easy to implement
+
+✅ Fast on large datasets
+
+✅ Works well when clusters are clearly separated
+
+# Disadvantages of K-Means
+
+❌ You must choose K before running the algorithm.
+
+❌ Sensitive to the initial random centroids; different starting points can produce different results.
+
+❌ Doesn't work well for irregularly shaped clusters.
+
+❌ Sensitive to outliers (extreme values), which can pull centroids away from the true center.
