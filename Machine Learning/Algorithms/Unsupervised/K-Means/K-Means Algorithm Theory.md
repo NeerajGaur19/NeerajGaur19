@@ -32,4 +32,28 @@ The average point is called the centroid.
 
 Think of the centroid as the center of a cluster
 
+---
 
+# Example
+
+Suppose we have students based on:
+
+    Student	  Height
+        A	      150
+        B	      152
+        C	      155
+        D	      178
+        E	      180
+        F	      182
+
+You can clearly see two groups:
+
+Group 1: 150, 152, 155
+
+Group 2: 178, 180, 182
+
+If we choose
+
+K = 2
+
+K-Means will automatically create these two clusters.
