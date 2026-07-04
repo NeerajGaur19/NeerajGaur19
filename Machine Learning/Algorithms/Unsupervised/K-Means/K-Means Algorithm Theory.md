@@ -57,3 +57,208 @@ If we choose
 K = 2
 
 K-Means will automatically create these two clusters.
+
+---
+
+# Step-by-Step Working of K-Means
+
+Imagine points on a graph:
+
+    A •      B •
+
+          C •
+
+
+                     D •
+                 E •
+
+                        F •
+
+Suppose
+
+K = 2
+
+## Step 1: Choose K
+
+Choose the number of clusters.
+
+K = 2
+
+## Step 2: Select Initial Centroids
+
+Randomly pick two points as centroids.
+
+For example:
+
+Centroid 1 = A
+
+Centroid 2 = F
+
+These are just starting guesses.
+
+## Step 3: Calculate Distance
+
+Every point checks:
+
+Which centroid is closer?
+
+Usually, K-Means uses Euclidean distance (the straight-line distance).
+
+### Example:
+
+Point C
+
+Distance to Centroid A = 5
+
+Distance to Centroid F = 20
+
+Since 5 is smaller,
+
+C joins Cluster 1.
+
+Every point does the same.
+
+# Step 4: Form Clusters
+
+Now suppose we get
+
+Cluster 1
+    
+    A
+    B
+    C
+
+Cluster 2
+
+    D
+    E
+    F
+
+## Step 5: Find New Centroids
+
+Now calculate the average position of each cluster.
+
+Example:
+
+Cluster 1
+
+    A
+    B
+    C
+
+New centroid = Average of A, B, and C
+
+Similarly,
+
+Cluster 2
+
+    D
+    E
+    F
+
+New centroid = Average of D, E, and F
+
+## Step 6: Repeat
+
+Again calculate distances using the new centroids.
+
+Some points may switch clusters.
+
+Again calculate new centroids.
+
+Repeat until nothing changes.
+
+This is called convergence.
+
+---
+
+# Final Output
+
+Cluster 1
+
+    A
+    B
+    C
+
+Centroid ●
+
+Cluster 2
+
+    D
+    E
+    F
+
+Centroid ●
+
+The algorithm stops.
+
+---
+
+# Visual Representation
+
+Before
+
+    A      B
+
+     C
+
+          D
+
+       E
+
+             F
+
+## After clustering
+
+Cluster 1
+
+    A  B
+     C
+
+      |------------|
+
+Cluster 2
+
+      D
+    E
+        F
+
+---
+
+# Flow of the Algorithm
+
+      Start
+
+        ↓
+
+    Choose K
+
+        ↓
+
+    Select Random Centroids
+
+        ↓
+
+    Calculate Distance
+
+        ↓
+
+    Assign Points to Nearest Centroid
+
+        ↓
+
+    Calculate New Centroids
+
+        ↓
+
+    Clusters Changed?
+
+      Yes
+       ↓
+    Repeat
+
+      No
+       ↓
+
+    Stop
+
