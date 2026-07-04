@@ -20,6 +20,8 @@ Without anyone telling you which fruit is which, you naturally separate them int
 
 This process of making similar groups is called clustering.
 
+---
+
 # Real-Life Examples of Clustering
 
 1. Customer Segmentation
@@ -43,3 +45,23 @@ If people in your cluster liked a movie, it recommends it to you.
 3. Organizing Photos
 
 Your phone groups photos of the same person together without anyone labeling them.
+
+---
+
+# Why Do We Need Clustering?
+
+Suppose you have 10,000 customers.
+
+Looking at each customer individually is difficult.
+
+Instead, clustering creates groups like:
+
+Cluster A → Young students
+
+Cluster B → Working professionals
+
+Cluster C → Families
+
+Now businesses can understand customers much more easily.
+
+
