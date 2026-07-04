@@ -22,13 +22,13 @@ without being told the correct labels.
 
 # 2. How Unsupervised Learning Works
 
-Raw Data
-    ↓
-Find Patterns
-    ↓
-Create Groups / Relationships
-    ↓
-Insights
+    Raw Data
+        ↓
+    Find Patterns
+        ↓
+    Create Groups / Relationships
+        ↓
+    Insights
 
 Unlike supervised learning, there is no target column.
 
@@ -46,11 +46,11 @@ Unlike supervised learning, there is no target column.
 
 Groups similar data points together.
 
-Customers
-   ↓
-Cluster 1 → Students
-Cluster 2 → Working Professionals
-Cluster 3 → Senior Citizens
+    Customers
+       ↓
+    Cluster 1 → Students
+    Cluster 2 → Working Professionals
+    Cluster 3 → Senior Citizens
 
 ### 3.1.1 Popular Clustering Algorithms
 
@@ -72,9 +72,9 @@ Reduces the number of features while preserving important information.
 
 Example:
 
-100 Features
-     ↓
-10 Features
+    100 Features
+         ↓
+    10 Features
 
 ### 3.2.1 Benefits:
 
@@ -100,9 +100,9 @@ Finds relationships between items.
 
 Example:
 
-People who buy Bread
-       ↓
-Often buy Butter
+    People who buy Bread
+           ↓
+    Often buy Butter
 
 ### 3.3.1 Popular Algorithms
 * Apriori
