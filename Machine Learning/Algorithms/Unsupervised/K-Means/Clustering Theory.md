@@ -64,4 +64,13 @@ Cluster C → Families
 
 Now businesses can understand customers much more easily.
 
+---
+
+# Types of Clustering
+
+There are many clustering algorithms.
+
+The most popular one is:
+
+K-Means Clustering
 
