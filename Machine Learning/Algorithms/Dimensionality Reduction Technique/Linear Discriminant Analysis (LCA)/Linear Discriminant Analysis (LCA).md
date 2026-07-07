@@ -3,7 +3,7 @@
 
 is a supervised dimensionality reduction technique.
 
-It reduces the number of features while keeping different classes as far apart as possible.
+It reduces the number of features while keeping different classes as far apart as possible. To solve the problem of inseparable classification data, we have to use LDA.
 
 Unlike PCA, LDA uses the target variable (y).
 
@@ -114,6 +114,8 @@ Maximum LDA components =
 
 Only one component.
 
+---
+
 Suppose
 
 Classes = 4
@@ -121,3 +123,22 @@ Classes = 4
 Maximum components
 
     4 − 1 = 3
+
+---
+
+Suppose
+
+Features = 100
+
+Classes = 3
+
+Maximum components
+
+    min(features, classes−1)
+    
+    min(100,2)
+    
+    =2
+
+Only 2 components.
+
