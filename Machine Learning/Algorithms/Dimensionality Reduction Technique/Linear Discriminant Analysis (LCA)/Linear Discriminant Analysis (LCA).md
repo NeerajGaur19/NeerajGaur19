@@ -142,3 +142,24 @@ Maximum components
 
 Only 2 components.
 
+# Advantages
+
+✅ Reduces dimensions
+
+✅ Improves classification
+
+✅ Uses class labels
+
+✅ Fast
+
+✅ Easy to interpret
+
+# Disadvantages
+
+❌ Works mainly for classification
+
+❌ Assumes classes are approximately linearly separable
+
+❌ Assumes similar covariance across classes (an assumption of classical LDA)
+
+❌ Maximum components are limited to number of classes − 1
