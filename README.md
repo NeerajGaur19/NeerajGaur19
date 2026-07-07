@@ -76,7 +76,7 @@ I am passionate about:
 3. <a href = 'Machine Learning/Algorithms/Unsupervised/Dimensionality Reduction Technique.md'>Dimensionality Reduction</a>
     
       - <a href='Machine Learning/Algorithms/Dimensionality Reduction Technique/Principal Component Analysis'>Princial Component Analysis (PCA)</a>
-      - <a href='Machine Learning/Algorithms/Dimensionality Reduction Technique/Linear Discriminant Analysis (LCA)'>Linear Discriminant Analysis (LDA)</a>
+      - <a href='Machine Learning/Algorithms/Dimensionality Reduction Technique/Linear Discriminant Analysis (LDA)'>Linear Discriminant Analysis (LDA)</a>
       - Singular Value Decomposition (SVD)
     
 4.  Reinforcement Learning
