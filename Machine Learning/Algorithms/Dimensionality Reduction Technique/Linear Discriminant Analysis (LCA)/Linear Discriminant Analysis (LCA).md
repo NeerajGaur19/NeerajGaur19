@@ -100,3 +100,24 @@ So LDA tries to
     Between-class distance
     ↑↑↑
 
+# Number of components in LDA
+
+Suppose
+
+Classes = 2
+
+Maximum LDA components =
+
+    Classes − 1
+    
+    2 − 1 = 1
+
+Only one component.
+
+Suppose
+
+Classes = 4
+
+Maximum components
+
+    4 − 1 = 3
