@@ -3,9 +3,19 @@
 
 is a supervised dimensionality reduction technique.
 
-It reduces the number of features while keeping different classes as far apart as possible. To solve the problem of inseparable classification data, we have to use LDA.
+It reduces the number of features while keeping different classes as far apart as possible. To solve the problem of inseparable classification data, we have to use LDA. LDA will project the data onto a new axis to make the data easily separable and while doing so it will automatically reduce the doimension of data.
 
-Unlike PCA, LDA uses the target variable (y).
+Unlike PCA, LDA uses the target variable (y). Unlike PCA, LDA main focus is not on dimensionality reduction but on separating the data by maximizing the separation between the classes.
+
+LDA will also make a new axis and project the data points on that new axis. The new axis that LDA will create should follow these two criterias
+
+* Maximize the distance between the means of two classes / categories.
+* Minimize the variation (spread) within each class.
+
+## Fischer Discriminant Ratio
+<img width="713" height="168" alt="image" src="https://github.com/user-attachments/assets/a3086d64-e491-4bcf-9f9b-7f77c5e848ca" />
+
+<img width="656" height="290" alt="image" src="https://github.com/user-attachments/assets/828aa913-674c-4041-b95b-ee38fe94be92" />
 
 
 # Imagine a dataset
