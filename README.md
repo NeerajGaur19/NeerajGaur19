@@ -71,14 +71,12 @@ I am passionate about:
     
       - <a href = 'Machine Learning/Algorithms/Unsupervised/K-Means'>K-Means</a>
       - Hierarchical Clustering
-      - DBSCAN
       - Gaussian Mixture Model (GMM)
     
 3. <a href = 'Machine Learning/Algorithms/Unsupervised/Dimensionality Reduction Technique.md'>Dimensionality Reduction</a>
     
       - <a href='Machine Learning/Algorithms/Dimensionality Reduction Technique/Principal Component Analysis'>Princial Component Analysis (PCA)</a>
-      - Distributed Stochastic Neighbor Embedding (SNE)
-      - Linear Discriminant Analysis (LDA)
+      - <a href='Machine Learning/Algorithms/Dimensionality Reduction Technique/Linear Discriminant Analysis (LCA)'>Linear Discriminant Analysis (LDA)</a>
       - Singular Value Decomposition (SVD)
     
 4.  Reinforcement Learning
