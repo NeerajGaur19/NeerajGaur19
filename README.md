@@ -53,12 +53,12 @@ I am passionate about:
       
       1.2  Classification
     
-        - Logistic Regression
+        - <a href='Machine Learning/Algorithms/Supervised/Classification/Logistic Regression'>Logistic Regression</a>
         - <a href='Machine Learning/Algorithms/Supervised/Classification/K-Nearest Neighbors/K-Nearest Neighbors (KNN) Theory.md'>K-Nearest Neighbors (KNN)</a>
         - Support Vector Machine (SVM)
         - Naive Bayes
-        - Decision Tree
-        - Random Forest
+        - <a href='Machine Learning/Algorithms/Supervised/Classification/Decision Tree Classifier'>Decision Tree</a>
+        - <a href='Machine Learning/Algorithms/Supervised/Classification/Random Forest Classifier'>Random Forest</a>
         - Gradient Boosting
         - XGBoost
         - ADABoost
