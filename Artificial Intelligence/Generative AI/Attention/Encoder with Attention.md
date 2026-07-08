@@ -9,6 +9,30 @@ English: "The cat sat on the mat."
 
 When translating the word "cat", you mainly need to pay attention to "cat" in the input, not every other word. Attention lets the model learn which words are most important at each step.
 
+### Step-by-step
+
+Suppose the input is:
+
+I love machine learning
+
+For the word "learning":
+
+    Create its Query vector.
+    Compare it with the Key vectors of all words.
+    Compute similarity scores.
+    Apply softmax to convert scores into probabilities.
+    Take the weighted sum of the Value vectors.
+
+Example attention weights:
+
+<img width="935" height="241" alt="image" src="https://github.com/user-attachments/assets/78d7311b-1e75-4b5d-a5da-eaa7ff57b09e" />
+
+The output representation is:
+
+0.05V1​+0.10V2​+0.35V3​+0.50V4
+​
+So "learning" pays the most attention to itself and to "machine."
+
 ## Step 1: How Encoder-Decoder Works (Without Attention)
 
 Suppose we want to translate:
