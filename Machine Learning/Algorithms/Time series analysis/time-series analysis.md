@@ -27,11 +27,12 @@ You have been provided with a data set containing daily sales and profit data of
 
 In this demonstration, we will:
 
-Prepare the data for time series modeling
-Forecast sales using the following models:
-Autoregressive (AR)
-Autoregressive integrated moving average (ARIMA)
-Seasonal autoregressive integrated moving average (SARIMA)
+* Prepare the data for time series modeling
+* Forecast sales using the following models:
+    * Autoregressive (AR)
+    * Autoregressive integrated moving average (ARIMA)
+    * Seasonal autoregressive integrated moving average (SARIMA)
+
 We will analyze the performance of these models using root mean squared error (RMSE) and mean absolute percentage error (MAPE).
 
 Please note that while we could evaluate the performance of the forecasting models using any one of RMSE or MAPE, to obtain a more comprehensive assessment of their performance, we will use both measures for each model.
