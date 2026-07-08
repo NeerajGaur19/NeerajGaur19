@@ -37,3 +37,48 @@ A Seq2Seq model has two parts:
             ▼
     French Sentence
 
+
+### What does the Encoder do?
+
+The encoder reads one word at a time.
+
+        I
+        ↓
+        love
+        ↓
+        machine
+        ↓
+        learning
+
+After reading every word, it updates its hidden state.
+
+Let's imagine the hidden states look like this.
+
+        After "I"
+        
+        H1
+        
+        After "love"
+        
+        H2
+        
+        After "machine"
+        
+        H3
+        
+        After "learning"
+        
+        H4
+
+The important thing is:
+
+The decoder only receives H4 (the final hidden state).
+
+        I → H1
+        love → H2
+        machine → H3
+        learning → H4
+        
+        Decoder gets only H4
+
+Think of H4 as a summary of the whole sentence.
