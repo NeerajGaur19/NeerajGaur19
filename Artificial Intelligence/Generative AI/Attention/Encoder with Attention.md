@@ -30,6 +30,7 @@ Example attention weights:
 The output representation is:
 
 0.05V1​+0.10V2​+0.35V3​+0.50V4
+
 ​
 So "learning" pays the most attention to itself and to "machine."
 
