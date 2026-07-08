@@ -32,8 +32,6 @@ import seaborn as sns
 # **Load the Dataset:**
 
 
-Dataset Link:https://drive.google.com/file/d/16cg5Ksa8pG6EhYfOrbKz9j_01SEjzpYT/view?usp=sharing
-
 df=pd.read_csv('/content/creditcard.csv')
 
 df
