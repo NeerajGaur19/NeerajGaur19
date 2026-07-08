@@ -5,7 +5,7 @@ Time series modeling is a set of tools and techniques that model temporal or tim
 
 By analyzing historical data, we can identify different components in time series data such as trends, seasonality, and so on, and use these insights to make more informed business decisions.
 
-In this demonstration, we will explore a few different techniques for time series modeling. As we construct and evaluate our models, we'll gain insight into how different techniques can be used to handle common challenges in time series modeling.
+There are few different techniques for time series modeling. As we construct and evaluate our models, we'll gain insight into how different techniques can be used to handle common challenges in time series modeling.
 
 # Problem Statement
 
@@ -13,15 +13,19 @@ In this demonstration, we will apply time series modeling techniques to a real-w
 
 The problem statement for this demonstration can be summarized as follows:
 
-Given historical sales data of a company, forecast its future sales.
+      Given historical sales data of a company, forecast its future sales.
 
 By studying the forecast, the company can effectively plan and prepare their inventory to ensure that the right amount of stock is made ready over future months.
+
+---
 
 # Data Description
 
 You have been provided with a data set containing daily sales and profit data of the company for the period 2011 to 2014. The data set has the following three attributes:
 
 <img width="583" height="133" alt="image" src="https://github.com/user-attachments/assets/39fc0027-4476-4e9a-8625-2dedecc51970" />
+
+---
 
 # Outline
 
