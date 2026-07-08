@@ -1,4 +1,4 @@
-#dataset drive link: https://drive.google.com/file/d/1CnE8T3t7CsZi9HXe5hn_tTT_mrKvQJnp/view?usp=sharing
+#dataset drive link: 
 
 #Problem:
 - The dataset is a demographic census dataset.
