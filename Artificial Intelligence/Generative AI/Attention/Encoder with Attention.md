@@ -107,3 +107,8 @@ The decoder only receives H4 (the final hidden state).
         Decoder gets only H4
 
 Think of H4 as a summary of the whole sentence.
+
+
+<img width="1536" height="1024" alt="ChatGPT Image Jul 9, 2026, 12_00_22 AM" src="https://github.com/user-attachments/assets/8cf94b2a-f4d5-402f-b678-36f8f76fb14c" />
+
+
