@@ -17,7 +17,7 @@
 
 I am passionate about:
 - <a href = 'Artificial Intelligence'>Artificial Intelligence</a>
-- <a href = 'Machine Learning/ML_README.md'>Machine Learning</a>
+- <a href = 'Machine Learning'>Machine Learning</a>
 - Data Science
 - Data Visualization
 
