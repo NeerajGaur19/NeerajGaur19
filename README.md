@@ -16,7 +16,7 @@
 ## 🔹 About Me
 
 I am passionate about:
-- <a href = 'Artificial Intelligence/AI_Readme.md'>Artificial Intelligence</a>
+- <a href = 'Artificial Intelligence'>Artificial Intelligence</a>
 - <a href = 'Machine Learning/ML_README.md'>Machine Learning</a>
 - Data Science
 - Data Visualization
