@@ -345,7 +345,3 @@ This makes the word representation context-aware.
 
 <img width="447" height="95" alt="image" src="https://github.com/user-attachments/assets/6951ffb8-b78d-41c6-9cf4-58b039ce7549" />
 
-
-# Multi-Head Attention
-
-<img width="1536" height="1024" alt="Multi-Head Attention" src="https://github.com/user-attachments/assets/b56f42a5-323f-4bb1-98ed-3ffb9ffb3de5" />
