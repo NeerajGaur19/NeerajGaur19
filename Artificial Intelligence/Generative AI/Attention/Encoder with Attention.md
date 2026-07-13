@@ -362,7 +362,96 @@ Meaning
 
 The model has learned that machine should focus mostly on itself.
 
+## Step 9: Compute Context Vector
 
+Now multiply
+
+    Attention Weights × V
+
+    (4×4)
+    ×
+    (4×2)
+    =
+    (4×2)
+
+### Output
+    
+    Word	        Context Vector
+    I	            [6.32,6.71]
+    love	        [6.35,6.76]
+    machine	        [6.46,6.94]
+    learning	    [5.95,6.55]
+
+These are the new representations of the words.
+
+
+## What is a Context Vector?
+
+Originally
+
+    machine
+    
+    ↓
+    
+    Embedding
+    
+    [3,1,0,2]
+
+After self-attention
+
+    machine
+    
+    ↓
+    
+    Context Vector
+    
+    [6.46,6.94]
+
+Now the word machine contains information from
+
+* I
+* love
+* machine
+* learning
+
+instead of only itself.
+
+This makes the word representation context-aware.
+
+## Complete Self-Attention Pipeline
+
+        Sentence
+           │
+           ▼
+        Word Embeddings (X)
+           │
+           ▼
+        Multiply with WQ, WK, WV
+           │
+           ▼
+        Q       K       V
+           │
+           ▼
+        Q × Kᵀ
+           │
+           ▼
+        Scale by √dk
+           │
+           ▼
+        Softmax
+           │
+           ▼
+        Attention Weights
+           │
+           ▼
+        Multiply by V
+           │
+           ▼
+        Context Vectors
+
+# Key Formula
+
+<img width="447" height="95" alt="image" src="https://github.com/user-attachments/assets/6951ffb8-b78d-41c6-9cf4-58b039ce7549" />
 
 
 # Multi-Head Attention
