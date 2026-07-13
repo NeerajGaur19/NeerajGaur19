@@ -142,10 +142,6 @@ Assume embedding size = 4
     learning	[2, 2, 1, 0]
 
 
-# Multi-Head Attention
-
-<img width="1536" height="1024" alt="Multi-Head Attention" src="https://github.com/user-attachments/assets/b56f42a5-323f-4bb1-98ed-3ffb9ffb3de5" />
-
 The complete embedding matrix is
 
 <img width="258" height="152" alt="image" src="https://github.com/user-attachments/assets/996e76ac-3b0c-4599-bbcc-66d3198c309c" />
@@ -262,3 +258,114 @@ Query : What information am I looking for?
 Key : What information do I contain?
 
 Value : What information should I send if another word attends to me?
+
+## Step 6: Compute Attention Scores
+
+Now compare every Query with every Key.
+
+    Attention Scores = Q × Kᵀ
+
+Why transpose?
+
+    Q : (4×2)
+    
+    K : (4×2)
+    
+    Kᵀ : (2×4)
+    
+    Result
+    
+    (4×2) × (2×4)
+    
+    =
+    
+    (4×4)
+
+### Result
+
+<img width="905" height="282" alt="image" src="https://github.com/user-attachments/assets/151379b1-edb8-4f2d-b576-eb64372f0dc5" />
+
+### Interpretation:
+
+For the word machine
+
+    35 32 49 35
+
+means
+
+    Machine vs I
+
+    Machine vs love
+
+    Machine vs machine
+    
+    Machine vs learning
+    
+The highest score is
+
+    49
+
+which means
+
+    machine is most related to itself.
+
+## Step 7: Scale the Scores
+
+Large values can make Softmax unstable.
+
+Therefore divide by
+
+<img width="110" height="63" alt="image" src="https://github.com/user-attachments/assets/b95e147a-9b65-46bc-bff7-10f2a04041f1" />
+
+
+Here
+
+    dk = 2
+
+So
+
+<img width="135" height="43" alt="image" src="https://github.com/user-attachments/assets/589766e0-8a22-4c7d-928d-29a78079addb" />
+
+
+### Scaled scores become
+
+<img width="763" height="242" alt="image" src="https://github.com/user-attachments/assets/4e570de2-99d0-4424-a552-8d248b5b6617" />
+
+## Step 8: Apply Softmax
+
+Softmax converts scores into probabilities.
+
+Each row sums to 1.
+
+### Result
+
+<img width="752" height="251" alt="image" src="https://github.com/user-attachments/assets/965d748c-9953-432a-8a2c-4052ccdec42f" />
+
+Example
+
+For the word machine
+
+    0.06
+    0.03
+    0.81
+    0.10
+
+Meaning
+
+    6% attention to I
+    
+    3% attention to love
+    
+    81% attention to machine
+    
+    10% attention to learning
+
+The model has learned that machine should focus mostly on itself.
+
+
+
+
+# Multi-Head Attention
+
+<img width="1536" height="1024" alt="Multi-Head Attention" src="https://github.com/user-attachments/assets/b56f42a5-323f-4bb1-98ed-3ffb9ffb3de5" />
+
