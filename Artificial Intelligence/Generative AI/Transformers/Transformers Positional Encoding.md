@@ -330,6 +330,8 @@ The original Transformer paper does not learn the positional vectors.
 
 Instead, it computes them using sine and cosine functions.
 
+<img width="620" height="276" alt="image" src="https://github.com/user-attachments/assets/397d4aa1-599f-4118-ba73-d4ea2754b247" />
+
 For position pos and embedding dimension index i:
 
 <img width="330" height="122" alt="image" src="https://github.com/user-attachments/assets/eee307cf-925e-47bc-8d1a-e4a6f03f144e" />
