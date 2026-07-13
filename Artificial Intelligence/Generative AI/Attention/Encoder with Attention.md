@@ -9,6 +9,9 @@ English: "The cat sat on the mat."
 
 When translating the word "cat", you mainly need to pay attention to "cat" in the input, not every other word. Attention lets the model learn which words are most important at each step.
 
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/074b9172-6870-4222-85d9-b0c7aec2df58" />
+
+
 ### Step-by-step
 
 Suppose the input is:
