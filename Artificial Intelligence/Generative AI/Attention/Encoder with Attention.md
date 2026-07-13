@@ -109,9 +109,156 @@ The decoder only receives H4 (the final hidden state).
 Think of H4 as a summary of the whole sentence.
 
 
+## Self-Attention Mechanism (Step-by-Step with Real Numbers)
+
 <img width="1536" height="1024" alt="ChatGPT Image Jul 9, 2026, 12_00_22 AM" src="https://github.com/user-attachments/assets/8cf94b2a-f4d5-402f-b678-36f8f76fb14c" />
+
+### Problem Statement
+
+Consider the sentence:
+
+    "I love machine learning"
+
+The Transformer needs to understand the relationship between every word in the sentence.
+
+For example:
+
+* Does "machine" relate more to "learning"?
+* Does "love" relate more to "I"?
+* Which words should each word pay attention to?
+
+This is exactly what the Self-Attention Mechanism does.
+
+## Step 1: Convert Words into Embeddings
+
+Every word is converted into a numerical vector called an embedding.
+
+Assume embedding size = 4
+
+    Word	     Embedding
+    I	        [1, 0, 1, 2]
+    love	    [0, 2, 1, 1]
+    machine	    [3, 1, 0, 2]
+    learning	[2, 2, 1, 0]
+
 
 # Multi-Head Attention
 
 <img width="1536" height="1024" alt="Multi-Head Attention" src="https://github.com/user-attachments/assets/b56f42a5-323f-4bb1-98ed-3ffb9ffb3de5" />
 
+The complete embedding matrix is
+
+<img width="258" height="152" alt="image" src="https://github.com/user-attachments/assets/996e76ac-3b0c-4599-bbcc-66d3198c309c" />
+
+Shape: 
+
+    (4 × 4)
+    4 words
+    Embedding dimension = 4
+
+Each row represents one word.
+
+## Step 2: Create Query (Q), Key (K) and Value (V)
+
+Self-attention does not use embeddings directly.
+
+Instead, the embeddings are transformed into three different representations.
+
+The Transformer learns three weight matrices:
+
+    WQ
+    WK
+    WV
+
+These matrices are initialized randomly and learned during training.
+
+Suppose
+
+    WQ (4×2)
+    
+    1 0
+    0 1
+    1 1
+    0 2
+
+    WK (4×2)
+    
+    0 1
+    1 1
+    2 0
+    1 2
+    
+    WV (4×2)
+    
+    2 1
+    1 0
+    0 1
+    1 2
+
+Now compute
+    
+    Q = X × WQ
+    
+    K = X × WK
+    
+    V = X × WV
+
+## Step 3: Compute Query Matrix
+
+Multiply
+
+    Q = X × WQ
+
+Result
+    
+    Word	    Query
+    I	        [2,5]
+    love	    [1,5]
+    machine	    [3,5]
+    learning	[3,3]
+
+Shape
+
+    Q = (4 × 2)
+
+## Step 4: Compute Key Matrix
+
+    K = X × WK
+
+Result
+
+    Word	     Key
+    I	        [4,5]
+    love	    [4,4]
+    machine	    [3,8]
+    learning	[5,4]
+
+Shape
+
+    K = (4 × 2)
+
+## Step 5: Compute Value Matrix
+
+V = X × WV
+
+Result
+    
+    Word	    Value
+    I	        [4,6]
+    love	    [3,3]
+    machine	    [8,7]
+    learning	[6,3]
+
+Shape
+
+    V = (4 × 2)
+
+## What do Query, Key and Value mean?
+
+Think of them like this:
+
+Query : What information am I looking for?
+
+Key : What information do I contain?
+
+Value : What information should I send if another word attends to me?
