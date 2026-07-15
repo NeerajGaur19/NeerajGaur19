@@ -9,7 +9,7 @@ Before understanding Positional Encoding, let's compare how RNNs and Transformer
 Suppose the sentence is
 
     I love machine learning
-
+ 
 RNN processes words one by one.
 
     I
