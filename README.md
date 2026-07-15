@@ -10,7 +10,7 @@
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=neerajgaur&label=Profile%20Views&color=0A84FF&style=flat" alt="profile views"/>
 </p>
- 
+  
 ---
 
 ## 🔹 About Me
