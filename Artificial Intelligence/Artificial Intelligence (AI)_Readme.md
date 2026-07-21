@@ -32,7 +32,7 @@ AI is the broader concept of making machines intelligent.
 ### Types of AI Tasks
 
 <img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/d8d170ea-8df1-47e5-aa67-322f9fd19bc8" />
-
+ 
 
 ## Real-Life AI Examples
 
