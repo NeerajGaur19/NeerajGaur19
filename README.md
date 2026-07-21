@@ -4,7 +4,7 @@
 <h1 align="center">Hi 👋, I'm <span style="color:#0A84FF">Neeraj Gaur</span></h1>
 <h3 align="center">AI-Assisted Testing | AI & Machine Learning & Data Science Enthusiast | Senior Test Manager</h3>
 
----
+--- 
 
 <!-- Profile Views & Stats -->
 <p align="center">
