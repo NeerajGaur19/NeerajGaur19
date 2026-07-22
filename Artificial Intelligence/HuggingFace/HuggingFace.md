@@ -12,14 +12,14 @@ Think of it like this:
 
 ## Why
 
-Without Hugging Face:
+### Without Hugging Face:
 
     Collect huge dataset
     Train GPT/BERT for weeks
     Need multiple GPUs
     Millions of parameters
 
-With Hugging Face:
+### With Hugging Face:
 
     Download an already trained model
     Use it in 5 lines of code
@@ -46,30 +46,31 @@ Instead of training from scratch, you reuse models created by researchers and co
         Your AI Application
 
 
-Main Components
-1. Hugging Face Hub
+## Main Components
+
+### 1. Hugging Face Hub
 
 This is an online repository.
 
 It contains:
 
-Millions of models
-Large collections of datasets
-AI applications (Spaces)
-Documentation
-Model versions
+    Millions of models
+    Large collections of datasets
+    AI applications (Spaces)
+    Documentation
+    Model versions
 
 For example:
 
-bert-base-uncased
-
-gpt2
-
-facebook/bart-large-cnn
-
-google/flan-t5-large
-
-meta-llama/Llama-3
-
+    bert-base-uncased
+    
+    gpt2
+    
+    facebook/bart-large-cnn
+    
+    google/flan-t5-large
+    
+    meta-llama/Llama-3
+    
 The Hub hosts millions of models, datasets, and interactive AI apps ("Spaces"), along with versioning and collaboration features.
   
