@@ -270,3 +270,58 @@ Example
     )
 
 Auto classes automatically load the correct implementation.
+
+
+## Fine-Tuning Models
+
+Suppose GPT or BERT knows general English.
+
+You want it to classify medical reports.
+
+Instead of training again:
+
+    Pretrained Model
+            ↓
+    Your Dataset
+            ↓
+    Fine-tune
+            ↓
+    Medical AI Model
+
+This saves enormous time and compute.
+
+## Hugging Face Spaces
+
+Spaces let you host AI applications in your browser.
+
+You can build apps using:
+
+    Gradio
+    Streamlit
+    Docker
+
+Example:
+
+    Image Classifier
+    
+    Upload Image
+    
+    ↓
+    
+    Prediction:
+    Golden Retriever
+
+No backend server required for many demos.
+
+Model Cards
+
+Every model has documentation explaining:
+
+    Model architecture
+    Training data
+    Intended use
+    Limitations
+    Performance
+    License
+
+Always read the model card before using a model.
