@@ -140,3 +140,27 @@ Then
 Output
 
     [101, 1045, 2293, 9932, 102]
+
+
+## 5. Pipelines
+
+One of the easiest features.
+
+Instead of writing many lines of code,
+
+Just do:
+
+    from transformers import pipeline
+    
+    classifier = pipeline("sentiment-analysis")
+    
+    classifier("I love ChatGPT.")
+
+Output
+
+    POSITIVE
+    0.999
+
+Few lines only.
+
+
