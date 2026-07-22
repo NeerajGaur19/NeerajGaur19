@@ -164,3 +164,88 @@ Output
 Few lines only.
 
 
+## Tasks Supported
+
+Hugging Face supports many AI tasks:
+
+        Task	                                Example
+    Sentiment Analysis	                    Positive/Negative
+    Text Classification	                    Spam detection
+    Named Entity Recognition	            Person, Place
+    Question Answering	                    BERT QA
+    Text Summarization	                    BART
+    Translation	                            English → French
+    Text Generation	                        GPT
+    Fill Mask	                            BERT
+    Image Classification	                ViT
+    Object Detection	                    DETR
+    Speech Recognition	                    Whisper
+    Text-to-Speech	                        TTS
+    Image Generation	                    Stable Diffusion
+
+## Example 1: Sentiment Analysis
+
+    from transformers import pipeline
+    
+    classifier = pipeline("sentiment-analysis")
+    
+    result = classifier("This movie is amazing!")
+    
+    print(result)
+    
+Output
+
+    [
+     {'label':'POSITIVE',
+      'score':0.999}
+    ]
+
+## Example 2: Text Generation
+
+    from transformers import pipeline
+    
+    generator = pipeline("text-generation",
+                         model="gpt2")
+    
+    generator(
+        "Artificial Intelligence is",
+        max_length=50
+    )
+
+Output
+
+    Artificial Intelligence is changing
+    every industry...
+
+
+## Example 3: Translation
+
+    translator = pipeline(
+        "translation_en_to_fr"
+    )
+    
+    translator("How are you?")
+    
+Output
+
+    Comment allez-vous ?
+    Example 4: Summarization
+    summarizer = pipeline(
+        "summarization"
+    )
+    
+    summarizer(long_text)
+
+## Example 5: Question Answering
+
+    qa = pipeline("question-answering")
+    
+    qa(
+     question="Where is Taj Mahal?",
+     context="Taj Mahal is located in Agra."
+    )
+
+Output
+
+    Agra
+
