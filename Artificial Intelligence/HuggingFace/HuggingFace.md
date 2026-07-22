@@ -4,11 +4,11 @@ Hugging Face is an open-source AI company and ecosystem that provides pre-traine
 
 Think of it like this:
 
-    Platform	          Purpose
-    GitHub	            Stores source code
-    Docker Hub	        Stores Docker images
-    PyPI	              Stores Python packages
-    Hugging Face Hub	  Stores AI models and datasets
+        Platform	                  Purpose
+    GitHub	                  Stores source code
+    Docker Hub	              Stores Docker images
+    PyPI	                  Stores Python packages
+    Hugging Face Hub	      Stores AI models and datasets
 
 ## Why
 
