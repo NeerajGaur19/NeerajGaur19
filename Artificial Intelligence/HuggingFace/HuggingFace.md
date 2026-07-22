@@ -313,7 +313,7 @@ Example:
 
 No backend server required for many demos.
 
-Model Cards
+## Model Cards
 
 Every model has documentation explaining:
 
@@ -325,3 +325,16 @@ Every model has documentation explaining:
     License
 
 Always read the model card before using a model.
+
+## Dataset Cards
+
+Datasets also include documentation describing:
+
+    Source
+    Features
+    Splits (train/validation/test)
+    Licensing
+    Suggested uses
+    Potential biases
+
+These help you understand whether a dataset is appropriate for your task.
