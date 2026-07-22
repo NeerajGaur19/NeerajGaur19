@@ -41,4 +41,49 @@ To calculate distance in hierarchial clustering, we use Euclidean Distance.
 <img width="820" height="239" alt="image" src="https://github.com/user-attachments/assets/722e59d1-f6d9-4106-9249-9e51c7bfd7ad" />
 
 
+## Mathematical working of Agglomerative Clustering
+
+Lets say there are 5 data points. A, B , C , D, E are the data points.
+
+## Proximity matrix
+
+<img width="894" height="374" alt="image" src="https://github.com/user-attachments/assets/18541daa-d251-4d39-99a6-1aaa6354af59" />
+
+Now A and E are closest, so A,E is now one cluster. New proximity matrix will be
+
+<img width="939" height="453" alt="image" src="https://github.com/user-attachments/assets/c64bb430-f056-4f93-a406-af1cb0f5abb3" />
+
+how we calculate distance between (A,E) to B ?
+
+For this we use
+
+## linkage methods
+
+Note: Each linkage method may indicate different clusters are closest to each other. We apply all linkage and whichever is giving best result that cluster points are kept together next iteration.
+
+How do we decide best result is that where intercluster disctance is high and each cluster is well defined.
+
+    Single Linkage
+    
+    Complete Linkage
+    
+    Average Linkage
+    
+    Word Linkage
+
+<img width="372" height="259" alt="image" src="https://github.com/user-attachments/assets/1d341960-2db8-450c-9977-511e17c062d9" />
+
+## 1. Single Linkage
+
+Distance between their two closest point in clusters is termed as Single linkage.
+
+<img width="321" height="263" alt="image" src="https://github.com/user-attachments/assets/d78ec58f-3cf9-4874-bffb-eafe629ed119" />
+
+## 2. Complete Linkage
+
+Distance between their two farthest point in clusters is termed as Complete linkage.
+
+<img width="310" height="257" alt="image" src="https://github.com/user-attachments/assets/6ca48865-0fa8-45a3-a6e4-3926bee8bb64" />
+
+
 ## 2. Divisive clustering
