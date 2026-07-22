@@ -7,3 +7,22 @@
               AutoModelForQuestionAnswering	                          Question answering
               AutoModelForMaskedLM	                                  Masked language modeling (e.g., BERT)
               AutoModelForCausalLM	                                  Text generation (e.g., GPT)
+
+
+# Supported Pipelines
+
+    pipeline("text-classification")
+    
+    pipeline("text-generation")
+    
+    pipeline("summarization")
+    
+    pipeline("translation")
+    
+    pipeline("question-answering")
+    
+    pipeline("fill-mask")
+    
+    pipeline("ner")
+
+  
