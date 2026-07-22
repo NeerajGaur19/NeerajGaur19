@@ -249,3 +249,24 @@ Output
 
     Agra
 
+## Auto Classes
+
+Instead of loading a specific class:
+
+    BertModel()
+
+Use
+
+    AutoModel
+    AutoTokenizer
+    AutoConfig
+
+Example
+
+    from transformers import AutoTokenizer
+    
+    tokenizer = AutoTokenizer.from_pretrained(
+        "bert-base-uncased"
+    )
+
+Auto classes automatically load the correct implementation.
