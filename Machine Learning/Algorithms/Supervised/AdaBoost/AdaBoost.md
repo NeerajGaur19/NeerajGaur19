@@ -271,3 +271,85 @@ Easy examples:
     
     ❌ Weak on very complex datasets sometimes
 
+    
+    ##AdaBoost in Scikit-Learn
+    
+    from sklearn.ensemble import AdaBoostClassifier
+    
+    from sklearn.tree import DecisionTreeClassifier
+    
+    model = AdaBoostClassifier(
+        estimator=DecisionTreeClassifier(max_depth=1),
+        n_estimators=50,
+        learning_rate=1.0,
+        random_state=42
+    )
+    
+    model.fit(X_train, y_train)
+
+## Important Parameters
+
+### n_estimators
+
+Number of weak learners.
+
+n_estimators=50
+
+More estimators:
+
+* can improve learning
+* but may increase time
+
+### learning_rate
+
+Controls contribution of each learner. In Machine Learning, Learning Rate controls: “How much should the model learn/update in one step?”
+
+It is usually represented by:
+
+learning_rate=1.0
+
+Smaller learning rate:
+
+* slower learning
+* sometimes better accuracy
+
+### Classification vs Regression
+
+AdaBoost supports both:
+
+Classification
+
+* AdaBoostClassifier
+
+Regression
+
+* AdaBoostRegressor
+
+## Visualization of AdaBoost Thinking
+
+    Model 1 → learns basic patterns
+    
+    ↓
+    
+    Find mistakes
+    
+    ↓
+    
+    Model 2 → focuses on mistakes
+    
+    ↓
+    
+    Find remaining mistakes
+    
+    ↓
+    
+    Model 3 → focuses more
+    
+    ↓
+    
+    Combine all models
+    
+    ↓
+    
+    Strong prediction
+
