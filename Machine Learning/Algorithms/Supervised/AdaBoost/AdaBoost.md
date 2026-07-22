@@ -199,5 +199,52 @@ Again:
 
 This repeats many times.
 
+### Final Prediction
+
+At the end:
+
+all weak learners vote together
+
+better learners get stronger vote
+
+Example:
+
+<img width="778" height="204" alt="image" src="https://github.com/user-attachments/assets/5f3ea9cd-db3b-402b-a3c2-84cbd131ce8c" />
+
+Final result: Fail wins because higher weighted votes
+
+## Important Concepts
+
+### 1. Sequential Learning
+
+Models are built one after another.
+
+Unlike Random Forest:
+
+* trees work independently
+
+In AdaBoost:
+
+* each model depends on previous model
+
+### 2. Focus on Errors
+
+Main strength of AdaBoost:
+
+* It learns from mistakes
+
+### 3. Weighted Data
+
+Every row has a weight.
+
+Hard examples:
+
+* gain higher weights
+
+Easy examples:
+
+* gain lower weights
+
+
 
 
