@@ -163,4 +163,25 @@ If error is small:
 
 Meaning:
 
-This model is trustworthy
+    * This model is trustworthy
+
+## STEP 5 — Increase Weights of Wrong Predictions
+
+Wrongly classified rows get higher weight.
+
+Example:
+
+Before:
+
+    B → 0.25
+
+After:
+
+    B → 0.50
+
+Correct rows get lower weights.
+
+Why?
+
+    Because next model should focus more on difficult cases.
+
