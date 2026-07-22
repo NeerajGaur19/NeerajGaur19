@@ -20,7 +20,8 @@ Step 3 : Points closer to each other (distance between points is less compared t
 
 <img width="820" height="435" alt="image" src="https://github.com/user-attachments/assets/6f77b885-b74b-4619-92ee-808be72a92d4" />
 
-<img width="630" height="351" alt="image" src="https://github.com/user-attachments/assets/e7067586-2b91-48ed-8081-cd27b46ac602" />
+
+<img width="800" height="451" alt="image" src="https://github.com/user-attachments/assets/e7067586-2b91-48ed-8081-cd27b46ac602" />
 
 0 and 4 are closer so placed in one cluster. Next time , it is observed that 1 and 5 are closer so another cluster. Then 2 and 3 are closer so another cluster.
 
@@ -30,7 +31,14 @@ To visualize the clusters, we use dendogram. Dendogram is nothing but another vi
 
 ## Dendrogram
 
+<img width="703" height="456" alt="image" src="https://github.com/user-attachments/assets/10df4465-df56-4920-b17f-b7e8a35df8f8" />
 
+
+<img width="792" height="454" alt="image" src="https://github.com/user-attachments/assets/82895e38-03bd-40af-b0db-5478e91707d5" />
+
+To calculate distance in hierarchial clustering, we use Euclidean Distance.
+
+<img width="820" height="239" alt="image" src="https://github.com/user-attachments/assets/722e59d1-f6d9-4106-9249-9e51c7bfd7ad" />
 
 
 ## 2. Divisive clustering
