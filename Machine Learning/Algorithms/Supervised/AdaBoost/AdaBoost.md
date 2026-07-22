@@ -90,9 +90,77 @@ Suppose it predicts:
 
 <img width="836" height="253" alt="image" src="https://github.com/user-attachments/assets/9dc152e9-dac2-433e-b6d8-99583fd1708d" />
 
+Perfect prediction.
 
+But usually some mistakes happen.
 
+Let’s assume:
 
+<img width="825" height="90" alt="image" src="https://github.com/user-attachments/assets/4bf04ccb-6415-4b22-bf88-1e7c1a8ce6a0" />
 
+## STEP 3 — Calculate Error
 
+Error = sum of weights of wrong predictions.
 
+Suppose:
+
+* Only B wrong
+* Weight of B = 0.25
+
+Then:
+
+* Error=0.25
+
+### Why here error = sum of weights of wrong predictions??
+
+In normal machine learning: Every row has equal importance.
+
+Error = Number of wrong predictions / Total predictions
+
+Example:
+
+Total : 10
+
+Wrong : 2
+
+Error:
+
+* Error = 2/10 = 0.2
+
+Every row has equal importance.
+
+## But AdaBoost Thinks Differently
+
+### AdaBoost says:
+
+“Some data points are more important than others.”
+
+So instead of counting mistakes equally, AdaBoost uses weights.
+
+## STEP 4 — Calculate Model Performance
+
+AdaBoost calculates importance of this stump.
+
+Formula:
+
+α = 1/2 ln ((1-Error)/Error)
+
+Note: Here ln is natural logarithm and base of logarithm is e ≈ 2.718
+
+Meaning: ln(1.5) asks: “e raised to what power gives 1.5?” 
+Answer: <img width="126" height="46" alt="image" src="https://github.com/user-attachments/assets/699b79d9-c403-45e8-92eb-0df1a299fd41" />
+
+That is why: ln(1.5)≈0.405
+
+Where:
+
+    * smaller error → higher alpha
+    * higher alpha → model more important
+
+If error is small:
+
+    * alpha becomes large
+
+Meaning:
+
+This model is trustworthy
