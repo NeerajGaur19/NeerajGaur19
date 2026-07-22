@@ -172,7 +172,7 @@ Wrongly classified rows get higher weight.
 Example:
 
 Before:
-
+    
     B → 0.25
 
 After:
@@ -184,4 +184,20 @@ Correct rows get lower weights.
 Why?
 
     Because next model should focus more on difficult cases.
+
+## STEP 6 — Train Next Weak Learner
+
+Now second stump is trained using updated weights.
+
+This stump focuses more on row B.
+
+Again:
+
+* calculate error
+* calculate alpha
+* update weights
+
+This repeats many times.
+
+
 
