@@ -338,3 +338,59 @@ Datasets also include documentation describing:
     Potential biases
 
 These help you understand whether a dataset is appropriate for your task.
+
+## Common Libraries in Hugging Face
+
+    Library	                    Purpose
+    transformers	            Pretrained transformer models
+    datasets	                Load datasets
+    tokenizers	                Fast tokenization
+    accelerate	                Multi-GPU/distributed training
+    evaluate	                Model evaluation
+    peft	                    Parameter-efficient fine-tuning (e.g., LoRA)
+    diffusers	                Diffusion models (Stable Diffusion)
+
+## Complete Workflow
+
+    Dataset
+       │
+       ▼
+    Tokenizer
+       │
+       ▼
+    Token IDs
+       │
+       ▼
+    Transformer Model
+       │
+       ▼
+    Predictions
+       │
+       ▼
+    Fine-tuning
+       │
+       ▼
+    Save Model
+       │
+       ▼
+    Upload to Hugging Face Hub
+
+## Where Hugging Face Fits with BERT and GPT
+
+    Transformer Paper (2017)
+              │
+              ▼
+          BERT, GPT, T5, BART
+              │
+              ▼
+    Pretrained Models
+              │
+              ▼
+    Uploaded to Hugging Face Hub
+              │
+              ▼
+    Developers download them
+              │
+              ▼
+    Build Chatbots, NLP Apps, LLM Applications
+
