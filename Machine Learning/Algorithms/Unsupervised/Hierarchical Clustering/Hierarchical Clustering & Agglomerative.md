@@ -134,6 +134,24 @@ And B to (C,D) is 5. So, we take maximum distance as per complete linkage defini
 
 <img width="505" height="409" alt="image" src="https://github.com/user-attachments/assets/a7336f12-f4fd-4004-a7fc-b7891d97e7e9" />
 
+Dendogram is made like this based on above final cluster
+
+<img width="471" height="445" alt="image" src="https://github.com/user-attachments/assets/ac13f8c5-e596-4d9f-b81c-453cb85cbcee" />
+
+Intercluster distance (distance bwteen clusters) should be as high as possible and intracluster should be low (distance within cluster).
+Then only cluster will be compact, data points closer to each other within a cluster but distance between each such cluster high. 
+So, clusters are farther away from each other.
+
+<img width="608" height="443" alt="image" src="https://github.com/user-attachments/assets/c95b5a02-dbe3-4e46-a316-aefc3c45226c" />
+
+## How to use dendogram to find the best k-value (number of clusters).
+
+In below diagram, find the vertical line that is maximum such that we can travel between connecting points without corssing other points. Here 1 and 2 is the maximum travel line (vertical line).
+
+Then the horizontal line drawn cuts it at 3 places as shown. So, k=3.
+
+<img width="716" height="505" alt="image" src="https://github.com/user-attachments/assets/c0b59424-0e80-4ce4-8cea-7638527137a9" />
+
 
 
 ## 2. Divisive clustering
