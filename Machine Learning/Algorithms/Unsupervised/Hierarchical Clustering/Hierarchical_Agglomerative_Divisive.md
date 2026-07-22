@@ -115,5 +115,25 @@ To combine next points into cluster we see that C and D are closest.
 
 <img width="530" height="314" alt="image" src="https://github.com/user-attachments/assets/54c5ea3b-202e-4441-9866-3afb6038e0c7" />
 
+Using Complete linkage (Farthest data point)
+
+<img width="503" height="334" alt="image" src="https://github.com/user-attachments/assets/4c95ff8a-20cd-40b3-932c-d5db19900bf3" />
+
+Smallest distance indicate next cluster to be formed. Here we see that (A,E) is close to B cluster.
+
+New proximity matrix is formed. Here we see that (A,E) to (C,D) is 9
+
+And B to (C,D) is 5. So, we take maximum distance as per complete linkage definition (farthest distance).
+
+<img width="835" height="464" alt="image" src="https://github.com/user-attachments/assets/6e1fa290-9270-44cc-805b-08ba573a1ec7" />
+
+
+<img width="817" height="503" alt="image" src="https://github.com/user-attachments/assets/cb23d5e5-f51a-4395-a30d-f0b22c8813cc" />
+
+## Final cluster
+
+<img width="505" height="409" alt="image" src="https://github.com/user-attachments/assets/a7336f12-f4fd-4004-a7fc-b7891d97e7e9" />
+
+
 
 ## 2. Divisive clustering
