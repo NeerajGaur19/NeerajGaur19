@@ -85,5 +85,23 @@ Distance between their two farthest point in clusters is termed as Complete link
 
 <img width="310" height="257" alt="image" src="https://github.com/user-attachments/assets/6ca48865-0fa8-45a3-a6e4-3926bee8bb64" />
 
+## 3. Average Linkage
+
+Distance between centroids of clusters is termed as average linkage.
+
+<img width="342" height="264" alt="image" src="https://github.com/user-attachments/assets/0d1aa873-c77a-4e5d-88f9-46d09ad6324a" />
+
+### How we get centroid to centroid distance ?
+
+Average of distances : Distance of each data point in one cluster to other points of 2nd cluster.
+
+For example heredistance between 4 data points to each of 5 points in 2nd cluster and then we take average of those distances.
+
+<img width="374" height="266" alt="image" src="https://github.com/user-attachments/assets/38f6a0ea-4006-43f0-902a-54c1bad64d52" />
+
+## 4. Ward Linkage
+
+Sum of sqaure of all the points of one cluster to distance with all the points of another cluster.
+
 
 ## 2. Divisive clustering
