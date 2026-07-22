@@ -20,6 +20,17 @@ Step 3 : Points closer to each other (distance between points is less compared t
 
 <img width="820" height="435" alt="image" src="https://github.com/user-attachments/assets/6f77b885-b74b-4619-92ee-808be72a92d4" />
 
+<img width="630" height="351" alt="image" src="https://github.com/user-attachments/assets/e7067586-2b91-48ed-8081-cd27b46ac602" />
+
+0 and 4 are closer so placed in one cluster. Next time , it is observed that 1 and 5 are closer so another cluster. Then 2 and 3 are closer so another cluster.
+
+<img width="710" height="449" alt="image" src="https://github.com/user-attachments/assets/f234fd78-f624-483f-bc61-22c38a446ae0" />
+
+To visualize the clusters, we use dendogram. Dendogram is nothing but another visual representation of clustering process.
+
+## Dendrogram
+
+
 
 
 ## 2. Divisive clustering
