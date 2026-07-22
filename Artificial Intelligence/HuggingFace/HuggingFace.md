@@ -74,3 +74,69 @@ For example:
     
 The Hub hosts millions of models, datasets, and interactive AI apps ("Spaces"), along with versioning and collaboration features.
   
+## 2. Transformers Library
+
+This is the most famous library.
+
+Install:
+
+pip install transformers
+
+It provides implementations of:
+
+    BERT
+    GPT-2
+    GPT-Neo
+    BART
+    T5
+    RoBERTa
+    DistilBERT
+    LLaMA
+    Mistral
+    Falcon
+    Qwen
+    BLOOM
+
+Instead of writing Transformer architecture yourself:
+
+    from transformers import AutoModel
+
+One line loads a trained model.
+
+## 3. Datasets Library
+
+Install:
+
+    pip install datasets
+
+Example:
+
+    from datasets import load_dataset
+    
+    dataset = load_dataset("imdb")
+
+Now you have the IMDb movie review dataset.
+
+No downloading manually.
+
+The datasets library provides one-line access to many datasets from the Hub and supports efficient loading, preprocessing, and streaming.
+
+## 4. Tokenizers Library
+
+Very fast tokenizer library.
+
+Example:
+
+    from transformers import AutoTokenizer
+    
+    tokenizer = AutoTokenizer.from_pretrained(
+        "bert-base-uncased"
+    )
+
+Then
+
+    tokens = tokenizer("I love AI")
+
+Output
+
+    [101, 1045, 2293, 9932, 102]
