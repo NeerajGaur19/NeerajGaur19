@@ -103,5 +103,17 @@ For example heredistance between 4 data points to each of 5 points in 2nd cluste
 
 Sum of sqaure of all the points of one cluster to distance with all the points of another cluster.
 
+<img width="471" height="268" alt="image" src="https://github.com/user-attachments/assets/9eee377b-4b92-4f08-b6f9-7641c98149b9" />
+
+<img width="771" height="345" alt="image" src="https://github.com/user-attachments/assets/86d4b32b-f69c-4a31-93b0-f9b9ec924790" />
+
+For example lets use, complete Linkage method
+
+<img width="449" height="312" alt="image" src="https://github.com/user-attachments/assets/2986c7b5-8c8b-46cb-bf89-df68c5f68071" />
+
+To combine next points into cluster we see that C and D are closest.
+
+<img width="530" height="314" alt="image" src="https://github.com/user-attachments/assets/54c5ea3b-202e-4441-9866-3afb6038e0c7" />
+
 
 ## 2. Divisive clustering
