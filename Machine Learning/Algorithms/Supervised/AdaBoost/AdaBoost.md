@@ -221,17 +221,17 @@ Models are built one after another.
 
 Unlike Random Forest:
 
-* trees work independently
+    * trees work independently
 
 In AdaBoost:
 
-* each model depends on previous model
+    * each model depends on previous model
 
 ### 2. Focus on Errors
 
 Main strength of AdaBoost:
 
-* It learns from mistakes
+    * It learns from mistakes
 
 ### 3. Weighted Data
 
@@ -239,12 +239,35 @@ Every row has a weight.
 
 Hard examples:
 
-* gain higher weights
+    * gain higher weights
 
 Easy examples:
 
-* gain lower weights
+    * gain lower weights
 
 
+<img width="957" height="439" alt="image" src="https://github.com/user-attachments/assets/fbd712cb-1fb6-4fb5-ab7f-74ce233908f6" />
 
+
+# Advantages of AdaBoost
+
+    ✅ Simple and powerful
+    
+    ✅ Improves weak models
+    
+    ✅ Good accuracy
+    
+    ✅ Less parameter tuning
+    
+    ✅ Works well for classification
+
+# Disadvantages
+    
+    ❌ Sensitive to noisy data
+    
+    ❌ Sensitive to outliers
+    
+    ❌ Sequential training can be slower
+    
+    ❌ Weak on very complex datasets sometimes
 
