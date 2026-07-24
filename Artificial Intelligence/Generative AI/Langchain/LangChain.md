@@ -1,6 +1,5 @@
 # LangChain Ecosystem
 
-
                      ┌──────────────────────────┐
                      │      LLM Providers       │
                      │ OpenAI, Gemini, Claude   │
@@ -138,18 +137,18 @@ John is 30 years old.
 
 Load data from
 
-    PDF
-    Word
-    CSV
-    Excel
-    Websites
-    YouTube
-    Notion
-    Google Drive
+            PDF
+            Word
+            CSV
+            Excel
+            Websites
+            YouTube
+            Notion
+            Google Drive
 
 Example
 
-    loader = PyPDFLoader("book.pdf")
+      loader = PyPDFLoader("book.pdf")
 
 ## 6. Text Splitters
 
