@@ -190,3 +190,124 @@ Example
         ↓
         
         Sunny
+
+# Types of States
+
+## Absorbing State
+
+Once entered, it cannot be left.
+
+Example
+
+    Graduated
+    
+    ↓
+    
+    100% Graduated
+
+Transition
+
+    Graduate → Graduate = 1
+
+
+## Transient State
+
+Eventually leaves the state.
+
+Example
+
+    Browsing
+    
+    ↓
+    
+    Purchase
+
+Browsing is transient.
+
+## Recurrent State
+
+The process will eventually return to the state.
+
+Example
+
+    Sunny
+    
+    ↓
+    
+    Rainy
+    
+    ↓
+    
+    Sunny
+
+---
+
+# Applications
+
+## Google PageRank
+
+Google originally used a Markov Chain to rank web pages.
+
+Web pages = States
+
+Hyperlinks = Transitions
+
+The probability of moving between pages determines importance.
+
+## NLP (Before Deep Learning)
+
+Markov Chains generated text.
+
+Example
+
+    I
+    
+    ↓
+    
+    Love
+    
+    ↓
+    
+    Machine
+    
+    ↓
+    
+    Learning
+
+Each next word depends only on the current word.
+
+This idea evolved into N-grams and Hidden Markov Models (HMMs).
+
+## Speech Recognition
+
+Earlier speech recognition systems heavily relied on Hidden Markov Models (HMMs), which are built upon Markov Chains.
+
+## Stock Market Modeling
+
+Market states
+
+    Bull
+    
+    Bear
+    
+    Stable
+    
+Transition probabilities help model regime changes.
+
+## Weather Forecasting
+
+Current weather predicts tomorrow's weather.
+
+## Robot Navigation
+
+A robot moves
+
+    North
+    
+    South
+    
+    East
+    
+    West
+
+Each movement has a probability.
