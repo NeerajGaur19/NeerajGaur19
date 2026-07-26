@@ -53,15 +53,15 @@ I am passionate about:
       
       1.2  Classification
     
-        - <a href='Machine Learning/Algorithms/Supervised/Classification/Logistic Regression'>Logistic Regression</a>
-        - <a href='Machine Learning/Algorithms/Supervised/Classification/K-Nearest Neighbors/K-Nearest Neighbors (KNN) Theory.md'>K-Nearest Neighbors (KNN)</a>
+        - <a href='Artificial Intelligence/Machine Learning/Algorithms/Supervised/Classification/Logistic Regression'>Logistic Regression</a>
+        - <a href='Artificial Intelligence/Machine Learning/Algorithms/Supervised/Classification/K-Nearest Neighbors/K-Nearest Neighbors (KNN) Theory.md'>K-Nearest Neighbors (KNN)</a>
         - Support Vector Machine (SVM)
         - Naive Bayes
-        - <a href='Machine Learning/Algorithms/Supervised/Classification/Decision Tree Classifier'>Decision Tree</a>
-        - <a href='Machine Learning/Algorithms/Supervised/Classification/Random Forest Classifier'>Random Forest</a>
-        - <a href='Machine Learning/Algorithms/Supervised/Gradient Boosting'>Gradient Boosting</a>
+        - <a href='Artificial Intelligence/Machine Learning/Algorithms/Supervised/Classification/Decision Tree Classifier'>Decision Tree</a>
+        - <a href='Artificial Intelligence/Machine Learning/Algorithms/Supervised/Classification/Random Forest Classifier'>Random Forest</a>
+        - <a href='Artificial Intelligence/Machine Learning/Algorithms/Supervised/Gradient Boosting'>Gradient Boosting</a>
         - XGBoost
-        - <a href='Machine Learning/Algorithms/Supervised/AdaBoost'>ADABoost</a>
+        - <a href='Artificial Intelligence/Machine Learning/Algorithms/Supervised/AdaBoost'>ADABoost</a>
         - <A href = 'Artificial Intelligence/Neural Network'>Neural Networks (MLP)</a>
         - <a href ='Artificial Intelligence/Neural Network'>Deep Learning (CNN, RNN)</a>
 
@@ -69,14 +69,14 @@ I am passionate about:
 
     2.1  Clustering
     
-      - <a href = 'Machine Learning/Algorithms/Unsupervised/K-Means'>K-Means</a>
-      - <a href = 'Machine Learning/Algorithms/Unsupervised/Hierarchical Clustering'>Hierarchical Clustering</a>
+      - <a href = 'Artificial Intelligence/Machine Learning/Algorithms/Unsupervised/K-Means'>K-Means</a>
+      - <a href = 'Artificial Intelligence/Machine Learning/Algorithms/Unsupervised/Hierarchical Clustering'>Hierarchical Clustering</a>
       - Gaussian Mixture Model (GMM)
     
-3. <a href = 'Machine Learning/Algorithms/Unsupervised/Dimensionality Reduction Technique.md'>Dimensionality Reduction</a>
+3. <a href = 'Artificial Intelligence/Machine Learning/Algorithms/Unsupervised/Dimensionality Reduction Technique.md'>Dimensionality Reduction</a>
     
-      - <a href='Machine Learning/Algorithms/Dimensionality Reduction Technique/Principal Component Analysis'>Princial Component Analysis (PCA)</a>
-      - <a href='Machine Learning/Algorithms/Dimensionality Reduction Technique/Linear Discriminant Analysis (LDA)'>Linear Discriminant Analysis (LDA)</a>
+      - <a href='Artificial Intelligence/Machine Learning/Algorithms/Dimensionality Reduction Technique/Principal Component Analysis'>Princial Component Analysis (PCA)</a>
+      - <a href='Artificial Intelligence/Machine Learning/Algorithms/Dimensionality Reduction Technique/Linear Discriminant Analysis (LDA)'>Linear Discriminant Analysis (LDA)</a>
       - Singular Value Decomposition (SVD)
     
 4.  Reinforcement Learning
@@ -100,9 +100,9 @@ I am passionate about:
 
 
 ## Featured Projects
-- <a href='Machine Learning/Algorithms/Supervised/Classification/Logistic Regression/LR_Customer Churn Project.py'>Customer Churn Prediction</a>
-- <a href='Machine Learning/Algorithms/Supervised/Classification/Logistic Regression/LR_VIF_Census Project.py'>Census Project</a>
-- <a href='Machine Learning/Algorithms/Supervised/Classification/Decision Tree/DT_SMOTE_Credit Card Fraud Detection.py'>Credit Card Fraud Detection Project</a>
+- <a href='Artificial Intelligence/Machine Learning/Algorithms/Supervised/Classification/Logistic Regression/LR_Customer Churn Project.py'>Customer Churn Prediction</a>
+- <a href='Artificial Intelligence/Machine Learning/Algorithms/Supervised/Classification/Logistic Regression/LR_VIF_Census Project.py'>Census Project</a>
+- <a href='Artificial Intelligence/Machine Learning/Algorithms/Supervised/Classification/Decision Tree/DT_SMOTE_Credit Card Fraud Detection.py'>Credit Card Fraud Detection Project</a>
 - House Price Prediction
 - Heart Disesase Prediction
 - Movie Recommendation Sytem
