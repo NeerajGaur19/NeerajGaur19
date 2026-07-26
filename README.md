@@ -70,7 +70,7 @@ I am passionate about:
     2.1  Clustering
     
       - <a href = 'Machine Learning/Algorithms/Unsupervised/K-Means'>K-Means</a>
-      - Hierarchical Clustering
+      - <a href = 'Machine Learning/Algorithms/Unsupervised/Hierarchical Clustering'>Hierarchical Clustering</a>
       - Gaussian Mixture Model (GMM)
     
 3. <a href = 'Machine Learning/Algorithms/Unsupervised/Dimensionality Reduction Technique.md'>Dimensionality Reduction</a>
