@@ -17,7 +17,7 @@
 
 I am passionate about:
 - <a href = 'Artificial Intelligence'>Artificial Intelligence</a>
-- <a href = 'Machine Learning'>Machine Learning</a>
+- <a href = 'Artificial Intelligence/Machine Learning'>Machine Learning</a>
 - Data Science
 - Data Visualization
 
@@ -40,7 +40,7 @@ I am passionate about:
   
       1.1. Regression
   
-        - <a href='Machine Learning/Algorithms/Supervised/Regression/Linear Regression'>Linear Regression</a>
+        - <a href='Artificial Intelligence/Machine Learning/Algorithms/Supervised/Regression/Linear Regression'>Linear Regression</a>
         - Ridge Regression
         - Lasso Regression
         - Support Vector Regression
