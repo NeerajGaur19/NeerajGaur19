@@ -239,3 +239,8 @@ The random feature selection makes the trees less correlated, which often improv
     Less interpretable than a single decision tree
     Does not significantly reduce bias (it mainly reduces variance)
 
+# Bagging vs Boosting
+
+
+<img width="885" height="475" alt="image" src="https://github.com/user-attachments/assets/e1ea29e8-c570-438b-9613-f7b9cbe36820" />
+
