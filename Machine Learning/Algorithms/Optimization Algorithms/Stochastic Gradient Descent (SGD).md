@@ -336,3 +336,21 @@ Noisy path.
             Minimum
 
 Between Batch and SGD.
+
+---
+
+## Advantages of SGD
+
+* Very fast for large datasets
+* Low memory usage
+* Can escape shallow local minima and saddle points due to noisy updates
+* Suitable for online learning (streaming data)
+* Widely used in deep learning
+
+## Disadvantages
+
+* Noisy convergence
+* May oscillate around the optimum
+* Sensitive to learning rate
+* Usually requires more epochs than Batch Gradient Descent
+
