@@ -232,3 +232,107 @@ Record 2
 Record 1000
 
 After all records are processed,
+
+    Epoch = 1 completed
+
+Training usually runs for multiple epochs (e.g., 10, 50, or 100).
+
+## Learning Rate
+
+The learning rate determines how big a step we take while updating the weights.
+
+If the learning rate is:
+
+### Too Small
+
+    Tiny steps
+    
+    ↓
+    
+    Very slow learning
+
+### Too Large
+
+    Huge jumps
+    
+    ↓
+    
+    May overshoot the minimum
+    
+    ↓
+    
+    Training may fail
+
+### Good Learning Rate
+
+    Steady movement
+    
+    ↓
+    
+    Fast convergence
+
+
+## Why Does SGD Look Noisy?
+
+Unlike Batch Gradient Descent,
+
+SGD uses only one sample at a time.
+
+Each sample has a different error.
+
+Therefore,
+
+    Loss
+    
+    ↓
+    
+    Up
+    
+    ↓
+    
+    Down
+    
+    ↓
+    
+    Up
+    
+    ↓
+    
+    Down
+
+The path is noisy, but on average it moves toward the minimum.
+
+
+# Visualization
+
+## Batch Gradient Descent
+
+    \
+     \
+      \
+       \
+        \
+         Minimum
+
+Smooth path.
+
+## SGD
+
+    \
+     \/\
+     /\ \
+    /  \ \
+         \/
+          Minimum
+
+Noisy path.
+
+## Mini-Batch
+    
+    \
+     \_
+       \__
+          \_
+            Minimum
+
+Between Batch and SGD.
