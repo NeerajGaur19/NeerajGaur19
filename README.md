@@ -59,9 +59,9 @@ I am passionate about:
         - Naive Bayes
         - <a href='Machine Learning/Algorithms/Supervised/Classification/Decision Tree Classifier'>Decision Tree</a>
         - <a href='Machine Learning/Algorithms/Supervised/Classification/Random Forest Classifier'>Random Forest</a>
-        - Gradient Boosting
+        - <a href='Machine Learning/Algorithms/Supervised/Gradient Boosting'>Gradient Boosting</a>
         - XGBoost
-        - ADABoost
+        - <a href='Machine Learning/Algorithms/Supervised/AdaBoost'>ADABoost</a>
         - <A href = 'Artificial Intelligence/Neural Network'>Neural Networks (MLP)</a>
         - <a href ='Artificial Intelligence/Neural Network'>Deep Learning (CNN, RNN)</a>
 
