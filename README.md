@@ -71,7 +71,7 @@ I am passionate about:
     
       - <a href = 'Artificial Intelligence/Machine Learning/Algorithms/Unsupervised/K-Means'>K-Means</a>
       - <a href = 'Artificial Intelligence/Machine Learning/Algorithms/Unsupervised/Hierarchical Clustering'>Hierarchical Clustering</a>
-      - Gaussian Mixture Model (GMM)
+      - <a href = 'Artificial Intelligence/Machine Learning/Algorithms/Unsupervised/Gaussian Mixture Model'>Gaussian Mixture Model (GMM)</a>
     
 3. <a href = 'Artificial Intelligence/Machine Learning/Algorithms/Unsupervised/Dimensionality Reduction Technique.md'>Dimensionality Reduction</a>
     
