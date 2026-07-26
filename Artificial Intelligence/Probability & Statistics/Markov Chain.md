@@ -144,23 +144,49 @@ Transition probabilities
 
 Businesses use Markov Chains to predict customer journeys.
 
-Components of a Markov Chain
+# Components of a Markov Chain
 
 A Markov Chain has four main components.
 
-1. States
+## 1. States
 
 Example
 
-Sunny
+    Sunny
+    
+    Rainy
+    
+    Cloudy
 
-Rainy
-
-Cloudy
-2. Transition Probabilities
+## 2. Transition Probabilities
 
 Probability of moving from one state to another.
 
 Example
 
-Sunny → Rainy = 0.2
+    Sunny → Rainy = 0.2
+
+
+## 3. Transition Matrix
+
+Stores all probabilities.
+
+Example
+
+            S     R
+    
+    S     0.8   0.2
+    
+    R     0.4   0.6
+
+## 4. Initial State
+
+Where the process starts.
+
+Example
+
+        Start
+        
+        ↓
+        
+        Sunny
