@@ -311,3 +311,22 @@ A robot moves
     West
 
 Each movement has a probability.
+
+---
+
+## Advantages
+
+* Simple to understand
+* Excellent for sequential data
+* Easy to compute
+* Strong mathematical foundation
+* Useful for modeling random processes
+
+
+## Disadvantages
+
+* Assumes the memoryless property, which is often unrealistic
+* Cannot capture long-term dependencies
+* Transition probabilities may be difficult to estimate accurately
+* Less effective than modern deep learning models for complex sequence tasks
+
