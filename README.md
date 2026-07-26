@@ -65,7 +65,7 @@ I am passionate about:
         - <A href = 'Artificial Intelligence/Neural Network'>Neural Networks (MLP)</a>
         - <a href ='Artificial Intelligence/Neural Network'>Deep Learning (CNN, RNN)</a>
 
-2. Unsupervised Learning
+2. <a href='Artificial Intelligence/Machine Learning/Algorithms/Unsupervised/Unsupervised_Readme.md'>Unsupervised Learning</a>
 
     2.1  Clustering
     
