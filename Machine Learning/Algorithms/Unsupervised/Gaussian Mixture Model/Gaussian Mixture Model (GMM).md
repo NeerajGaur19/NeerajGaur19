@@ -145,24 +145,57 @@ This is called Soft Clustering.
 ---
 
 
-Hard Clustering vs Soft Clustering
-K-Means
-Person
+# Hard Clustering vs Soft Clustering
 
-↓
+## K-Means
 
-Cluster 1
+    Person
+    
+    ↓
+    
+    Cluster 1
 
 Only one cluster.
 
-GMM
-Person
+## GMM
 
-↓
-
-Cluster 1 = 70%
-
-Cluster 2 = 30%
+    Person
+    
+    ↓
+    
+    Cluster 1 = 70%
+    
+    Cluster 2 = 30%
 
 Belongs partly to multiple clusters.
+
+# Why is it Called Mixture?
+
+Suppose the data comes from
+
+Three populations.
+
+    Gaussian 1
+    
+          /\
+    
+    Gaussian 2
+    
+                /\
+    
+    Gaussian 3
+    
+                      /\
+
+Together,
+
+         /\      /\      /\
+        /  \    /  \    /  \
+    ___/____\__/____\__/____\____
+
+The complete dataset is a mixture of several Gaussian distributions.
+
+Hence
+
+Gaussian Mixture Model.
 
