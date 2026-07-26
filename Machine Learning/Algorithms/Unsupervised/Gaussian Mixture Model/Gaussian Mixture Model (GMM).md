@@ -199,3 +199,29 @@ Hence
 
 Gaussian Mixture Model.
 
+
+
+---
+
+## Advantages of GMM over K-Means
+
+✅ Soft clustering
+
+✅ Probability output
+
+✅ Works for overlapping clusters
+
+✅ Can model elliptical clusters
+
+✅ More flexible
+
+## Disadvantages
+
+❌ Slower than K-Means
+
+❌ Sensitive to initialization
+
+❌ Need to specify number of clusters
+
+❌ Can converge to local optima
+
