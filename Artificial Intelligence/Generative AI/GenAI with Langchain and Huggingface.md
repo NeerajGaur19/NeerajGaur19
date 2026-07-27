@@ -1,5 +1,5 @@
 
-## Data source -> Data Ingestion
+## Data Source -> Data Ingestion
 ## Data Transformation -> Text Chunks 
    (Data into text chunks)
 ## Embedding
