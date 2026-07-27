@@ -34,6 +34,14 @@ I am passionate about:
 
 ---
 
+## Artifical Intelligence Topics
+
+  1. <a href='Artificial Intelligence/Generative AI'>Generative AI</a>
+  2. <a href='Artificial Intelligence/Natural Language Processing'>Natural Language Processing (NLP)</a>
+  3. <a href='Artificial Intelligence/Probability & Statistics'>Probability and Statistics</a>
+  
+---
+
 ## Machine Learning Topics
 
   1. Supervised Learning
