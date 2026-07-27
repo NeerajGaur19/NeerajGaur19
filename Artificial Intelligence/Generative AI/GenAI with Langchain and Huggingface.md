@@ -1,6 +1,6 @@
 
 ## Data Ingestion
-## Text Chunks
+## Text Chunks (Data into text chunks)
 ## Embedding
 ## VectorStore DB (FAISS, CHROMA DB, ASTRA DB)
 ## 
