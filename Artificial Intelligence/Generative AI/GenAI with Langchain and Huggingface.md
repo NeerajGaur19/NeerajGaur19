@@ -115,9 +115,17 @@ CharacterTextSplitter is the simplest text splitter in LangChain. It divides tex
 
    If one paragraph is longer than the chunk_size, it doesn't intelligently try a different separator.
 
-### Which one should you use?
+   ### Which one should you use?
 
-   <img width="683" height="307" alt="image" src="https://github.com/user-attachments/assets/8b566bc7-0c34-4d1f-8807-9c2618a96b67" />
+      <img width="683" height="307" alt="image" src="https://github.com/user-attachments/assets/8b566bc7-0c34-4d1f-8807-9c2618a96b67" />
+
+
+## Summary
+
+      CharacterTextSplitter uses one separator (such as \n) and splits text into chunks based on chunk_size and chunk_overlap.
+      It is simple and predictable, but it does not adapt if a chunk is still too large.
+      RecursiveCharacterTextSplitter is generally preferred for production RAG systems because it preserves the document's structure more effectively by 
+      trying multiple separators in order.
 
 
 #### 2.1.3 HTML Header Text Splitter
