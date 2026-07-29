@@ -55,9 +55,17 @@ Unlike RecursiveCharacterTextSplitter, it does not try multiple separators.
 
 Example:
 
-
-
-
+      from langchain_text_splitters import CharacterTextSplitter
+      
+      splitter = CharacterTextSplitter(
+          separator="\n",
+          chunk_size=40,
+          chunk_overlap=10
+      )
+      
+      chunks = splitter.split_text(text)
+      
+      print(chunks)
 
 #### 2.1.3 HTML Header Text Splitter
 
