@@ -41,6 +41,20 @@ Sample Program
 
 #### 2.1.2 Character Text Splitter
 
+CharacterTextSplitter is the simplest text splitter in LangChain. It divides text into chunks based on a specified separator and chunk size, without trying to preserve the document's structure intelligently.
+
+### What is CharacterTextSplitter?
+
+It splits text into chunks based on:
+
+* A separator (such as \n or a space)
+* A chunk_size
+* A chunk_overlap
+
+Unlike RecursiveCharacterTextSplitter, it does not try multiple separators.
+
+Example:
+
 
 
 
@@ -49,7 +63,6 @@ Sample Program
 
 
 #### 2.1.4 Recursive Json Splitter
-
 
 ---
 
