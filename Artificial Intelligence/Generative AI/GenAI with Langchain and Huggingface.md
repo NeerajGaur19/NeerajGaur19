@@ -13,12 +13,12 @@
 #### 2.1.1 Recursive Character Text Splitter 
    (Data into text chunks)
    
-   What is RecursiveCharacterTextSplitter?
+   ### What is RecursiveCharacterTextSplitter?
 
       RecursiveCharacterTextSplitter splits a large document into smaller chunks while trying to preserve the document's natural structure.
       Instead of cutting text at an exact character count, it recursively tries different separators until the chunk size is reached.
 
-Sample Program
+   ### Sample Program
 
       from langchain_text_splitters import RecursiveCharacterTextSplitter
       
@@ -38,6 +38,31 @@ Sample Program
       chunks = splitter.split_text(text)
       
       print(chunks)
+   
+   ### Where it fits in a RAG pipeline
+   
+            PDF / DOCX / TXT
+                    │
+                    ▼
+            Document Loader
+                    │
+                    ▼
+            RecursiveCharacterTextSplitter
+                    │
+                    ▼
+            Small Chunks
+                    │
+                    ▼
+            Embeddings
+                    │
+                    ▼
+            Vector Database
+                    │
+                    ▼
+            Retriever
+                    │
+                    ▼
+            LLM (GPT, Llama, Gemini, etc.)
 
 #### 2.1.2 Character Text Splitter
 
