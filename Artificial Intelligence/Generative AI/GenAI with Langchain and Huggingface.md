@@ -197,6 +197,17 @@ CharacterTextSplitter is the simplest text splitter in LangChain. It divides tex
                ▼
          LLM
 
+### Summary
+
+         Purpose: Split HTML documents by heading tags rather than by character count.
+         Key benefit: Keeps each logical section together and stores heading information as metadata.
+         Ideal for: HTML documentation, blogs, technical manuals, and web pages.
+         Advantage in RAG: The metadata (for example, the page title and section name) can improve retrieval quality and provide better 
+                           context when answering questions.
+
+
+
+
 
 #### 2.1.4 Recursive Json Splitter
 
