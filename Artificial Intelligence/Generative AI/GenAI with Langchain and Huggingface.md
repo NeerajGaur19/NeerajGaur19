@@ -130,6 +130,29 @@ CharacterTextSplitter is the simplest text splitter in LangChain. It divides tex
 
 #### 2.1.3 HTML Header Text Splitter
 
+   HTMLHeaderTextSplitter is a LangChain text splitter specifically designed for HTML documents. 
+   Instead of splitting by characters, it splits the document based on HTML heading tags (<h1>, <h2>, <h3>, etc.).
+   This is useful because headings naturally define sections of a document.
+
+   ### Why do we need it?
+   
+   Consider this HTML page:
+      
+         <h1>Machine Learning</h1>
+         
+         <p>Machine Learning is a subset of AI.</p>
+         
+         <h2>Supervised Learning</h2>
+         
+         <p>Uses labeled data.</p>
+         
+         <h2>Unsupervised Learning</h2>
+         
+         <p>Uses unlabeled data.</p>
+   
+   If you use CharacterTextSplitter, it may split in the middle of a section.
+   
+   If you use HTMLHeaderTextSplitter, each section stays together.
 
 #### 2.1.4 Recursive Json Splitter
 
