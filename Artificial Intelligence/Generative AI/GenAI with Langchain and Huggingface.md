@@ -68,17 +68,17 @@
 
 CharacterTextSplitter is the simplest text splitter in LangChain. It divides text into chunks based on a specified separator and chunk size, without trying to preserve the document's structure intelligently.
 
-### What is CharacterTextSplitter?
+   ### What is CharacterTextSplitter?
+   
+   It splits text into chunks based on:
+   
+   * A separator (such as \n or a space)
+   * A chunk_size
+   * A chunk_overlap
 
-It splits text into chunks based on:
+   Unlike RecursiveCharacterTextSplitter, it does not try multiple separators.
 
-* A separator (such as \n or a space)
-* A chunk_size
-* A chunk_overlap
-
-Unlike RecursiveCharacterTextSplitter, it does not try multiple separators.
-
-Example:
+   ### Example:
 
       from langchain_text_splitters import CharacterTextSplitter
       
@@ -91,6 +91,34 @@ Example:
       chunks = splitter.split_text(text)
       
       print(chunks)
+
+   ### Visual Comparison
+
+      Suppose your text is:
+      
+      Paragraph 1
+      
+      Paragraph 2
+      
+      Paragraph 3
+
+   ### CharacterTextSplitter
+
+      Uses only one separator
+              │
+              ▼
+      Paragraph 1
+      
+      Paragraph 2
+      
+      Paragraph 3
+
+   If one paragraph is longer than the chunk_size, it doesn't intelligently try a different separator.
+
+### Which one should you use?
+
+   <img width="683" height="307" alt="image" src="https://github.com/user-attachments/assets/8b566bc7-0c34-4d1f-8807-9c2618a96b67" />
+
 
 #### 2.1.3 HTML Header Text Splitter
 
