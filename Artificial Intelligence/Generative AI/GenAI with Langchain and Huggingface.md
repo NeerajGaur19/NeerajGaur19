@@ -119,7 +119,7 @@ CharacterTextSplitter is the simplest text splitter in LangChain. It divides tex
 
       <img width="683" height="307" alt="image" src="https://github.com/user-attachments/assets/8b566bc7-0c34-4d1f-8807-9c2618a96b67" />
 
-
+ 
 ## Summary
 
       CharacterTextSplitter uses one separator (such as \n) and splits text into chunks based on chunk_size and chunk_overlap.
