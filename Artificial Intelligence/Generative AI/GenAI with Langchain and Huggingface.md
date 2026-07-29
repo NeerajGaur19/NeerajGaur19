@@ -157,19 +157,45 @@ CharacterTextSplitter is the simplest text splitter in LangChain. It divides tex
 
    ### Example
 
-      from langchain_text_splitters import HTMLHeaderTextSplitter
+         from langchain_text_splitters import HTMLHeaderTextSplitter
+         
+         headers_to_split_on = [
+             ("h1", "Header 1"),
+             ("h2", "Header 2"),
+             ("h3", "Header 3"),
+         ]
+         
+         splitter = HTMLHeaderTextSplitter(
+             headers_to_split_on=headers_to_split_on
+         )
+         
+         documents = splitter.split_text(html_string)
+
+
+   ### Where it fits in a RAG pipeline
       
-      headers_to_split_on = [
-          ("h1", "Header 1"),
-          ("h2", "Header 2"),
-          ("h3", "Header 3"),
-      ]
-      
-      splitter = HTMLHeaderTextSplitter(
-          headers_to_split_on=headers_to_split_on
-      )
-      
-      documents = splitter.split_text(html_string)
+         HTML Web Page
+               │
+               ▼
+         HTMLHeaderTextSplitter
+               │
+               ▼
+         Sections based on <h1>, <h2>, <h3>
+               │
+               ▼
+         Document Chunks + Metadata
+               │
+               ▼
+         Embeddings
+               │
+               ▼
+         Vector Database
+               │
+               ▼
+         Retriever
+               │
+               ▼
+         LLM
 
 
 #### 2.1.4 Recursive Json Splitter
