@@ -154,6 +154,24 @@ CharacterTextSplitter is the simplest text splitter in LangChain. It divides tex
    
    If you use HTMLHeaderTextSplitter, each section stays together.
 
+
+   ### Example
+
+      from langchain_text_splitters import HTMLHeaderTextSplitter
+      
+      headers_to_split_on = [
+          ("h1", "Header 1"),
+          ("h2", "Header 2"),
+          ("h3", "Header 3"),
+      ]
+      
+      splitter = HTMLHeaderTextSplitter(
+          headers_to_split_on=headers_to_split_on
+      )
+      
+      documents = splitter.split_text(html_string)
+
+
 #### 2.1.4 Recursive Json Splitter
 
 ---
