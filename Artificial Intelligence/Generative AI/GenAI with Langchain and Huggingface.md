@@ -206,10 +206,151 @@ CharacterTextSplitter is the simplest text splitter in LangChain. It divides tex
                            context when answering questions.
 
 
-
-
-
 #### 2.1.4 Recursive Json Splitter
+
+   RecursiveJsonSplitter is a LangChain splitter designed specifically for JSON data.
+   
+   Unlike text splitters that work on characters or paragraphs, it recursively traverses a JSON object and breaks it into smaller JSON chunks while preserving 
+   the JSON structure.
+   
+   ### Why do we need it?
+
+      Suppose you have a large JSON file:
+
+               {
+                 "company": "ABC Ltd",
+                 "employees": [
+                   {
+                     "id": 101,
+                     "name": "John",
+                     "department": "IT",
+                     "salary": 80000
+                   },
+                   {
+                     "id": 102,
+                     "name": "Alice",
+                     "department": "HR",
+                     "salary": 70000
+                   }
+                 ],
+                 "projects": [
+                   {
+                     "project_id": 1,
+                     "name": "AI Chatbot"
+                   },
+                   {
+                     "project_id": 2,
+                     "name": "Recommendation System"
+                   }
+                 ]
+               }
+
+   If you use CharacterTextSplitter, it may split the JSON like this:
+            
+            {
+              "company": "ABC Ltd",
+              "employees": [
+                {
+                  "id": 101,
+
+   This creates invalid JSON because braces and objects are cut in half.
+   
+   RecursiveJsonSplitter avoids this by keeping each chunk as valid JSON.
+
+   ### How it works
+
+   It recursively explores the JSON tree.
+
+            JSON
+            │
+            ├── company
+            │
+            ├── employees
+            │      ├── Employee 1
+            │      └── Employee 2
+            │
+            └── projects
+                   ├── Project 1
+                   └── Project 2
+            
+   If the JSON is too large, it splits at a lower level while preserving the hierarchy.
+
+## Example
+
+         from langchain_text_splitters import RecursiveJsonSplitter
+         
+         json_data = {
+             "company": "ABC Ltd",
+             "employees": [
+                 {"id": 1, "name": "John"},
+                 {"id": 2, "name": "Alice"},
+                 {"id": 3, "name": "Bob"}
+             ]
+         }
+         
+         splitter = RecursiveJsonSplitter(max_chunk_size=100)
+         
+         chunks = splitter.split_json(json_data)
+         
+         print(chunks)
+
+   Possible output:
+
+         [
+             {
+                 "company": "ABC Ltd"
+             },
+             {
+                 "employees": [
+                     {"id": 1, "name": "John"},
+                     {"id": 2, "name": "Alice"}
+                 ]
+             },
+             {
+                 "employees": [
+                     {"id": 3, "name": "Bob"}
+                 ]
+             }
+         ]
+
+Each chunk is still valid JSON.
+
+### Important Parameter
+
+   max_chunk_size
+
+            splitter = RecursiveJsonSplitter(
+                max_chunk_size=500
+            )
+
+   This specifies the approximate maximum size of each JSON chunk.
+   
+   If a chunk exceeds this size, the splitter recursively breaks it into smaller JSON objects or arrays.
+
+### Why is it called "Recursive"?
+
+   Consider this JSON:
+
+         Company
+         │
+         ├── Employees
+         │      ├── Employee 1
+         │      ├── Employee 2
+         │      └── Employee 3
+         │
+         └── Projects
+                ├── Project 1
+                └── Project 2
+       
+
+   If the entire JSON is too large:
+
+      It first tries to keep the whole object together.
+      If that's too big, it splits at the top-level keys (employees, projects).
+      If employees is still too large, it splits the employee list.
+      If an employee object is still too large, it can split deeper into nested objects.
+      
+   It keeps descending the JSON tree until each chunk fits the size limit.
 
 ---
 
