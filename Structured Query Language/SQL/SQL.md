@@ -37,7 +37,7 @@ Used to insert, update, and delete data.
     UPDATE	            Modify data
     DELETE	            Remove data
 
-Example:
+### Example:
     
     INSERT INTO Employees
         VALUES (101, 'Neha', 70000);
@@ -50,3 +50,19 @@ Example:
         WHERE EmpID = 101;
 
     
+## 3. DQL (Data Query Language)
+
+Used to retrieve data.
+
+The primary command is:
+
+    SELECT * FROM Employees;
+
+### Examples:
+
+    SELECT Name, Salary
+    FROM Employees;
+
+    SELECT *
+    FROM Employees
+    WHERE Salary > 60000;
