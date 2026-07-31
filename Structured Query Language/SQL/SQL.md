@@ -12,9 +12,9 @@ Used to create and modify database objects.
 
     Command	                              Purpose
     CREATE	                        Create a table or database
-    ALTER	                          Modify a table
-    DROP	                          Delete a table
-    TRUNCATE	                      Remove all rows (keeps table structure)
+    ALTER	                        Modify a table
+    DROP	                        Delete a table
+    TRUNCATE	                    Remove all rows (keeps table structure)
     RENAME	                        Rename an object
 
 ### Example:
@@ -26,7 +26,6 @@ Used to create and modify database objects.
         Salary DECIMAL(10,2)
     );
     
-
 
 ## 2. DML (Data Manipulation Language)
 
@@ -66,3 +65,25 @@ The primary command is:
     SELECT *
     FROM Employees
     WHERE Salary > 60000;
+
+## 4. DCL (Data Control Language)
+
+Used to control access.
+
+    GRANT
+    REVOKE
+
+## 5. TCL (Transaction Control Language)
+
+Used to manage transactions.
+
+* COMMIT
+* ROLLBACK
+* SAVEPOINT
+
+### Example Queries
+
+Retrieve specific columns:
+
+    SELECT Name, Age
+    FROM Students;
