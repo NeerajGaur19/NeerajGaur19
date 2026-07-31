@@ -26,3 +26,27 @@ Used to create and modify database objects.
         Salary DECIMAL(10,2)
     );
     
+
+
+## 2. DML (Data Manipulation Language)
+
+Used to insert, update, and delete data.
+    
+    Command	            Purpose
+    INSERT	            Add data
+    UPDATE	            Modify data
+    DELETE	            Remove data
+
+Example:
+    
+    INSERT INTO Employees
+        VALUES (101, 'Neha', 70000);
+    
+    UPDATE Employees
+        SET Salary = 75000
+        WHERE EmpID = 101;
+    
+    DELETE FROM Employees
+        WHERE EmpID = 101;
+
+    
