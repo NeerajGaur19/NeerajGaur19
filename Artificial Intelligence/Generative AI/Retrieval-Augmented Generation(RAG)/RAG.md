@@ -54,11 +54,11 @@ Instead of guessing, RAG searches your documents first.
                         ▼
                  Final Answer
 
+---
+
 # Components of RAG
 
 There are 8 main components.
-
-
 
 ## 1. Knowledge Source
 
@@ -123,3 +123,88 @@ Typical chunk size:
 
 Sometimes overlapping chunks are used to preserve context across boundaries.
 
+### Why do we chunk?
+
+Suppose the sentence is
+
+    The leave policy states employees receive
+    12 casual leaves annually.
+
+If you split badly:
+
+Chunk 1
+
+    The leave policy states employees receive
+
+Chunk 2
+
+    12 casual leaves annually.
+
+Neither chunk has the complete meaning.
+
+Using chunk overlap helps avoid losing important context.
+
+
+## 4. Embedding Model
+
+The chunk is converted into numbers.
+
+Example
+
+    Chunk
+    
+    ↓
+    
+    [0.25, -0.11, 0.72, ...]
+
+This numerical representation is called an embedding.
+
+Popular embedding models:
+
+    OpenAI Embeddings
+    Hugging Face sentence-transformers
+    BAAI/bge models
+    E5 models
+
+
+### Why embeddings?
+
+Computers cannot compare paragraphs directly.
+
+Instead they compare vectors.
+
+Example
+
+    "What is leave policy?"
+    
+    ↓
+    
+    Vector
+    
+    ↓
+    
+    Compare with document vectors
+
+
+## 5. Vector Database
+
+Stores embeddings.
+
+Instead of
+
+    Document
+
+It stores
+
+    Embedding
+
+Popular vector databases:
+
+* FAISS
+* Chroma
+* Pinecone
+* Weaviate
+* Milvus
+* Qdrant
+
+Think of it as a specialized database optimized for similarity search.
