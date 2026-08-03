@@ -303,3 +303,17 @@ and generates
                          │
                          ▼
                   Final Response
+
+
+## Definition of each component
+
+        Component	                            Purpose
+    Knowledge Source	            Stores original data (PDFs, databases, websites, etc.)
+    Document Loader	                Reads data into the application
+    Chunking	                    Splits large documents into manageable pieces
+    Embedding Model	                Converts text into numerical vectors
+    Vector Database	                Stores and indexes embedding vectors
+    Retriever	                    Finds the most relevant chunks using similarity search
+    Prompt Augmentation	            Combines retrieved context with the user's question
+    LLM	                            Generates the final natural-language answer
+
