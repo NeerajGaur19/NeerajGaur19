@@ -266,4 +266,40 @@ and generates
 
     Employees receive 12 casual leaves annually according to the company handbook.
 
+---
 
+# Complete Flow
+        
+                        PDF
+                         │
+                         ▼
+                  Document Loader
+                         │
+                         ▼
+                  Text Chunking
+                         │
+                         ▼
+                  Embedding Model
+                         │
+                         ▼
+                 Vector Database
+        ──────────────────────────────────────
+                  User Question
+                         │
+                         ▼
+              Question Embedding
+                         │
+                         ▼
+                Similarity Search
+                         │
+                         ▼
+                Top Relevant Chunks
+                         │
+                         ▼
+              Prompt Augmentation
+                         │
+                         ▼
+                       LLM
+                         │
+                         ▼
+                  Final Response
