@@ -255,13 +255,15 @@ Notice the retrieved context is inserted into the prompt.
 
 This is the Augmented part of Retrieval-Augmented Generation.
 
-8. Large Language Model (LLM)
+## 8. Large Language Model (LLM)
 
 Finally the LLM reads
 
-User Question
-Retrieved Context
+* User Question
+* Retrieved Context
 
 and generates
 
-Employees receive 12 casual leaves annually according to the company handbook.
+    Employees receive 12 casual leaves annually according to the company handbook.
+
+
