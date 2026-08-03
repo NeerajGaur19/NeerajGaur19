@@ -208,3 +208,60 @@ Popular vector databases:
 * Qdrant
 
 Think of it as a specialized database optimized for similarity search.
+
+
+## 6. Retriever (Similarity Search)
+
+When the user asks a question
+
+    "What is maternity leave?"
+
+The question is also converted into an embedding.
+
+Then
+
+    Question Vector
+    
+    ↓
+    
+    Compare
+    
+    ↓
+    
+    Document Vectors
+    
+    ↓
+    
+    Top 5 most similar chunks
+
+This is called vector similarity search.
+
+## 7. Prompt Augmentation
+
+Now LangChain (or your application) creates a prompt like:
+
+    Context:
+    
+    Employees are entitled to
+    12 casual leaves annually.
+    
+    Question:
+    
+    How many casual leaves are allowed?
+    
+    Answer:
+
+Notice the retrieved context is inserted into the prompt.
+
+This is the Augmented part of Retrieval-Augmented Generation.
+
+8. Large Language Model (LLM)
+
+Finally the LLM reads
+
+User Question
+Retrieved Context
+
+and generates
+
+Employees receive 12 casual leaves annually according to the company handbook.
