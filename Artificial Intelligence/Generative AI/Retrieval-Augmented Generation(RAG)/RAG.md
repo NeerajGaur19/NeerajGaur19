@@ -30,10 +30,10 @@ Instead of guessing, RAG searches your documents first.
 
 # RAG Architecture
 
-                  User Question
+                 User Question
                         │
                         ▼
-               Query Processing
+                Query Processing
                         │
                         ▼
                 Embedding Model
@@ -49,10 +49,10 @@ Instead of guessing, RAG searches your documents first.
                Prompt Construction
                         │
                         ▼
-                     LLM
+                       LLM
                         │
                         ▼
-                 Final Answer
+                   Final Answer
 
 ---
 
