@@ -317,3 +317,8 @@ and generates
     Prompt Augmentation	            Combines retrieved context with the user's question
     LLM	                            Generates the final natural-language answer
 
+
+
+<img width="1536" height="1024" alt="ChatGPT Image Aug 5, 2026, 10_57_27 AM" src="https://github.com/user-attachments/assets/30d2d79a-69ca-41ce-b97e-cf89cded164b" />
+
+
