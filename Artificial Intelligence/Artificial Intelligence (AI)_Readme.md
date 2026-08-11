@@ -1,6 +1,6 @@
 
 ### Artificial Intelligence (AI) is the ability of a computer or machine to perform tasks that normally require human intelligence.
-
+ 
 ## Examples:
 
 * Understanding language
