@@ -62,8 +62,15 @@ rag_chain = None
 # Helper Function
 # =========================
 def format_docs(docs):
-    return "\n\n".join(doc.page_content for doc in docs)
+    #return "\n\n".join(doc.page_content for doc in docs)
+    formatted = []
 
+    for doc in docs:
+        source = doc.metadata.get("source_file", "Unknown")
+        formatted.append(f"[Source: {source}]\\n{doc.page_content}")
+
+    return "\\n\\n".join(formatted)
+    
 # =========================
 # Load and Process Document
 # =========================
@@ -84,12 +91,16 @@ def load_document(pdf_files=None):
     for pdf_path in pdf_paths:
         loader = PyPDFLoader(pdf_path)
         docs = loader.load()
+        # Add source metadata
+        for doc in docs:
+            doc.metadata["source_file"] = os.path.basename(pdf_path)
+
         documents.extend(docs)
         file_names.append(os.path.basename(pdf_path))
 
     # Split into chunks
     splitter = RecursiveCharacterTextSplitter(
-        chunk_size=2000,
+        chunk_size=1000,
         chunk_overlap=150
     )
 
@@ -102,7 +113,7 @@ def load_document(pdf_files=None):
     )
 
     # Create retriever
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
+    retriever = vectorstore.as_retriever(search_kwargs={"k": 8})
 
     # Create prompt
     
