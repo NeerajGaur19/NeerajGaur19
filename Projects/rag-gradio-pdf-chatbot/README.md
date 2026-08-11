@@ -44,9 +44,10 @@ A Retrieval-Augmented Generation (RAG) chatbot built using LangChain 1.x, Google
 
 1. Clone the repository
     git clone https://github.com/YOUR_USERNAME/RAG-GRADIO-PDF-CHATBOT.git
+
     cd rag-gradio-pdf-chatbot
 
-2. Create a virtual environment
+3. Create a virtual environment
 
     Windows
         python -m venv venv
@@ -55,7 +56,7 @@ A Retrieval-Augmented Generation (RAG) chatbot built using LangChain 1.x, Google
         python -m venv venv
         source venv/bin/activate
 
-3. Install dependencies
+4. Install dependencies
     python -m pip install -r requirements.txt
 
 ---
