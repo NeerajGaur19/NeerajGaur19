@@ -69,7 +69,7 @@ def load_document(pdf_files=None):
 
     # If no file uploaded, use default ISTQB PDF
     if not pdf_files:
-        pdf_paths = "ISTQB-CTAL.pdf"       
+        pdf_paths = ["ISTQB-CTAL.pdf"]       
     else:
         pdf_paths = [f.name for f in pdf_files]
 
