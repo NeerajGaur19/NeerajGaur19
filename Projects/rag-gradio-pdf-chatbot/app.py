@@ -1,11 +1,11 @@
 import os
 import gradio as gr
 from dotenv import load_dotenv
-from langchain_huggingface import HuggingFaceEmbeddings
+#from langchain_huggingface import HuggingFaceEmbeddings
 
 from langchain_google_genai import (
-    ChatGoogleGenerativeAI,
-    GoogleGenerativeAIEmbeddings
+    ChatGoogleGenerativeAI
+    #GoogleGenerativeAIEmbeddings
 )
 
 from langchain_community.document_loaders import PyPDFLoader
@@ -50,11 +50,11 @@ llm = ChatGoogleGenerativeAI(
 #    model_name="sentence-transformers/all-MiniLM-L6-v2"
 #)
 
-embeddings = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/paraphrase-MiniLM-L3-v2",
-    model_kwargs={"device": "cpu"},
-    encode_kwargs={"normalize_embeddings": True}
-)
+#embeddings = HuggingFaceEmbeddings(
+#    model_name="sentence-transformers/paraphrase-MiniLM-L3-v2",
+#    model_kwargs={"device": "cpu"},
+#    encode_kwargs={"normalize_embeddings": True}
+#)
 
 rag_chain = None
 
@@ -70,7 +70,21 @@ def format_docs(docs):
         formatted.append(f"[Source: {source}]\\n{doc.page_content}")
 
     return "\\n\\n".join(formatted)
-    
+
+
+# =========================
+# load Embeddings
+# =========================
+
+def get_embeddings():
+    from langchain_huggingface import HuggingFaceEmbeddings
+
+    return HuggingFaceEmbeddings(
+        model_name="sentence-transformers/paraphrase-MiniLM-L3-v2",
+        model_kwargs={"device": "cpu"},
+        encode_kwargs={"normalize_embeddings": True}
+    )
+
 # =========================
 # Load and Process Document
 # =========================
@@ -106,6 +120,9 @@ def load_document(pdf_files=None):
 
     chunks = splitter.split_documents(documents)
 
+    # Load embeddings only when user clicks Load Document
+    embeddings = get_embeddings()
+
     # Create vector store
     vectorstore = Chroma.from_documents(
         documents=chunks,
@@ -113,7 +130,16 @@ def load_document(pdf_files=None):
     )
 
     # Create retriever
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 8})
+    #retriever = vectorstore.as_retriever(search_kwargs={"k": 8})
+    retriever = vectorstore.as_retriever(
+    search_type="mmr",
+    search_kwargs={
+        "k": 8,
+        "fetch_k": 20,
+        "lambda_mult": 0.7
+    }
+)
+
 
     # Create prompt
     
