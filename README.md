@@ -93,7 +93,7 @@ I am passionate about:
       - TBD
 
 ---
-     
+      
 ## Current Focus
 - Building ML Projects
 - Improving Data Analysis Skills
