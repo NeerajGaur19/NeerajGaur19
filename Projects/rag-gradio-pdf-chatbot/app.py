@@ -19,6 +19,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
+from langchain_core.documents import Document
 
 # =========================
 # Load API Key
@@ -80,7 +81,7 @@ def get_embeddings():
     from langchain_huggingface import HuggingFaceEmbeddings
 
     return HuggingFaceEmbeddings(
-        model_name="sentence-transformers/paraphrase-MiniLM-L3-v2",
+        model_name="sentence-transformers/all-MiniLM-L6-v2",
         model_kwargs={"device": "cpu"},
         encode_kwargs={"normalize_embeddings": True}
     )
@@ -105,17 +106,30 @@ def load_document(pdf_files=None):
     for pdf_path in pdf_paths:
         loader = PyPDFLoader(pdf_path)
         docs = loader.load()
-        # Add source metadata
-        for doc in docs:
-            doc.metadata["source_file"] = os.path.basename(pdf_path)
 
-        documents.extend(docs)
+        # Merge all pages into one continuous text
+        full_text = "\\n\\n".join(doc.page_content for doc in docs)
+        
+        merged_doc = Document(
+            page_content=full_text,metadata={"source_file": os.path.basename(pdf_path)})
+
+        # Add source metadata
+        #for doc in docs:
+        #    doc.metadata["source_file"] = os.path.basename(pdf_path)
+
+        documents.append(merged_doc)
         file_names.append(os.path.basename(pdf_path))
 
     # Split into chunks
     splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=150
+        chunk_size=2000,
+        chunk_overlap=300,
+        separators=[
+        "\\n\\n",
+        "\\n",
+        ". ",
+        " "
+        ]
     )
 
     chunks = splitter.split_documents(documents)
@@ -132,11 +146,11 @@ def load_document(pdf_files=None):
     # Create retriever
     #retriever = vectorstore.as_retriever(search_kwargs={"k": 8})
     retriever = vectorstore.as_retriever(
-    search_type="mmr",
-    search_kwargs={
-        "k": 8,
-        "fetch_k": 20,
-        "lambda_mult": 0.7
+        search_type="similarity",      #mmr
+        search_kwargs={
+            "k": 8 #,
+            #"fetch_k": 25,
+            #"lambda_mult": 0.7
     }
 )
 
@@ -146,8 +160,13 @@ def load_document(pdf_files=None):
     prompt = ChatPromptTemplate.from_template(""" You are a helpful AI assistant.
 
     Answer the question using ONLY the provided context.
-    If the answer is not present in the context, say:
-    "The document does not contain enough information to answer this question."
+    
+    Important instructions:
+    - If the context contains a list of steps, types, activities, factors, phases, lists, or bullet points, return ALL of them completely.
+    - Preserve the order of steps from the document.
+    - Use bullet points.
+    - If the answer is not present in the context, say:
+        "The document does not contain enough information to answer this question."
     
     Context:
     {context}
