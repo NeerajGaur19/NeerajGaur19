@@ -1,7 +1,7 @@
 import os
 import gradio as gr
 from dotenv import load_dotenv
-#from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 
 from langchain_google_genai import (
     ChatGoogleGenerativeAI,
@@ -40,15 +40,21 @@ llm = ChatGoogleGenerativeAI(
 )
 
 
-embeddings = GoogleGenerativeAIEmbeddings(
-    model="gemini-embedding-001",
-    google_api_key=GOOGLE_API_KEY,
-    task_type="retrieval_document"
-)
+#embeddings = GoogleGenerativeAIEmbeddings(
+#    model="gemini-embedding-001",
+#    google_api_key=GOOGLE_API_KEY,
+#    task_type="retrieval_document"
+#)
 
 #embeddings = HuggingFaceEmbeddings(
 #    model_name="sentence-transformers/all-MiniLM-L6-v2"
 #)
+
+embeddings = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/paraphrase-MiniLM-L3-v2",
+    model_kwargs={"device": "cpu"},
+    encode_kwargs={"normalize_embeddings": True}
+)
 
 rag_chain = None
 
