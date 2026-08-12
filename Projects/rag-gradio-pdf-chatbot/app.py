@@ -22,6 +22,14 @@ from langchain_core.documents import Document
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
+# For Streamlit Cloud
+try:
+    import streamlit as st
+    if not GOOGLE_API_KEY and "GOOGLE_API_KEY" in st.secrets:
+        GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+except Exception:
+    pass
+
 if not GOOGLE_API_KEY:
     raise ValueError("GOOGLE_API_KEY not found in .env file")
 
@@ -68,10 +76,11 @@ def get_embeddings():
 # Load and Process Document
 # =========================
 def load_document(pdf_files=None):
+    import tempfile
     global rag_chain
 
     if not pdf_files:
-        return "Please upload one or more PDF files."     
+        return "Please upload one or more PDF files." 
     
     documents = []
     file_names = []
@@ -240,6 +249,6 @@ if __name__ == "__main__":
     demo.launch(
         server_name="0.0.0.0",
         server_port=port,
-        share=False
+        share=True
     )
 

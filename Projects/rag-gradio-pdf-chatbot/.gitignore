@@ -15,3 +15,5 @@ chroma_db/
 .ipynb_checkpoints/
 
 certificate.pem
+
+streamlit_app.py
