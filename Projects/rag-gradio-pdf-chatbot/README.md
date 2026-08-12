@@ -145,6 +145,7 @@ Example questions:
 
     Example:
 
+<img width="1716" height="914" alt="image" src="https://github.com/user-attachments/assets/803400de-43a1-45cc-8e19-1bf4cafb9ee2" />
 
 ---
 
