@@ -213,19 +213,17 @@ Example:
 ### `requirements.txt`
 
 ```text
-streamlit==1.61.1
-langchain==1.3.15
-langchain-community==0.4.2
-langchain-core==1.5.4
-langchain-text-splitters==1.1.2
-langchain-huggingface==1.2.2
-langchain-google-genai==4.3.3
+streamlit
+langchain
+langchain-community
+langchain-huggingface
 sentence-transformers==5.7.0
 transformers==4.55.4
-torch==2.13.0
-chromadb==1.5.9
-pypdf==6.16.0
-python-dotenv==1.2.2
+chromadb
+pypdf
+python-dotenv
+langchain-google-genai
+torchvision
 ```
 
 ---
