@@ -1,6 +1,6 @@
 RAG Gradio PDF Chatbot
 
-A Retrieval-Augmented Generation (RAG) chatbot built using LangChain 1.x, Google Gemini, ChromaDB, and Gradio. The application allows users to upload single or multiple PDF documents (such as ISTQB study guides, test management books, or process documents) and ask context-aware questions through a simple web interface.
+A Retrieval-Augmented Generation (RAG) chatbot built using LangChain 1.x, all-MiniLM-L6-v2 HuggingFace, ChromaDB, and Gradio. The application allows users to upload single or multiple PDF documents (such as ISTQB study guides, test management books, or process documents) and ask context-aware questions through a simple web interface.
 
 🚀 Features
 📚 Multi-PDF document ingestion
@@ -19,7 +19,8 @@ A Retrieval-Augmented Generation (RAG) chatbot built using LangChain 1.x, Google
     Technology	            Purpose
     Python	                Application development
     LangChain 1.x	        RAG orchestration
-    Google Gemini	        LLM and embeddings
+    Google Gemini	        LLM
+    all-MiniLM-L6-v2        Embedding
     ChromaDB	            Vector storage and retrieval
     Gradio	                Web-based UI
     PyPDF	                PDF document loading
@@ -35,7 +36,6 @@ A Retrieval-Augmented Generation (RAG) chatbot built using LangChain 1.x, Google
     ├── README.md               # Project documentation
     ├── .env                    # API key (not committed to GitHub)
     ├── .gitignore              # Git ignore rules
-    ├── ISTQB-CTAL.pdf          # Default ISTQB PDF
     └── venv/                   # Virtual environment
 
 ---
@@ -110,11 +110,10 @@ Upload Multiple PDFs
 
 Example questions:
 
-    * What is risk-based testing?
-    * Explain verification vs validation.
-    * What are the responsibilities of a Test Manager?
-    * Describe the ISTQB test process activities.
-    * What is equivalence partitioning?
+    * What are the review types
+    * What are the success factors for reviews
+    * What are the test management activities 
+    * What are the steps of a retrospective
 
 ---
 
@@ -153,17 +152,21 @@ Example questions:
 
     Current requirements.txt:
 
+    streamlit
     langchain
     langchain-community
     langchain-huggingface
     langchain-google-genai
     langchain-text-splitters
     langchain-chroma
-    sentence-transformers
+    sentence-transformers==5.1.0
     chromadb
     gradio
     pypdf
     python-dotenv
+    
+    --extra-index-url https://download.pytorch.org/whl/cpu
+    torch==2.13.0+cpu
 
 ---
 
@@ -174,7 +177,6 @@ Example questions:
     * Uses ChromaDB for semantic search
     * Combines retrieved chunks into a single context prompt
     * Returns grounded answers instead of relying only on the LLM’s internal knowledge
-
 
 ---
 
