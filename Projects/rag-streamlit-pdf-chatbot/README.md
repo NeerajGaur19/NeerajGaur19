@@ -202,9 +202,12 @@ Add a screenshot after running the application.
 
 Example:
 
-```text
-[ Streamlit UI Screenshot Here ]
-```
+What are the steps of a retrospective
+<img width="1907" height="969" alt="image" src="https://github.com/user-attachments/assets/cc620eec-a9c9-4e3a-a9e9-6f3e20f9a773" />
+
+What are the success factors for reviews
+<img width="1911" height="958" alt="image" src="https://github.com/user-attachments/assets/027153b9-6e54-429a-a023-a7e681e5630a" />
+
 
 ---
 
