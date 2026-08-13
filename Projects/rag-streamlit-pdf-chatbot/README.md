@@ -46,9 +46,6 @@ rag-streamlit-pdf-chatbot/
 ├── README.md                # Project documentation
 ├── .env                     # API key (not committed to GitHub)
 ├── .gitignore               # Git ignore rules
-├── chroma_db/               # Persisted vector database
-├── data/                    # Sample PDFs (optional)
-│   └── sample.pdf
 └── venv/                    # Virtual environment
 ```
 
