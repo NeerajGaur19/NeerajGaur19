@@ -11,6 +11,21 @@ GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY and "GOOGLE_API_KEY" in st.secrets:
     GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
+import streamlit as st
+
+# Hide the Deploy button, GitHub icon, and main menu
+st.markdown(
+    """
+    <style>
+    .stDeployButton { visibility: hidden; }
+    #MainMenu { visibility: hidden; }
+    header { visibility: hidden; }
+    footer { visibility: hidden; }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Browser tab title
 st.set_page_config(page_title="PDF RAG Chatbot")
 
