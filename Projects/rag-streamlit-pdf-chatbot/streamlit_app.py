@@ -51,10 +51,10 @@ with col3:
 
 #st.markdown("<hr>", unsafe_allow_html=True)
 
-st.markdown("<h1 style='font-size:18px;'>Upload a PDF and ask questions from it</h1>", unsafe_allow_html=True)
 
 with st.sidebar:
     st.header("📂 Upload Documents")
+    st.markdown("<h1 style='font-size:18px;'>Upload a PDF and ask questions from it</h1>", unsafe_allow_html=True)
 
     uploaded_files = st.file_uploader(
         "Choose PDF files",
