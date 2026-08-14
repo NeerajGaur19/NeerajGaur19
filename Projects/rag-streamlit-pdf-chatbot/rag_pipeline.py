@@ -39,8 +39,8 @@ def create_rag_chain(pdf_paths, google_api_key):
     # -------------------------------
     vectorstore = Chroma.from_documents(
         documents=splits,
-        embedding=embeddings,
-        persist_directory="chroma_db"
+        embedding=embeddings
+        #persist_directory="chroma_db"
     )
 
     # -------------------------------
