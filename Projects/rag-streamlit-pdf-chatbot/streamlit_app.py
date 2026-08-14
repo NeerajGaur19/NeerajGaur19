@@ -13,6 +13,13 @@ if not GOOGLE_API_KEY and "GOOGLE_API_KEY" in st.secrets:
 
 import streamlit as st
 
+
+# Browser tab title
+st.set_page_config(page_title="PDF RAG Chatbot",
+    page_icon="📄",
+    layout="wide"
+)
+
 # Hide the Deploy button, GitHub icon, and main menu
 st.markdown(
     """
@@ -26,8 +33,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Browser tab title
-st.set_page_config(page_title="PDF RAG Chatbot")
 
 # Main heading
 st.subheader("📄 PDF RAG Chatbot (HuggingFace Embeddings)")
@@ -35,7 +40,6 @@ st.subheader("📄 PDF RAG Chatbot (HuggingFace Embeddings)")
 if not GOOGLE_API_KEY:
     st.error("GOOGLE_API_KEY not found in .env file")
     st.stop()
-
 
 col1, col2, col3 = st.columns(3)
 
@@ -88,7 +92,8 @@ if uploaded_files:
         st.success(f"Processed {len(uploaded_files)} PDF files")
 
         # User question
-        question = st.text_input("Ask a question from the PDF.")
+        #question = st.text_input("Ask a question from the PDF.")
+        question = st.chat_input("Ask a question from your PDFs...")
 
         if question:
             with st.spinner("Searching document and generating answer..."):
@@ -114,6 +119,18 @@ if uploaded_files:
             #st.subheader("Source Details")            
             #st.write(f"Source: {doc.metadata['source']}, Page: {doc.metadata['page']}")
             st.subheader("Answer")
-            st.write(response.content[0]["text"])
+            with st.chat_message("user"):
+                st.write(question)
+            with st.chat_message("assistant"):
+                st.write(response.content[0]["text"])
+
     except Exception as e:
         st.error(f"❌ Error processing PDF: {e}")
+
+st.markdown("---")
+st.markdown(
+    "<div style='text-align:center; color:gray;'>"
+    "Built using Streamlit • LangChain • Gemini • ChromaDB"
+    "</div>",
+    unsafe_allow_html=True
+)
