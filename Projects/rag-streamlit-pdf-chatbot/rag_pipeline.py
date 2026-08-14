@@ -55,7 +55,7 @@ def create_rag_chain(pdf_paths, google_api_key):
     # -------------------------------
     llm = ChatGoogleGenerativeAI(
         model="gemini-flash-lite-latest",
-        temperature=0,
+        temperature=0.2,
         google_api_key=google_api_key
     )
 

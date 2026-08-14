@@ -30,16 +30,46 @@ st.markdown(
 st.set_page_config(page_title="PDF RAG Chatbot")
 
 # Main heading
-st.title("📄 PDF RAG Chatbot (HuggingFace Embeddings)")
+st.subheader("📄 PDF RAG Chatbot (HuggingFace Embeddings)")
 
 if not GOOGLE_API_KEY:
     st.error("GOOGLE_API_KEY not found in .env file")
     st.stop()
 
-st.write("Upload a PDF and ask questions from it.")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.info("📚 **Multi-PDF Support**\nUpload and search across multiple documents.")
+
+with col2:
+    st.success("🔍 **Semantic Search**\nFind answers even when wording is different.")
+
+with col3:
+    st.warning("⚡ **Powered by Gemini**\nContext-aware answers using RAG + LLMs.")
+
+
+#st.markdown("<hr>", unsafe_allow_html=True)
+
+st.markdown("<h1 style='font-size:18px;'>Upload a PDF and ask questions from it</h1>", unsafe_allow_html=True)
+
+with st.sidebar:
+    st.header("📂 Upload Documents")
+
+    uploaded_files = st.file_uploader(
+        "Choose PDF files",
+        type="pdf",
+        accept_multiple_files=True
+    )
+
+    st.markdown("---")
+    st.caption("Supported: Multiple PDF documents") 
 
 # Upload PDF
-uploaded_files = st.file_uploader("Choose a PDF file",type="pdf",accept_multiple_files=True)
+# uploaded_files = st.file_uploader("Choose a PDF file",
+#    type="pdf",
+#    accept_multiple_files=True
+#)
 
 if uploaded_files:
     temp_pdf_paths = []
@@ -51,18 +81,19 @@ if uploaded_files:
                 temp_pdf_paths.append(tmp_file.name)
 
         # Build RAG pipeline
-        with st.spinner("Processing PDFs"):
-            rag = create_rag_chain(temp_pdf_paths,GOOGLE_API_KEY)
+        if temp_pdf_paths and "rag" not in st.session_state:
+            with st.spinner("📄 Processing PDFs and building vector index..."):
+                st.session_state.rag = create_rag_chain(temp_pdf_paths,GOOGLE_API_KEY)
 
         st.success(f"Processed {len(uploaded_files)} PDF files")
 
         # User question
-        question = st.text_input("Ask a question from the PDF")
+        question = st.text_input("Ask a question from the PDF.")
 
         if question:
             with st.spinner("Searching document and generating answer..."):
                 # Retrieve relevant chunks
-                docs = rag["retriever"].invoke(question)
+                docs = st.session_state.rag["retriever"].invoke(question)
 
                 # Combine retrieved text
                 context = "\n\n".join([doc.page_content for doc in docs])
@@ -78,7 +109,7 @@ if uploaded_files:
                 {question}
                 """
                 # Generate answer
-                response = rag["llm"].invoke(prompt)
+                response = st.session_state.rag["llm"].invoke(prompt)
 
             #st.subheader("Source Details")            
             #st.write(f"Source: {doc.metadata['source']}, Page: {doc.metadata['page']}")
