@@ -5,13 +5,17 @@ from langchain_community.vectorstores import Chroma
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 # Function to build complete RAG pipeline
-def create_rag_chain(pdf_path, google_api_key):
+def create_rag_chain(pdf_paths, google_api_key):
+
+    all_documents = []
 
     # -------------------------------
     # STEP 1: LOAD PDF
     # -------------------------------
-    loader = PyPDFLoader(pdf_path)
-    documents = loader.load()
+    for pdf_path in pdf_paths:
+        loader = PyPDFLoader(pdf_path)
+        documents = loader.load()
+        all_documents.extend(documents)
 
     # -------------------------------
     # STEP 2: SPLIT DOCUMENT
@@ -21,7 +25,7 @@ def create_rag_chain(pdf_path, google_api_key):
         chunk_overlap=200
     )
 
-    splits = splitter.split_documents(documents)
+    splits = splitter.split_documents(all_documents)
 
     # -------------------------------
     # STEP 3: CREATE EMBEDDINGS
@@ -43,7 +47,7 @@ def create_rag_chain(pdf_path, google_api_key):
     # STEP 5: CREATE RETRIEVER
     # -------------------------------
     retriever = vectorstore.as_retriever(
-        search_kwargs={"k": 3}
+        search_kwargs={"k": 4}
     )
 
     # -------------------------------

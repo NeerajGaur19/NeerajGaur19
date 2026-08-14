@@ -21,22 +21,22 @@ if not GOOGLE_API_KEY:
 st.write("Upload a PDF and ask questions from it.")
 
 # Upload PDF
-uploaded_file = st.file_uploader("Choose a PDF file",type="pdf")
+uploaded_files = st.file_uploader("Choose a PDF file",type="pdf",accept_multiple_files=True)
 
-if uploaded_file is not None:
+if uploaded_files:
+    temp_pdf_paths = []
     try:
-        # Save uploaded file temporarily
-        with tempfile.NamedTemporaryFile(delete=False,suffix=".pdf") as tmp_file:
-            tmp_file.write(uploaded_file.read())
-            temp_pdf_path = tmp_file.name
-
-        st.success("PDF uploaded successfully!")
+        for uploaded_file in uploaded_files:
+            # Save uploaded file temporarily
+            with tempfile.NamedTemporaryFile(delete=False,suffix=".pdf") as tmp_file:
+                tmp_file.write(uploaded_file.read())
+                temp_pdf_paths.append(tmp_file.name)
 
         # Build RAG pipeline
-        with st.spinner("Creating embeddings and vector database..."):
-            rag = create_rag_chain(temp_pdf_path,GOOGLE_API_KEY)
+        with st.spinner("Processing PDFs"):
+            rag = create_rag_chain(temp_pdf_paths,GOOGLE_API_KEY)
 
-        st.success("RAG system is ready!")
+        st.success(f"Processed {len(uploaded_files)} PDF files")
 
         # User question
         question = st.text_input("Ask a question from the PDF")
