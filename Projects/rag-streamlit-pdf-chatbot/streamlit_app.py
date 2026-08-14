@@ -8,6 +8,9 @@ import os
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
+if not GOOGLE_API_KEY and "GOOGLE_API_KEY" in st.secrets:
+    GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+
 # Browser tab title
 st.set_page_config(page_title="PDF RAG Chatbot")
 
