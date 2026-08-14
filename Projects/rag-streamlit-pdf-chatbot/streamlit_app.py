@@ -77,12 +77,12 @@ if uploaded_files:
                 Question:
                 {question}
                 """
-
                 # Generate answer
                 response = rag["llm"].invoke(prompt)
 
+            #st.subheader("Source Details")            
+            #st.write(f"Source: {doc.metadata['source']}, Page: {doc.metadata['page']}")
             st.subheader("Answer")
             st.write(response.content[0]["text"])
-            
     except Exception as e:
         st.error(f"❌ Error processing PDF: {e}")
