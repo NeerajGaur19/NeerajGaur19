@@ -109,8 +109,8 @@ These terms are related but slightly different.
 
    An AI agent is an individual entity that can perform actions.
 
-     User
-      ↓
+      User
+       ↓
      AI Agent
       ├── LLM
       ├── Memory
@@ -124,3 +124,19 @@ These terms are related but slightly different.
   * Customer support agent
   * Research agent
 
+### Agentic AI
+
+Agentic AI is the broader approach or system where AI behaves in a goal-directed, autonomous way.
+
+It may contain:
+
+Agentic AI System
+       │
+       ├── Agent 1: Researcher
+       ├── Agent 2: Analyst
+       ├── Agent 3: Writer
+       └── Agent 4: Reviewer
+Simple way to remember
+
+AI Agent = the worker
+Agentic AI = the way the workers operate and collaborate
