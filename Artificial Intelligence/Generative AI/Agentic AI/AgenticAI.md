@@ -305,3 +305,45 @@ Temporary information while solving a problem.
      Food = ₹8,000
      Total = ₹45,000
 
+## 8. Component 4: Planning
+
+This is one of the most important parts of Agentic AI.
+
+A complex goal may need to be divided into smaller tasks.
+
+User:
+
+     "Analyze my sales data and recommend how to improve revenue."
+
+The agent creates a plan:
+
+     Goal
+      │
+      ├── Step 1: Get sales data
+      │
+      ├── Step 2: Clean data
+      │
+      ├── Step 3: Analyze trends
+      │
+      ├── Step 4: Identify low-performing products
+      │
+      ├── Step 5: Identify regions
+      │
+      ├── Step 6: Find revenue opportunities
+      │
+      └── Step 7: Create recommendations
+
+This is called:
+
+     Task decomposition
+
+The agent converts:
+
+     Complex Goal
+          ↓
+     Smaller Tasks
+          ↓
+     Actions
+          ↓
+     Results
+
