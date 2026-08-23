@@ -354,7 +354,7 @@ The agent doesn't just think.
 
 It can act.
 
-Examples:
+  Examples:
 
      Search web
            ↓
@@ -370,7 +370,7 @@ Examples:
            ↓
      Update CRM
 
-Conceptually:
+  Conceptually:
 
      thought = llm("What should I do?")
      
@@ -383,5 +383,39 @@ Conceptually:
      elif thought == "calculate":
          calculator()
 
-Of course, modern agent frameworks do this more systematically.
+  Of course, modern agent frameworks do this more systematically.
+
+## 10. Component 6: Reflection
+
+An advanced agent can evaluate its own output.
+
+Example:
+
+     Agent creates report
+             ↓
+     Agent evaluates report
+             ↓
+     "Is information sufficient?"
+             ↓
+     No
+             ↓
+     Search for more data
+             ↓
+     Improve report
+
+This is sometimes described as:
+
+     Generate
+        ↓
+     Evaluate
+        ↓
+     Critique
+        ↓
+     Improve
+
+Example:
+
+     "I could not find sufficient evidence to support this conclusion. I should retrieve more information."
+
+This creates an iterative loop.
 
