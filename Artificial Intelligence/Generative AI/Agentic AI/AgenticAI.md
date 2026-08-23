@@ -1,6 +1,12 @@
 
 # Agentic AI
 
+Agentic AI is an AI system that can understand a goal, decide what actions are required, use tools, execute those actions, evaluate the results, and continue working until the goal is achieved.
+
+## Goal
+
+     You give the AI a goal, rather than explicitly programming every step.
+
 ## Evolution from Traditional Programming
 
      Traditional Programming
@@ -36,7 +42,7 @@
 
 ## RAG application
 
-    User Question
+     User Question
           ↓
       Retriever
           ↓
