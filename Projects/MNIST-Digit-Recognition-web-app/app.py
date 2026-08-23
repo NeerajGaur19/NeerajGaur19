@@ -26,14 +26,25 @@ st.markdown("""
 <div class="pipeline">
     <div class="step purple">✍️<br>Draw</div>
     <div class="arrow">→</div>
+
     <div class="step blue">⚫<br>Gray</div>
     <div class="arrow">→</div>
+
+    <div class="step cyan">⬛<br>Binary</div>
+    <div class="arrow">→</div>
+
     <div class="step orange">✂️<br>Crop</div>
     <div class="arrow">→</div>
-    <div class="step green">📐<br>Resize</div>
+
+    <div class="step pink">⬜<br>Square</div>
     <div class="arrow">→</div>
-    <div class="step yellow">🎯<br>Center</div>
+
+    <div class="step green">📐<br>20 × 20</div>
     <div class="arrow">→</div>
+
+    <div class="step yellow">🔢<br>28 × 28</div>
+    <div class="arrow">→</div>
+
     <div class="step red">🤖<br>Predict</div>
 </div>
 """, unsafe_allow_html=True)
@@ -93,6 +104,16 @@ st.markdown("""
 
 .red {
     background-color: #DC2626;
+    color: white;
+}
+
+.cyan {
+    background-color: #0891B2;
+    color: white;
+}
+
+.pink {
+    background-color: #DB2777;
     color: white;
 }
 
