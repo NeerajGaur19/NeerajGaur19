@@ -305,6 +305,8 @@ Temporary information while solving a problem.
      Food = ₹8,000
      Total = ₹45,000
 
+---
+
 ## 8. Component 4: Planning
 
 This is one of the most important parts of Agentic AI.
@@ -347,6 +349,7 @@ The agent creates a plan:
           ↓
      Results
 
+---
 
 ## 9. Component 5: Action
 
@@ -385,6 +388,8 @@ It can act.
 
   Of course, modern agent frameworks do this more systematically.
 
+---
+
 ## 10. Component 6: Reflection
 
 An advanced agent can evaluate its own output.
@@ -419,3 +424,60 @@ Example:
 
 This creates an iterative loop.
 
+---
+
+## 11. The most important Agentic AI loop
+
+At the heart of many agents is:
+
+### Think → Act → Observe → Repeat
+           ┌───────────────┐
+           │     THINK     │
+           └───────┬───────┘
+                   ↓
+           ┌───────────────┐
+           │      ACT      │
+           └───────┬───────┘
+                   ↓
+           ┌───────────────┐
+           │    OBSERVE    │
+           └───────┬───────┘
+                   ↓
+                   │
+              Goal done?
+               /      \
+             No        Yes
+             ↓           ↓
+          THINK         END
+
+Example:
+
+     "Find the cheapest flight."
+
+Think
+          
+          I need flight prices.
+
+Act
+          
+          Call flight search tool.
+
+Observe
+
+          I found three flights.
+
+Think
+
+          I need to compare them.
+
+Act
+
+          Compare prices.
+
+Observe
+
+          Flight A is cheapest.
+
+Final answer
+
+          Recommend Flight A.
