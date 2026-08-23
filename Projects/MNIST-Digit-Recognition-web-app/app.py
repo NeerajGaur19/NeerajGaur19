@@ -1,3 +1,5 @@
+
+
 import streamlit as st
 import numpy as np
 import cv2
@@ -15,12 +17,65 @@ from streamlit_drawable_canvas import st_canvas
 # PAGE CONFIGURATION
 # --------------------------------------------------
 
+st.markdown("""
+<div class="pipeline">
+    <div class="step purple">✍️<br>Draw</div>
+    <div class="arrow">→</div>
+    <div class="step blue">⚫<br>Gray</div>
+    <div class="arrow">→</div>
+    <div class="step orange">✂️<br>Crop</div>
+    <div class="arrow">→</div>
+    <div class="step green">📐<br>Resize</div>
+    <div class="arrow">→</div>
+    <div class="step yellow">🎯<br>Center</div>
+    <div class="arrow">→</div>
+    <div class="step red">🤖<br>Predict</div>
+</div>
+""", unsafe_allow_html=True)
+
 st.set_page_config(
     page_title="MNIST Digit Recognition",
     page_icon="🔢",
     layout="wide"
 )
 
+st.markdown("""
+<style>
+
+.pipeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0px;
+    flex-wrap: wrap;
+}
+
+.step {
+    width: 100px;
+    height: 80px;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 5px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.arrow {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.purple { background-color: #e0ccff; }
+.blue { background-color: #cce5ff; }
+.orange { background-color: #ffe0b3; }
+.green { background-color: #ccf2d9; }
+.yellow { background-color: #fff5b3; }
+.red { background-color: #ffd6d6; }
+
+</style>
+""", unsafe_allow_html=True)
 
 #----------------------------------------------------
 
@@ -576,6 +631,26 @@ if canvas_result.image_data is not None:
 
                     Confidence: {confidence:.2f}%
                     """
+                )
+
+                st.markdown(
+                    f"""
+                    <div style="
+                        text-align:center;
+                        padding:30px;
+                        border-radius:20px;
+                        background: linear-gradient(135deg, #667eea, #764ba2);
+                        color:white;
+                        box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+                    ">
+                        <h2>🤖 AI Prediction</h2>
+                        <h1 style="font-size:90px; margin:0;">
+                            {predicted_digit}
+                        </h1>
+                        <h3>Confidence: {confidence:.2f}%</h3>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
                 )
 
 
