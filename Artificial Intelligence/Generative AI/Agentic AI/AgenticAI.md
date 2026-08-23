@@ -3,11 +3,13 @@
 
 Agentic AI is an AI system that can understand a goal, decide what actions are required, use tools, execute those actions, evaluate the results, and continue working until the goal is achieved.
 
+
 ## Goal
 
      You give the AI a goal, rather than explicitly programming every step.
 
-## Evolution from Traditional Programming
+
+## 1. Evolution from Traditional Programming
 
      Traditional Programming
             ↓
@@ -55,6 +57,70 @@ Agentic AI is an AI system that can understand a goal, decide what actions are r
         Answer
 
 
+## 2. Traditional program vs Agentic AI
+
+### Traditional program 
+
+     Step 1: Search flights
+     Step 2: Search hotels
+     Step 3: Compare prices
+     Step 4: Create itinerary
+
+You define everything.
 
 
+### Agentic AI
+
+  You say:
+
+  "Plan my 5-day trip to Goa within ₹50,000."
+
+  The agent can determine:
+
+     Goal: Plan Goa trip
+            ↓
+     Need travel information?
+            ↓
+     Search flights
+            ↓
+     Need accommodation?
+            ↓
+     Search hotels
+            ↓
+     Need to calculate budget?
+            ↓
+     Use calculator
+            ↓
+     Need itinerary?
+            ↓
+     Create daily plan
+            ↓
+     Check budget
+            ↓
+     Return final answer
+
+ This ability to reason about actions and execute them is the basic idea behind Agentic AI.
+
+## 3. AI Agent vs Agentic AI
+
+These terms are related but slightly different.
+
+### AI Agent
+
+   An AI agent is an individual entity that can perform actions.
+
+     User
+      ↓
+     AI Agent
+      ├── LLM
+      ├── Memory
+      ├── Tools
+      └── Actions
+
+   Example:
+
+  * Travel agent
+  * Coding agent
+  * Customer support agent
+  * Research agent
 
