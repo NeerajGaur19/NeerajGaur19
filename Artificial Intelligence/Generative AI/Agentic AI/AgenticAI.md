@@ -8,6 +8,7 @@ Agentic AI is an AI system that can understand a goal, decide what actions are r
 
      You give the AI a goal, rather than explicitly programming every step.
 
+---
 
 ## 1. Evolution from Traditional Programming
 
@@ -56,6 +57,7 @@ Agentic AI is an AI system that can understand a goal, decide what actions are r
           ↓
         Answer
 
+---
 
 ## 2. Traditional program vs Agentic AI
 
@@ -101,6 +103,8 @@ You define everything.
 
  This ability to reason about actions and execute them is the basic idea behind Agentic AI.
 
+---
+
 ## 3. AI Agent vs Agentic AI
 
   These terms are related but slightly different.
@@ -142,8 +146,9 @@ You define everything.
      AI Agent = the worker
      
      Agentic AI = the way the workers operate and collaborate
+
+---
   
-   
 ## 4. Core architecture of an AI Agent
 
   A basic agent has several important components.
@@ -175,6 +180,8 @@ You define everything.
                  └───────────────────┘
 
    Let's understand each one.
+
+---
 
 ## 5. Component 1: LLM = Brain
 
