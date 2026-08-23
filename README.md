@@ -110,7 +110,7 @@ I am passionate about:
 ## Featured Projects
 
 - <a href='Projects/rag-gradio-pdf-chatbot/README.md'>RAG Gradio PDF Chatbot</a>
-- <a href=''>MNIST Digit Recognition App</a>
+- <a href='Projects/MNIST-Digit-Recognition-web-app/README.md'>MNIST Digit Recognition App</a>
 - <a href='Artificial Intelligence/Machine Learning/Algorithms/Supervised/Classification/Logistic Regression/LR_Customer Churn Project.py'>Customer Churn Prediction</a>
 - <a href='Artificial Intelligence/Machine Learning/Algorithms/Supervised/Classification/Logistic Regression/LR_VIF_Census Project.py'>Census Project</a>
 - <a href='Artificial Intelligence/Machine Learning/Algorithms/Supervised/Classification/Decision Tree/DT_SMOTE_Credit Card Fraud Detection.py'>Credit Card Fraud Detection Project</a>
