@@ -219,3 +219,49 @@ The LLM may decide:
      5. Check calculation
      6. Generate report
 
+
+---
+
+## 6. Component 2: Tools
+
+An LLM by itself mainly generates text.
+
+An agent becomes much more powerful when it can use tools.
+
+Examples:
+
+     AI Agent
+        │
+        ├── Web Search
+        ├── Calculator
+        ├── Python
+        ├── SQL Database
+        ├── RAG Retriever
+        ├── Email
+        ├── Calendar
+        ├── API
+        └── File System
+
+Example user request:
+
+     "What was our company's revenue last quarter?"
+
+
+The agent may do:
+
+     User Question
+           ↓
+     LLM decides:
+     "I need company financial data"
+           ↓
+       SQL Tool
+           ↓
+       Database
+           ↓
+     Revenue Data
+           ↓
+     LLM analyzes data
+           ↓
+     Final Answer
+
+This is fundamentally different from a normal chatbot.
