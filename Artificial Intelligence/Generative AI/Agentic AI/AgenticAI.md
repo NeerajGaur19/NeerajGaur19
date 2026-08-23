@@ -103,9 +103,9 @@ You define everything.
 
 ## 3. AI Agent vs Agentic AI
 
-These terms are related but slightly different.
+  These terms are related but slightly different.
 
-### AI Agent
+  ### AI Agent
 
    An AI agent is an individual entity that can perform actions.
 
@@ -124,19 +124,91 @@ These terms are related but slightly different.
   * Customer support agent
   * Research agent
 
-### Agentic AI
+  ### Agentic AI
 
-Agentic AI is the broader approach or system where AI behaves in a goal-directed, autonomous way.
+  Agentic AI is the broader approach or system where AI behaves in a goal-directed, autonomous way.
+  
+  It may contain:
+  
+     Agentic AI System
+            │
+            ├── Agent 1: Researcher
+            ├── Agent 2: Analyst
+            ├── Agent 3: Writer
+            └── Agent 4: Reviewer
+  
+  Simple way to remember
+     
+     AI Agent = the worker
+     
+     Agentic AI = the way the workers operate and collaborate
+  
+   
+## 4. Core architecture of an AI Agent
 
-It may contain:
+  A basic agent has several important components.
 
-Agentic AI System
-       │
-       ├── Agent 1: Researcher
-       ├── Agent 2: Analyst
-       ├── Agent 3: Writer
-       └── Agent 4: Reviewer
-Simple way to remember
+                 ┌───────────────────┐
+                 │       USER        │
+                 └─────────┬─────────┘
+                           │ Goal
+                           ▼
+                 ┌───────────────────┐
+                 │       AGENT       │
+                 │                   │
+                 │  ┌─────────────┐  │
+                 │  │    LLM      │  │
+                 │  │   BRAIN     │  │
+                 │  └──────┬──────┘  │
+                 │         │         │
+                 │  ┌──────▼──────┐  │
+                 │  │   Memory    │  │
+                 │  └─────────────┘  │
+                 │                   │
+                 │  ┌─────────────┐  │
+                 │  │    Tools    │  │
+                 │  └──────┬──────┘  │
+                 │         │         │
+                 │  ┌──────▼──────┐  │
+                 │  │   Actions   │  │
+                 │  └─────────────┘  │
+                 └───────────────────┘
 
-AI Agent = the worker
-Agentic AI = the way the workers operate and collaborate
+   Let's understand each one.
+
+## 5. Component 1: LLM = Brain
+
+The LLM is the reasoning engine.
+
+Examples include:
+     
+     * GPT models
+     * Claude models
+     * Gemini models
+     * Llama models
+
+The LLM decides:
+     
+     What does the user want?
+             ↓
+     What information do I need?
+             ↓
+     Do I need a tool?
+             ↓
+     Which tool should I use?
+             ↓
+     What should I do next?
+
+For example:
+
+     "Find the latest sales data and calculate the growth."
+
+The LLM may decide:
+
+     1. Need sales data
+     2. Use database tool
+     3. Retrieve current sales
+     4. Calculate growth
+     5. Check calculation
+     6. Generate report
+
