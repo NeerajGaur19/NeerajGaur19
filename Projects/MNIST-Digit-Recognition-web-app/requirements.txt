@@ -1,6 +1,6 @@
-streamlit
-streamlit-drawable-canvas
-tensorflow
+streamlit==1.62.0
+streamlit-drawable-canvas==0.9.3
+tensorflow==2.20.0
 numpy
 opencv-python-headless
 Pillow
