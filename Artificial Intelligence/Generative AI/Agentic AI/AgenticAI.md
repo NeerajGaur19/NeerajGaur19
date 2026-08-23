@@ -333,11 +333,11 @@ The agent creates a plan:
       │
       └── Step 7: Create recommendations
 
-This is called:
+  This is called:
 
      Task decomposition
 
-The agent converts:
+  The agent converts:
 
      Complex Goal
           ↓
