@@ -347,3 +347,41 @@ The agent creates a plan:
           ↓
      Results
 
+
+## 9. Component 5: Action
+
+The agent doesn't just think.
+
+It can act.
+
+Examples:
+
+     Search web
+           ↓
+     Read document
+           ↓
+     Query database
+           ↓
+     Call API
+           ↓
+     Execute Python
+           ↓
+     Send email
+           ↓
+     Update CRM
+
+Conceptually:
+
+     thought = llm("What should I do?")
+     
+     if thought == "search":
+         search()
+     
+     elif thought == "query_database":
+         query_database()
+     
+     elif thought == "calculate":
+         calculator()
+
+Of course, modern agent frameworks do this more systematically.
+
