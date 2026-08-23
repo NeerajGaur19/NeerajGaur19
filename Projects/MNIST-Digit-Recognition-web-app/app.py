@@ -6,7 +6,6 @@ import cv2
 import tensorflow as tf
 import matplotlib.pyplot as plt
 from pathlib import Path
-import tensorflow as tf
 
 
 from PIL import Image
@@ -16,6 +15,12 @@ from streamlit_drawable_canvas import st_canvas
 # --------------------------------------------------
 # PAGE CONFIGURATION
 # --------------------------------------------------
+
+st.set_page_config(
+    page_title="MNIST Digit Recognition",
+    page_icon="🔢",
+    layout="wide"
+)
 
 st.markdown("""
 <div class="pipeline">
@@ -32,12 +37,6 @@ st.markdown("""
     <div class="step red">🤖<br>Predict</div>
 </div>
 """, unsafe_allow_html=True)
-
-st.set_page_config(
-    page_title="MNIST Digit Recognition",
-    page_icon="🔢",
-    layout="wide"
-)
 
 st.markdown("""
 <style>
