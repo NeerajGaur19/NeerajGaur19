@@ -219,7 +219,6 @@ The LLM may decide:
      5. Check calculation
      6. Generate report
 
-
 ---
 
 ## 6. Component 2: Tools
@@ -265,3 +264,44 @@ The agent may do:
      Final Answer
 
 This is fundamentally different from a normal chatbot.
+
+---
+
+## 7. Component 3: Memory
+
+An agent may need to remember information.
+
+### Short-term memory
+
+Information relevant to the current task.
+
+     User: Plan a trip to Goa
+     User: Make it cheaper
+     User: Add water sports
+
+The agent remembers the context of the conversation.
+
+### Long-term memory
+
+Information useful across interactions.
+
+For example:
+
+     User preferences:
+     - Budget traveler
+     - Prefers vegetarian food
+     - Likes beaches
+     - Prefers direct flights
+
+The agent can use this information in future tasks.
+
+### Working memory
+
+Temporary information while solving a problem.
+
+     Flight cost = ₹12,000
+     Hotel = ₹20,000
+     Activities = ₹5,000
+     Food = ₹8,000
+     Total = ₹45,000
+
