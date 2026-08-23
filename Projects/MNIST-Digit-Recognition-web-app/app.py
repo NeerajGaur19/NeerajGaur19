@@ -3,6 +3,9 @@ import numpy as np
 import cv2
 import tensorflow as tf
 import matplotlib.pyplot as plt
+from pathlib import Path
+import tensorflow as tf
+
 
 from PIL import Image
 from streamlit_drawable_canvas import st_canvas
@@ -56,15 +59,14 @@ def center_by_mass(image):
 # LOAD MODEL
 # --------------------------------------------------
 
+
+BASE_DIR = Path(__file__).parent
+
+MODEL_PATH = BASE_DIR / "mnist_cnn_model.keras"
+
 @st.cache_resource
 def load_model():
-
-    model = tf.keras.models.load_model(
-        "mnist_cnn_model.keras"
-    )
-
-    return model
-
+    return tf.keras.models.load_model(MODEL_PATH)
 
 # --------------------------------------------------
 # IMAGE PREPROCESSING FUNCTION
