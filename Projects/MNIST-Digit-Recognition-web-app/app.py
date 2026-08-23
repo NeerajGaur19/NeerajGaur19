@@ -66,12 +66,35 @@ st.markdown("""
     font-weight: bold;
 }
 
-.purple { background-color: #e0ccff; }
-.blue { background-color: #cce5ff; }
-.orange { background-color: #ffe0b3; }
-.green { background-color: #ccf2d9; }
-.yellow { background-color: #fff5b3; }
-.red { background-color: #ffd6d6; }
+.purple {
+    background-color: #7C3AED;
+    color: white;
+}
+
+.blue {
+    background-color: #2563EB;
+    color: white;
+}
+
+.orange {
+    background-color: #EA580C;
+    color: white;
+}
+
+.green {
+    background-color: #16A34A;
+    color: white;
+}
+
+.yellow {
+    background-color: #CA8A04;
+    color: white;
+}
+
+.red {
+    background-color: #DC2626;
+    color: white;
+}
 
 </style>
 """, unsafe_allow_html=True)
