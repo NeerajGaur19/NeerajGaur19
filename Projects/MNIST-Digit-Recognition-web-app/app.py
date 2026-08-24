@@ -22,6 +22,19 @@ st.set_page_config(
     layout="wide"
 )
 
+st.markdown(
+    """
+    <style>
+    .stDeployButton { visibility: hidden; }
+    #MainMenu { visibility: hidden; }
+    header { visibility: hidden; }
+    footer { visibility: hidden; }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 st.markdown("""
 <div class="pipeline">
     <div class="step purple">✍️<br>Draw</div>
