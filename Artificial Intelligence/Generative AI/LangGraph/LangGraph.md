@@ -73,3 +73,28 @@ So:
     Retrieve      →    Analyze       →     Generate
     documents          documents            answer
     
+## What is an Edge?
+
+An edge determines where execution goes next.
+
+For example:
+
+    START
+      ↓
+    Retrieve
+      ↓
+    Generate
+      ↓
+    END
+
+In code:
+
+    graph.add_edge(START, "retrieve")
+    graph.add_edge("retrieve", "generate")
+    graph.add_edge("generate", END)
+
+So you can think:
+
+    Node = WHAT to do
+    
+    Edge = WHERE to go next
