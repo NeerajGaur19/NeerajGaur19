@@ -65,3 +65,28 @@ The simplest difference is:
 
 <img width="845" height="736" alt="image" src="https://github.com/user-attachments/assets/a1d86a5c-3a89-434c-8f90-c2c43877e89a" />
 
+
+# 1. Power BI Desktop 💻
+
+   Power BI Desktop is the application you install on Windows to develop reports.
+
+        Excel / SQL / CSV / API
+                  ↓
+             Power BI Desktop
+                  ↓
+            Power Query
+           Clean the data
+                  ↓
+            Data Modeling
+         Create relationships
+                  ↓
+                DAX
+         Create calculations
+                  ↓
+           Create Visuals
+                  ↓
+              .pbix File
+                  ↓
+                Publish
+                  ↓
+           Power BI Service
