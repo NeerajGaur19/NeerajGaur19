@@ -56,3 +56,12 @@ Power BI is Microsoft's Business Intelligence (BI) and data visualization tool. 
     Business Decision
 
 
+# Power BI Desktop vs Power BI Service
+
+The simplest difference is:
+
+    Power BI Desktop = Create and build reports
+    Power BI Service = Publish, share, collaborate, and consume reports
+
+    <img width="845" height="736" alt="image" src="https://github.com/user-attachments/assets/a1d86a5c-3a89-434c-8f90-c2c43877e89a" />
+
