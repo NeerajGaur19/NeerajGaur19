@@ -90,3 +90,32 @@ The simplest difference is:
                 Publish
                   ↓
            Power BI Service
+
+
+# 2. Power BI Service ☁️
+
+ Power BI Service is the online/cloud version of Power BI.
+
+ After building your report in Desktop, you publish it to the Power BI Service.
+
+    Developer / Data Analyst
+            ↓
+    Power BI Desktop
+            ↓
+        Publish
+            ↓
+     ┌──────────────────────┐
+     │ Power BI Service     │
+     │                      │
+     │ 📊 Reports           │
+     │ 📈 Dashboards        │
+     │ 🔄 Data Refresh      │
+     │ 👥 Sharing           │
+     │ 🔐 Permissions       │
+     │ 🤝 Collaboration     │
+     └──────────────────────┘
+            ↓
+         Business Users
+
+Business users can then open the report in their browser and interact with it.
+
