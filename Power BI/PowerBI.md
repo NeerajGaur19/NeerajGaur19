@@ -37,3 +37,22 @@ Power BI is Microsoft's Business Intelligence (BI) and data visualization tool. 
     DAX – create measures and calculations
     Visualizations – charts, maps, KPIs, tables
     Power BI Service – publish and share reports
+
+
+# Power BI + Data Science
+
+    Since you're learning Python, ML, GenAI, RAG, and Agentic AI, Power BI can complement your skills:
+
+    Python / SQL / Excel
+            ↓
+    Data Collection & Processing
+            ↓
+    Machine Learning Model
+            ↓
+    Predictions
+            ↓
+    Power BI Dashboard
+            ↓
+    Business Decision
+
+
