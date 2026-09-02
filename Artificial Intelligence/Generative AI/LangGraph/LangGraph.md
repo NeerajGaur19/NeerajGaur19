@@ -150,3 +150,54 @@ So the state acts like the shared memory/context of the running graph.
 The official quickstart similarly uses graph state to maintain information such as messages and LLM-call counts throughout execution.
 
 
+## LangGraph vs LangChain
+
+This is extremely important for your learning.
+
+Think of:
+
+### LangChain
+
+    LLM
+     +
+    Prompt
+     +
+    Tools
+     +
+    Retrievers
+     +
+    Memory
+
+LangChain gives you many components and integrations for building LLM applications and agents.
+
+### LangGraph
+
+                 GRAPH
+                   │
+          ┌────────┼────────┐
+          ↓        ↓        ↓
+        Node     Node      Node
+          │        │        │
+          └──────→ State ←──┘
+                   │
+                Decisions
+                   │
+                 Loops
+
+LangGraph controls how those components execute together.
+
+The current official documentation explicitly says that LangChain agents are built on top of LangGraph, while basic LangChain agent usage does not require you to know LangGraph.
+
+So:
+
+    LangChain
+       ↓
+    Components + integrations + agents
+    
+    LangGraph
+       ↓
+    Workflow orchestration + state + control
+
+A good mental model is:
+
+    LangChain gives you building blocks; LangGraph gives you control over the execution flow.
