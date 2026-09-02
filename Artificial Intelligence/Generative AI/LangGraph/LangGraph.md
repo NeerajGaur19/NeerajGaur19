@@ -1,5 +1,5 @@
 
-### LangGraph represents an application as a graph.
+#### LangGraph represents an application as a graph.
 
 A graph consists mainly of:
 
