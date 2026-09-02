@@ -98,3 +98,55 @@ So you can think:
     Node = WHAT to do
     
     Edge = WHERE to go next
+
+
+## What is State?
+
+This is probably the most important LangGraph concept.
+
+State is the information that travels through your graph.
+
+For example:
+
+    class State(TypedDict):
+        question: str
+        documents: list
+        answer: str
+
+Imagine the user asks:
+
+    "What is Power BI?"
+
+Initial state:
+
+    {
+        "question": "What is Power BI?",
+        "documents": [],
+        "answer": ""
+    }
+
+After retrieval:
+
+    {
+        "question": "What is Power BI?",
+        "documents": [
+            "Power BI is Microsoft's BI platform..."
+        ],
+        "answer": ""
+    }
+
+After generation:
+
+    {
+        "question": "What is Power BI?",
+        "documents": [
+            "Power BI is Microsoft's BI platform..."
+        ],
+        "answer": "Power BI is a business intelligence..."
+    }
+
+So the state acts like the shared memory/context of the running graph.
+
+The official quickstart similarly uses graph state to maintain information such as messages and LLM-call counts throughout execution.
+
+
