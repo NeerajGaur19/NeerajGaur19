@@ -1,26 +1,78 @@
 import tensorflow as tf
+
+from pathlib import Path
+
 from tensorflow.keras.datasets import mnist
+
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPooling2D
-from tensorflow.keras.layers import Flatten, Dense, Dropout
+
+from tensorflow.keras.layers import (
+    Conv2D,
+    MaxPooling2D,
+    Flatten,
+    Dense,
+    Dropout
+)
 
 
-MODEL_PATH = "mnist_cnn_model.keras"
+# ============================================================
+# MODEL PATH
+# ============================================================
 
+BASE_DIR = Path(__file__).resolve().parent
+
+MODEL_PATH = BASE_DIR / "mnist_cnn_model.keras"
+
+
+# ============================================================
+# CREATE AND TRAIN MODEL
+# ============================================================
 
 def create_and_train_model():
-    """
-    Create and train a CNN model on the MNIST dataset.
-    """
 
-    # Load MNIST dataset
-    (x_train, y_train), (x_test, y_test) = mnist.load_data()
+    print("\n")
+    print("=" * 60)
+    print("MNIST CNN TRAINING")
+    print("=" * 60)
 
-    # Normalize pixel values from 0-255 to 0-1
-    x_train = x_train.astype("float32") / 255.0
-    x_test = x_test.astype("float32") / 255.0
+    # --------------------------------------------------------
+    # LOAD MNIST
+    # --------------------------------------------------------
 
-    # Add channel dimension
+    print("\nLoading MNIST dataset...")
+
+    (
+        x_train,
+        y_train
+    ), (
+        x_test,
+        y_test
+    ) = mnist.load_data()
+
+    print(
+        f"Training samples: {len(x_train)}"
+    )
+
+    print(
+        f"Testing samples: {len(x_test)}"
+    )
+
+    # --------------------------------------------------------
+    # NORMALIZATION
+    # --------------------------------------------------------
+
+    x_train = (
+        x_train.astype("float32") / 255.0
+    )
+
+    x_test = (
+        x_test.astype("float32") / 255.0
+    )
+
+    # --------------------------------------------------------
+    # ADD CHANNEL DIMENSION
+    # --------------------------------------------------------
+
     x_train = x_train.reshape(
         x_train.shape[0],
         28,
@@ -35,8 +87,13 @@ def create_and_train_model():
         1
     )
 
-    # Build CNN
+    # --------------------------------------------------------
+    # BUILD CNN
+    # --------------------------------------------------------
+
     model = Sequential([
+
+        # Convolution Layer 1
         Conv2D(
             32,
             kernel_size=(3, 3),
@@ -44,55 +101,134 @@ def create_and_train_model():
             input_shape=(28, 28, 1)
         ),
 
-        MaxPooling2D(pool_size=(2, 2)),
+        # Pooling
+        MaxPooling2D(
+            pool_size=(2, 2)
+        ),
 
+        # Convolution Layer 2
         Conv2D(
             64,
             kernel_size=(3, 3),
             activation="relu"
         ),
 
-        MaxPooling2D(pool_size=(2, 2)),
+        # Pooling
+        MaxPooling2D(
+            pool_size=(2, 2)
+        ),
 
+        # Flatten
         Flatten(),
 
-        Dense(128, activation="relu"),
+        # Fully Connected Layer
+        Dense(
+            128,
+            activation="relu"
+        ),
 
-        Dropout(0.3),
+        # Dropout
+        Dropout(
+            0.3
+        ),
 
-        Dense(10, activation="softmax")
+        # Output Layer
+        Dense(
+            10,
+            activation="softmax"
+        )
     ])
 
-    # Compile model
+    # --------------------------------------------------------
+    # COMPILE
+    # --------------------------------------------------------
+
     model.compile(
+
         optimizer="adam",
+
         loss="sparse_categorical_crossentropy",
+
         metrics=["accuracy"]
     )
 
-    # Train model
-    model.fit(
+    # --------------------------------------------------------
+    # DISPLAY MODEL
+    # --------------------------------------------------------
+
+    print("\n")
+    model.summary()
+
+    # --------------------------------------------------------
+    # TRAIN
+    # --------------------------------------------------------
+
+    print("\n")
+    print("Training CNN...")
+
+    history = model.fit(
+
         x_train,
+
         y_train,
+
         epochs=5,
+
         batch_size=128,
-        validation_data=(x_test, y_test)
+
+        validation_data=(
+            x_test,
+            y_test
+        )
     )
 
-    # Evaluate model
+    # --------------------------------------------------------
+    # EVALUATE
+    # --------------------------------------------------------
+
     loss, accuracy = model.evaluate(
+
         x_test,
+
         y_test,
+
         verbose=0
     )
 
-    print(f"Test Accuracy: {accuracy:.4f}")
+    print("\n")
+    print("=" * 60)
+    print(
+        f"Test Loss     : {loss:.4f}"
+    )
+    print(
+        f"Test Accuracy : {accuracy:.4f}"
+    )
+    print("=" * 60)
 
-    # Save model
-    model.save(MODEL_PATH)
+    # --------------------------------------------------------
+    # SAVE MODEL
+    # --------------------------------------------------------
 
-    return model
+    model.save(
+        MODEL_PATH
+    )
 
+    print("\n")
+    print(
+        f"Model saved to:"
+    )
+
+    print(
+        MODEL_PATH
+    )
+
+    return model, history
+
+
+# ============================================================
+# RUN TRAINING
+# ============================================================
 
 if __name__ == "__main__":
+
     create_and_train_model()
