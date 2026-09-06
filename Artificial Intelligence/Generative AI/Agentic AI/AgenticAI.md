@@ -481,3 +481,99 @@ Observe
 Final answer
 
           Recommend Flight A.
+
+
+# Agent types
+
+A useful way to learn these:
+
+## Simple Reflex Agent
+
+     Perception
+        ↓
+     IF-THEN Rule
+        ↓
+     Action
+
+Example:
+
+     Dirty → Clean
+
+## Model-Based Reflex Agent
+     
+     Perception
+        ↓
+     Update World Model
+        ↓
+     Rule
+        ↓
+     Action
+
+Example:
+
+     Kitchen = dirty
+     Living room = clean
+
+## Goal-Based Agent
+
+     Now the agent asks:
+
+     What goal am I trying to achieve?
+
+     Current State
+          ↓
+     Goal
+          ↓
+     Plan
+          ↓
+     Action
+
+Example:
+
+     Goal = Entire house should be clean
+
+It determines:
+
+     Kitchen dirty
+     Living room clean
+     Bedroom dirty
+
+→ Clean Kitchen
+→ Clean Bedroom
+
+## Utility-Based Agent
+
+Now there can be multiple possible solutions.
+
+The agent asks:
+
+     Which solution is the best?
+
+For example:
+
+     Plan A → 30 minutes
+     Plan B → 20 minutes
+     Plan C → 15 minutes but high energy
+
+The agent evaluates utility:
+     
+     Cost
+     Time
+     Energy
+     Safety
+     Quality
+
+and chooses the best option.
+
+## Learning Agent
+
+The agent learns from experience.
+
+     Experience
+         ↓
+     Feedback
+         ↓
+     Learning
+         ↓
+     Improve Future Decisions
+     
