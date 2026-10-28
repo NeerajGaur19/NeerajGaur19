@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 from datetime import datetime
 import csv
+import plotly.graph_objects as go
+import time
 
 from streamlit_drawable_canvas import st_canvas
 
@@ -130,13 +132,18 @@ def center_by_mass(image):
 # PREPROCESSING
 # ============================================================
 
-def preprocess_digit(image):
+def preprocess_digit(image, progress_callback=None):
+
+    def report_progress(step):
+        if progress_callback is not None:
+            progress_callback(step)
 
     # --------------------------------------------------------
     # 1. RGBA → RGB
     # --------------------------------------------------------
 
     rgb_image = image[:, :, :3]
+    report_progress(1)
 
     # --------------------------------------------------------
     # 2. RGB → GRAYSCALE
@@ -146,6 +153,8 @@ def preprocess_digit(image):
         rgb_image,
         cv2.COLOR_RGB2GRAY
     )
+
+    report_progress(2)
 
     # --------------------------------------------------------
     # 3. BINARY IMAGE
@@ -157,6 +166,8 @@ def preprocess_digit(image):
         255,
         cv2.THRESH_BINARY
     )
+
+    report_progress(3)
 
     # --------------------------------------------------------
     # 4. FIND DIGIT
@@ -177,6 +188,8 @@ def preprocess_digit(image):
         y:y+h,
         x:x+w
     ]
+
+    report_progress(4)
 
     # --------------------------------------------------------
     # 6. MAKE SQUARE
@@ -202,6 +215,8 @@ def preprocess_digit(image):
         x_offset:x_offset + width
     ] = cropped
 
+    report_progress(5)
+
     # --------------------------------------------------------
     # 7. RESIZE TO 20 × 20
     # --------------------------------------------------------
@@ -212,6 +227,8 @@ def preprocess_digit(image):
         interpolation=cv2.INTER_AREA
     )
 
+    report_progress(6)
+
     # --------------------------------------------------------
     # 8. CREATE 28 × 28 MNIST IMAGE
     # --------------------------------------------------------
@@ -221,10 +238,14 @@ def preprocess_digit(image):
         dtype=np.uint8
     )
 
+    report_progress(7)
+
     mnist_before_center[
         4:24,
         4:24
     ] = resized_digit
+
+    report_progress(8)
 
     # --------------------------------------------------------
     # 9. CENTER BY MASS
@@ -234,6 +255,8 @@ def preprocess_digit(image):
         mnist_before_center
     )
 
+    report_progress(9)
+
     # --------------------------------------------------------
     # 10. NORMALIZE
     # --------------------------------------------------------
@@ -241,6 +264,8 @@ def preprocess_digit(image):
     normalized = (
         mnist_image.astype("float32") / 255.0
     )
+
+    report_progress(10)
 
     # --------------------------------------------------------
     # 11. CNN INPUT
@@ -252,6 +277,8 @@ def preprocess_digit(image):
         28,
         1
     )
+
+    report_progress(11)
 
     return {
 
@@ -333,7 +360,7 @@ def predict_digit(model, model_input):
 def show_pixel_grid(image):
 
     fig, ax = plt.subplots(
-        figsize=(7, 7)
+        figsize=(3, 3)
     )
 
     ax.imshow(
@@ -369,6 +396,69 @@ def show_pixel_grid(image):
 
     return fig
 
+# ============================================================
+# DISPLAY PREPROCESSING
+# ============================================================
+
+
+# ============================================================
+# FLOWCHART BOX
+# ============================================================
+
+def render_flowchart_box(
+    placeholder,
+    step_number,
+    label,
+    active_step=0,
+    all_completed=False,
+    direction="right",
+):
+    """Render a flowchart stage with direction-specific chevrons."""
+
+    if all_completed or step_number < active_step:
+        box_color = "#16A34A"
+    elif step_number == active_step:
+        box_color = "#2563EB"
+    else:
+        box_color = "#475569"
+
+    # Point the chevron in the direction of processing.
+    polygons = {
+        "right": "0% 0%, 86% 0%, 100% 50%, 86% 100%, 0% 100%",
+        "left": "14% 0%, 100% 0%, 100% 100%, 14% 100%, 0% 50%",
+        "down": "0% 0%, 100% 0%, 100% 86%, 50% 100%, 0% 86%",
+        "up": "0% 14%, 50% 0%, 100% 14%, 100% 100%, 0% 100%",
+    }
+    polygon = polygons.get(direction, polygons["right"])
+    is_vertical = direction in ("up", "down")
+    min_height = "120px" if is_vertical else "64px"
+    padding = "12px 7px" if is_vertical else "8px 18px 8px 8px"
+    font_size = "13px" if is_vertical else "14px"
+
+    chevron = f"""
+    <div style="
+        width: 100%;
+        min-height: {min_height};
+        box-sizing: border-box;
+        background: {box_color};
+        color: white;
+        border: 1px solid #E2E8F0;
+        box-shadow: 3px 3px 0 #172033;
+        clip-path: polygon({polygon});
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: {padding};
+        font-size: {font_size};
+        font-weight: 700;
+        overflow-wrap: anywhere;
+    ">
+        {step_number}. {label}
+    </div>
+    """
+    placeholder.markdown(chevron, unsafe_allow_html=True)
+
 
 # ============================================================
 # DISPLAY PREPROCESSING
@@ -397,7 +487,7 @@ def display_preprocessing(result):
         st.image(
             result["gray"],
             clamp=True,
-            use_container_width=True
+            width=120
         )
 
     with c2:
@@ -409,7 +499,7 @@ def display_preprocessing(result):
         st.image(
             result["binary"],
             clamp=True,
-            use_container_width=True
+            width=120
         )
 
     with c3:
@@ -420,7 +510,7 @@ def display_preprocessing(result):
         st.image(
             result["cropped"],
             clamp=True,
-            use_container_width=True
+            width=120
         )
 
     # --------------------------------------------------------
@@ -438,7 +528,7 @@ def display_preprocessing(result):
         st.image(
             result["square"],
             clamp=True,
-            use_container_width=True
+            width=120
         )
 
     with c5:
@@ -450,7 +540,7 @@ def display_preprocessing(result):
         st.image(
             result["resized"],
             clamp=True,
-            use_container_width=True
+            width=120
         )
 
     with c6:
@@ -462,7 +552,7 @@ def display_preprocessing(result):
         st.image(
             result["mnist"],
             clamp=True,
-            use_container_width=True
+            width=120
         )
 
 
@@ -612,80 +702,114 @@ mode = st.radio(
 
 if mode == "Single Digit Prediction":
 
-    st.header(
-        "✍️ Single Digit Prediction"
-    )
+    st.header("✍️ Single Digit Prediction")
 
-    st.write(
-        "Draw one digit from 0 to 9."
-    )
+    # --------------------------------------------------------
+    # FLOWCHART STAGE DEFINITIONS
+    # --------------------------------------------------------
 
-    col1, col2 = st.columns(
-        [1, 1]
-    )
+    flowchart_steps = [
+        "RGB conversion", "Grayscale", "Binary image",
+        "Crop digit", "Make square", "Resize 20x20",
+        "Add padding", "Create 28x28", "Center digit",
+        "Normalize", "Send to CNN", "Predict digit",
+    ]
 
-    with col1:
+    flowchart_boxes = {}
 
-        canvas_result = st_canvas(
-
-            fill_color="rgba(255,255,255,0)",
-
-            stroke_width=stroke_width,
-
-            stroke_color="#FFFFFF",
-
-            background_color="#000000",
-
-            height=280,
-
-            width=280,
-
-            drawing_mode="freedraw",
-
-            key="single_digit_canvas"
+    def add_flowchart_box(step_number, label, direction="right"):
+        box_placeholder = st.empty()
+        flowchart_boxes[step_number] = {
+            "placeholder": box_placeholder,
+            "label": label,
+            "direction": direction,
+        }
+        render_flowchart_box(
+            box_placeholder, step_number, label,
+            active_step=0, all_completed=False,
+            direction=direction,
         )
 
-    with col2:
+    def update_flowchart(step, completed=False):
+        for number, box in flowchart_boxes.items():
+            render_flowchart_box(
+                box["placeholder"], number, box["label"],
+                active_step=step, all_completed=completed,
+                direction=box["direction"],
+            )
+        time.sleep(0.5)
 
-        st.info(
-            """
-            ### How it works
+    # TOP: 1 -> 2 -> 3
+    top1, top2, top3 = st.columns(3, gap="medium")
+    with top1:
+        add_flowchart_box(1, flowchart_steps[0], "right")
+    with top2:
+        add_flowchart_box(2, flowchart_steps[1], "right")
+    with top3:
+        add_flowchart_box(3, flowchart_steps[2], "right")
 
-            1. Draw a digit
-            2. Convert to grayscale
-            3. Create binary image
-            4. Crop the digit
-            5. Make it square
-            6. Resize to 20 × 20
-            7. Add padding
-            8. Create 28 × 28 image
-            9. Center the digit
-            10. Normalize pixels
-            11. Send to CNN
-            12. Predict digit
-            """
-        )
+    # MIDDLE: symmetric side columns keep the canvas centred.
+    # Wider side columns give stages 4-6 and 10-12 more room.
+    left_col, centre_col, right_col = st.columns(
+        [1.6, 4.8, 1.6], gap="small"
+    )
+
+    with left_col:
+        # Stages are displayed top-to-bottom as 12, 11, 10,
+        # so the processing direction runs upward: 10 -> 11 -> 12.
+        add_flowchart_box(12, flowchart_steps[11], "up")
+        add_flowchart_box(11, flowchart_steps[10], "up")
+        add_flowchart_box(10, flowchart_steps[9], "up")
+
+    with centre_col:
+        st.markdown("<div style='text-align:center'>Draw one digit from 0 to 9.</div>", unsafe_allow_html=True)
+        _, canvas_center, _ = st.columns([1, 2, 1], gap="small")
+        with canvas_center:
+            canvas_result = st_canvas(
+                fill_color="rgba(255,255,255,0)",
+                stroke_width=stroke_width,
+                stroke_color="#FFFFFF",
+                background_color="#000000",
+                height=280,
+                width=280,
+                drawing_mode="freedraw",
+                key="single_digit_canvas",
+            )
+
+    with right_col:
+        add_flowchart_box(4, flowchart_steps[3], "down")
+        add_flowchart_box(5, flowchart_steps[4], "down")
+        add_flowchart_box(6, flowchart_steps[5], "down")
+
+    # BOTTOM: stages 7, 8, 9 are positioned right-to-left so that
+    # the visual processing direction is 6 -> 7 -> 8 -> 9.
+    bottom1, bottom2, bottom3 = st.columns(3, gap="medium")
+    with bottom1:
+        add_flowchart_box(9, flowchart_steps[8], "left")
+    with bottom2:
+        add_flowchart_box(8, flowchart_steps[7], "left")
+    with bottom3:
+        add_flowchart_box(7, flowchart_steps[6], "left")
+
+    # --------------------------------------------------------
+    # PREPROCESS DRAWING AND PREDICT
+    # --------------------------------------------------------
 
     if canvas_result.image_data is not None:
 
         image_data = canvas_result.image_data
-
         rgb = image_data[:, :, :3]
 
         if np.max(rgb) > 10:
 
             result = preprocess_digit(
-                image_data
+                image_data,
+                progress_callback=update_flowchart,
             )
 
             if result is not None:
-
-                display_preprocessing(
-                    result
-                )
-
+                display_preprocessing(result)
                 st.divider()
-
                 st.header(
                     "🔍 Final 28 × 28 Pixel Visualization"
                 )
@@ -698,29 +822,26 @@ if mode == "Single Digit Prediction":
                     """
                 )
 
-                fig = show_pixel_grid(
-                    result["mnist"]
-                )
-
-                st.pyplot(
-                    fig
-                )
+                fig = show_pixel_grid(result["mnist"])
+                st.pyplot(fig, use_container_width=False)
+                plt.close(fig)
 
                 if model is not None:
-
+                    update_flowchart(12)
                     predicted_digit, confidence, probabilities = \
                         predict_digit(
                             model,
-                            result["model_input"]
+                            result["model_input"],
                         )
 
+                    # Mark every stage as completed.
+                    update_flowchart(12, completed=True)
                     display_prediction(
                         predicted_digit,
                         confidence,
-                        probabilities
+                        probabilities,
                     )
-
-
+                    
 # ============================================================
 # MODE 2
 # PREDICT ALL DIGITS 0–9

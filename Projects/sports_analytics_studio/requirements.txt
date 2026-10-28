@@ -1,0 +1,15 @@
+streamlit>=1.39,<2.0
+pandas>=2.1
+numpy>=1.26
+scikit-learn>=1.4
+plotly>=5.20
+seaborn>=0.13
+matplotlib>=3.8
+openpyxl>=3.1
+python-dotenv>=1.0
+langchain>=0.3
+langchain-google-genai>=2.0
+chromadb>=0.5
+langchain-huggingface>=0.1
+langchain-chroma>=0.1
+sentence-transformers>=3.0
