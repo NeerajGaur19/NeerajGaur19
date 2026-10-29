@@ -10,7 +10,7 @@ from src.data_utils import read_uploaded_file, dataframe_info, duplicate_column_
 from src.ai_utils import ask_gemini, retrieve_sports_notes
 
 load_dotenv()
-st.set_page_config(page_title="Sports Analytics Studio | SAS", page_icon="🏟️", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Sports Analytics Studio | SAS", page_icon="🏟️", layout="wide")
 
 ROOT = Path(__file__).parent
 SAMPLE_DIR = ROOT / "data" / "sample"
