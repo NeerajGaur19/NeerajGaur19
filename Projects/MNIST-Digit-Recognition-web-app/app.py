@@ -397,7 +397,8 @@ def display_preprocessing(result):
         st.image(
             result["gray"],
             clamp=True,
-            use_container_width=True
+            #use_container_width=True
+            width="stretch"
         )
 
     with c2:
@@ -409,7 +410,8 @@ def display_preprocessing(result):
         st.image(
             result["binary"],
             clamp=True,
-            use_container_width=True
+            #use_container_width=True
+            width="stretch"
         )
 
     with c3:
@@ -420,7 +422,8 @@ def display_preprocessing(result):
         st.image(
             result["cropped"],
             clamp=True,
-            use_container_width=True
+            #use_container_width=True
+            width="stretch"
         )
 
     # --------------------------------------------------------
@@ -438,7 +441,8 @@ def display_preprocessing(result):
         st.image(
             result["square"],
             clamp=True,
-            use_container_width=True
+            #use_container_width=True
+            width="stretch"
         )
 
     with c5:
@@ -450,7 +454,8 @@ def display_preprocessing(result):
         st.image(
             result["resized"],
             clamp=True,
-            use_container_width=True
+            #use_container_width=True
+            width="stretch"
         )
 
     with c6:
@@ -462,7 +467,8 @@ def display_preprocessing(result):
         st.image(
             result["mnist"],
             clamp=True,
-            use_container_width=True
+            #use_container_width=True
+            width="stretch"
         )
 
 
@@ -924,7 +930,8 @@ elif mode == "Predict All Digits 0–9":
 
                 st.dataframe(
                     summary_data,
-                    use_container_width=True,
+                    #use_container_width=True,
+                    width="stretch",
                     hide_index=True
                 )
 
@@ -1293,7 +1300,8 @@ elif mode == "Collect Training Data":
 
             for digit in range(10)
         ],
-        use_container_width=True,
+        #use_container_width=True,
+        width="stretch",
         hide_index=True
     )
 
