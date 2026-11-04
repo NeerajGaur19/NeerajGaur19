@@ -642,7 +642,9 @@ if mode == "Single Digit Prediction":
 
             drawing_mode="freedraw",
 
-            key="single_digit_canvas"
+            key="single_digit_canvas",
+
+            return_image_data=True
         )
 
     with col2:
@@ -788,7 +790,9 @@ elif mode == "Predict All Digits 0–9":
 
                     drawing_mode="freedraw",
 
-                    key=f"all_digit_canvas_{digit}"
+                    key=f"all_digit_canvas_{digit}",
+
+                    return_image_data=True
                 )
 
             with col2:
@@ -998,9 +1002,11 @@ elif mode == "Collect Training Data":
 
             drawing_mode="freedraw",
 
-            display_toolbar=False,
+            #display_toolbar=False,
 
-            key=f"training_canvas_{selected_label}_{st.session_state.training_canvas_reset}"
+            key=f"training_canvas_{selected_label}_{st.session_state.training_canvas_reset}",
+
+            return_image_data=True
         )
 
         # --------------------------------------------------------
