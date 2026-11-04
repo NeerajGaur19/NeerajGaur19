@@ -9,3 +9,4 @@ data/uploads/
 chroma_db/
 *.joblib
 *.pkl
+app_03-Nov.py

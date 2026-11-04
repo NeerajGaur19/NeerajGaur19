@@ -130,10 +130,10 @@ def sidebar_nav():
         st.sidebar.success(f"Active data: {st.session_state.data_name}")
         st.sidebar.caption(f"{len(st.session_state.active_df):,} rows × {st.session_state.active_df.shape[1]:,} columns")
         c1, c2 = st.sidebar.columns(2)
-        if c1.button("Undo", use_container_width=True, disabled=not st.session_state.undo_stack):
+        if c1.button("Undo", width='stretch', disabled=not st.session_state.undo_stack):
             st.session_state.active_df = st.session_state.undo_stack.pop()
             st.rerun()
-        if c2.button("Reset", use_container_width=True):
+        if c2.button("Reset", width='stretch'):
             st.session_state.active_df = st.session_state.original_df.copy(deep=True)
             st.session_state.undo_stack = []
             st.session_state.model_results = None
@@ -185,34 +185,34 @@ def render_data_laboratory():
     tabs = st.tabs(["Preview & Info", "Missing Values", "Duplicates", "EDA & Charts", "Feature Engineering", "Export"])
     with tabs[0]:
         st.subheader("Dataset preview")
-        st.dataframe(df.head(100), use_container_width=True, height=320)
+        st.dataframe(df.head(100), width='stretch', height=320)
         a, b = st.columns(2)
         with a:
             st.markdown("**Head**")
-            st.dataframe(df.head(int(st.number_input("Head rows", 1, 100, 5, key="head_n"))), use_container_width=True)
+            st.dataframe(df.head(int(st.number_input("Head rows", 1, 100, 5, key="head_n"))), width='stretch')
         with b:
             st.markdown("**Tail**")
-            st.dataframe(df.tail(5), use_container_width=True)
+            st.dataframe(df.tail(5), width='stretch')
         st.markdown("**Column information**")
-        st.dataframe(dataframe_info(df), use_container_width=True)
+        st.dataframe(dataframe_info(df), width='stretch')
         st.markdown("**Numeric summary**")
-        st.dataframe(df.describe(include="number").T, use_container_width=True)
+        st.dataframe(df.describe(include="number").T, width='stretch')
         st.markdown("**Categorical summary**")
         cats = df.select_dtypes(exclude="number")
         if len(cats.columns):
-            st.dataframe(cats.describe().T, use_container_width=True)
+            st.dataframe(cats.describe().T, width='stretch')
     with tabs[1]:
         st.subheader("Missing-value inspection")
         null_info = dataframe_info(df).query("null_count > 0")
         if null_info.empty:
             st.success("No missing values found.")
         else:
-            st.dataframe(null_info, use_container_width=True)
+            st.dataframe(null_info, width='stretch')
             col = st.selectbox("View rows with missing values in column", ["Any column"] + null_info["column"].tolist())
             if col == "Any column":
-                st.dataframe(df[df.isna().any(axis=1)].head(500), use_container_width=True)
+                st.dataframe(df[df.isna().any(axis=1)].head(500), width='stretch')
             else:
-                st.dataframe(df[df[col].isna()].head(500), use_container_width=True)
+                st.dataframe(df[df[col].isna()].head(500), width='stretch')
             st.warning("Recommendation: inspect why values are missing before dropping. Imputation may be safer for ML; drop rows only if the loss is small and not systematically biased.")
             action = st.radio("Cleaning action", ["Do nothing", "Drop rows with any null", "Drop rows missing selected column", "Fill numeric with median and categories with mode"], horizontal=False)
             if st.button("Apply missing-value action", disabled=action == "Do nothing"):
@@ -246,7 +246,7 @@ def render_data_laboratory():
         b.metric("Repeated column names", len(duplicate_names))
         c.metric("Identical-content columns", len(duplicate_content))
         if duplicate_rows:
-            st.dataframe(df[df.duplicated(keep=False)].head(300), use_container_width=True)
+            st.dataframe(df[df.duplicated(keep=False)].head(300), width='stretch')
             if st.button("Drop duplicate rows"):
                 snapshot()
                 st.session_state.active_df = df.drop_duplicates().copy()
@@ -268,31 +268,31 @@ def render_data_laboratory():
         all_cols = df.columns.tolist()
         if numeric:
             target_col = st.selectbox("Numeric distribution", numeric)
-            st.plotly_chart(px.histogram(df, x=target_col, marginal="box", title=f"Distribution of {target_col}"), use_container_width=True)
+            st.plotly_chart(px.histogram(df, x=target_col, marginal="box", title=f"Distribution of {target_col}"), width='stretch')
             xcol = st.selectbox("X-axis", all_cols, index=0, key="eda_x")
             y_options = [c for c in numeric if c != xcol] or numeric
             ycol = st.selectbox("Y-axis (numeric)", y_options, key="eda_y")
             color_options = ["(none)"] + [c for c in all_cols if c not in (xcol, ycol)]
             color_col = st.selectbox("Color by (optional)", color_options)
             try:
-                st.plotly_chart(px.scatter(df, x=xcol, y=ycol, color=None if color_col == "(none)" else color_col, title=f"{ycol} vs {xcol}"), use_container_width=True)
+                st.plotly_chart(px.scatter(df, x=xcol, y=ycol, color=None if color_col == "(none)" else color_col, title=f"{ycol} vs {xcol}"), width='stretch')
             except Exception as e:
                 st.warning(f"Could not plot selected columns: {e}")
             if len(numeric) >= 2:
                 st.markdown("**Correlation heatmap (Pearson)**")
                 corr = df[numeric].corr(numeric_only=True)
-                st.plotly_chart(px.imshow(corr, text_auto=".2f", aspect="auto", color_continuous_scale="RdBu_r", zmin=-1, zmax=1), use_container_width=True)
+                st.plotly_chart(px.imshow(corr, text_auto=".2f", aspect="auto", color_continuous_scale="RdBu_r", zmin=-1, zmax=1), width='stretch')
                 st.caption("Correlation describes linear association, not causation. Correlations can be distorted by outliers and missingness.")
         st.markdown("**Missingness overview**")
         missing = df.isna().sum().sort_values(ascending=False)
         if missing.sum():
-            st.plotly_chart(px.bar(x=missing.index, y=missing.values, labels={"x":"Column","y":"Missing cells"}), use_container_width=True)
+            st.plotly_chart(px.bar(x=missing.index, y=missing.values, labels={"x":"Column","y":"Missing cells"}), width='stretch')
         else:
             st.caption("No missing values.")
         cat_cols = df.select_dtypes(exclude="number").columns.tolist()
         if cat_cols:
             cat_col = st.selectbox("Category frequency", cat_cols)
-            st.plotly_chart(px.bar(df[cat_col].astype(str).value_counts().head(25).reset_index(), x=cat_col, y="count", title=f"Top values in {cat_col}"), use_container_width=True)
+            st.plotly_chart(px.bar(df[cat_col].astype(str).value_counts().head(25).reset_index(), x=cat_col, y="count", title=f"Top values in {cat_col}"), width='stretch')
     with tabs[4]:
         st.subheader("Feature engineering")
         st.write("Feature engineering can improve predictive signal when derived features reflect the sport and prediction moment. It can also create leakage or redundant columns.")
@@ -305,7 +305,7 @@ def render_data_laboratory():
             st.session_state["feature_created"] = created
         if "feature_preview" in st.session_state:
             st.write("Features that would be added:", st.session_state.get("feature_created", []))
-            st.dataframe(st.session_state["feature_preview"].head(20), use_container_width=True)
+            st.dataframe(st.session_state["feature_preview"].head(20), width='stretch')
             if decision == "Yes, add available derived features" and st.button("Apply feature engineering", type="primary"):
                 snapshot()
                 st.session_state.active_df = st.session_state["feature_preview"].copy()
@@ -420,11 +420,11 @@ def render_athlete_performance():
 
     st.subheader("Performance leaderboard")
     display_cols = ["Rank", "Athlete"] + active_metrics + ["Overall Score"]
-    st.dataframe(ranked[display_cols].reset_index(drop=True), use_container_width=True, hide_index=True)
+    st.dataframe(ranked[display_cols].reset_index(drop=True), width='stretch', hide_index=True)
     st.plotly_chart(px.bar(ranked.head(20).sort_values("Overall Score"),
                            x="Overall Score", y="Athlete", orientation="h",
                            title="Top 20 athletes by composite score",
-                           hover_data=active_metrics), use_container_width=True)
+                           hover_data=active_metrics), width='stretch')
 
     chosen_athlete = st.selectbox("Inspect an athlete", ranked["Athlete"].astype(str).tolist())
     selected_row = ranked[ranked["Athlete"].astype(str) == chosen_athlete].iloc[0]
@@ -432,7 +432,7 @@ def render_athlete_performance():
     raw_cols = [c for c in active_metrics if c in ranked.columns]
     st.plotly_chart(px.bar(x=raw_cols, y=[selected_row[c] for c in raw_cols],
                            labels={"x":"Metric", "y":"Observed value"},
-                           title=f"Selected athlete: {chosen_athlete}"), use_container_width=True)
+                           title=f"Selected athlete: {chosen_athlete}"), width='stretch')
 
     st.download_button("Download leaderboard CSV",
                        data=to_csv_bytes(ranked[display_cols]),
@@ -599,14 +599,14 @@ def render_injury_risk():
         left, right = st.columns(2)
         with left:
             st.subheader(f"Top {int(n)} higher model-score athletes")
-            st.dataframe(leaderboard.head(int(n)), use_container_width=True, hide_index=True)
+            st.dataframe(leaderboard.head(int(n)), width='stretch', hide_index=True)
         with right:
             st.subheader(f"Top {int(n)} lower model-score athletes")
-            st.dataframe(leaderboard.tail(int(n)).sort_values("estimated_injury_risk_pct"), use_container_width=True, hide_index=True)
+            st.dataframe(leaderboard.tail(int(n)).sort_values("estimated_injury_risk_pct"), width='stretch', hide_index=True)
         st.plotly_chart(px.bar(leaderboard.head(int(n)), x=athlete_col, y="estimated_injury_risk_pct",
                                color="risk_group" if "risk_group" in leaderboard.columns else None,
                                title=f"Higher estimated risk — top {int(n)}",
-                               labels={"estimated_injury_risk_pct":"Estimated model score (%)"}), use_container_width=True)
+                               labels={"estimated_injury_risk_pct":"Estimated model score (%)"}), width='stretch')
         st.download_button("Download injury risk rankings", to_csv_bytes(leaderboard), "injury_risk_rankings.csv", "text/csv")
         st.warning("A predicted score is not a clinical risk assessment. Model rankings can be biased or miscalibrated, especially with synthetic, small, imbalanced, or time-leaky data. Have qualified sports medicine staff interpret findings.")
 
@@ -699,9 +699,9 @@ def render_talent_identification():
         show_cols = ["Rank", "Athlete"] + ([sport_col] if sport_col and sport_col in ranked.columns else []) + selected_metrics + ["Talent Score"]
         show_cols = list(dict.fromkeys(c for c in show_cols if c in ranked.columns))
         st.subheader(f"Top {int(n)} talents")
-        st.dataframe(top[show_cols], use_container_width=True, hide_index=True)
+        st.dataframe(top[show_cols], width='stretch', hide_index=True)
         st.plotly_chart(px.bar(top.sort_values("Talent Score"), x="Talent Score", y="Athlete", orientation="h",
-                               title=f"Top {int(n)} talent candidates"), use_container_width=True)
+                               title=f"Top {int(n)} talent candidates"), width='stretch')
         st.download_button("Download talent leaderboard", to_csv_bytes(ranked[show_cols]), "talent_leaderboard.csv", "text/csv")
         st.info("This is a configurable screening score, not a definitive scouting decision. Use role-specific metrics and contextual factors such as age, biological maturation, competition level, minutes played, and opportunity. Avoid cross-sport comparisons unless the metrics have been appropriately standardized.")
     st.markdown("### Optional potential-label model")
@@ -735,11 +735,11 @@ def model_comparison_ui(df, default_target=None, task="classification", key_pref
     results = st.session_state.get("model_results")
     if results is not None:
         st.markdown("**Model comparison results**")
-        st.dataframe(results, use_container_width=True)
+        st.dataframe(results, width='stretch')
         numeric_metrics = [c for c in results.select_dtypes(include="number").columns if c != "Model"]
         if numeric_metrics:
             metric = st.selectbox("Metric to compare", numeric_metrics, key=f"{key_prefix}_metric")
-            st.plotly_chart(px.bar(results, x="Model", y=metric, title=f"Model comparison — {metric}"), use_container_width=True)
+            st.plotly_chart(px.bar(results, x="Model", y=metric, title=f"Model comparison — {metric}"), width='stretch')
         st.info("For classification, larger Accuracy/F1/ROC-AUC is often preferred; for regression, lower MAE/RMSE and higher R² are typical goals. Consider class balance, calibration, interpretability, and validation stability—not just one score.")
 
 def task_page(title, emoji, description, sample_name, task_kind, default_target=None):
@@ -754,7 +754,7 @@ def task_page(title, emoji, description, sample_name, task_kind, default_target=
     df = st.session_state.active_df
     show_data_summary(df)
     st.markdown("**Active dataset preview**")
-    st.dataframe(df.head(12), use_container_width=True)
+    st.dataframe(df.head(12), width='stretch')
     if task_kind in ("classification", "regression"):
         model_comparison_ui(df, default_target=default_target, task=task_kind, key_prefix=title.lower().replace(" ", "_"))
     elif task_kind == "talent":
@@ -775,9 +775,9 @@ def task_page(title, emoji, description, sample_name, task_kind, default_target=
                     st.error(str(e))
             if "talent_output" in st.session_state:
                 out = st.session_state.talent_output
-                st.dataframe(out.head(100), use_container_width=True)
+                st.dataframe(out.head(100), width='stretch')
                 if len(features) >= 2:
-                    st.plotly_chart(px.scatter(out, x=features[0], y=features[1], color="talent_cluster", hover_data=[c for c in ["athlete_id", "athlete_name", "position"] if c in out.columns]), use_container_width=True)
+                    st.plotly_chart(px.scatter(out, x=features[0], y=features[1], color="talent_cluster", hover_data=[c for c in ["athlete_id", "athlete_name", "position"] if c in out.columns]), width='stretch')
                 st.download_button("Download talent profiles", to_csv_bytes(out), "talent_profiles.csv", "text/csv")
         if default_target in df.columns:
             st.markdown("**Optional supervised talent label prediction**")
@@ -790,8 +790,8 @@ def task_page(title, emoji, description, sample_name, task_kind, default_target=
             if cats:
                 group = st.selectbox("Group by", cats, key="event_group")
                 agg = df.groupby(group, dropna=False)[metric].mean().sort_values(ascending=False).reset_index()
-                st.plotly_chart(px.bar(agg.head(30), x=group, y=metric, title=f"Average {metric} by {group}"), use_container_width=True)
-            st.plotly_chart(px.histogram(df, x=metric, title=f"Distribution of {metric}"), use_container_width=True)
+                st.plotly_chart(px.bar(agg.head(30), x=group, y=metric, title=f"Average {metric} by {group}"), width='stretch')
+            st.plotly_chart(px.histogram(df, x=metric, title=f"Distribution of {metric}"), width='stretch')
         st.markdown("**Optional outcome prediction**")
         model_comparison_ui(df, default_target=default_target, task="regression", key_prefix="event_model")
     elif task_kind == "anomaly":
@@ -813,7 +813,7 @@ def task_page(title, emoji, description, sample_name, task_kind, default_target=
                 out = st.session_state.anomaly_output
                 count = int((out["anomaly_flag"] == "Anomaly").sum())
                 st.metric("Flagged observations", f"{count:,}", f"{count / max(len(out), 1):.1%} of rows")
-                st.dataframe(out[out["anomaly_flag"] == "Anomaly"].head(500), use_container_width=True)
+                st.dataframe(out[out["anomaly_flag"] == "Anomaly"].head(500), width='stretch')
                 st.download_button("Download anomaly results", to_csv_bytes(out), "anomaly_results.csv", "text/csv")
                 st.info("Review flagged rows in context. Sensor errors, rare but valid performance, and real events can all look anomalous.")
 
@@ -837,7 +837,7 @@ if page == "Home":
             with st.container(border=True):
                 st.markdown(f"#### {name}")
                 st.write(desc)
-                st.button("Open", key=f"home_{i}", use_container_width=True,
+                st.button("Open", key=f"home_{i}", width='stretch',
                           on_click=navigate_to, args=(target,))
     st.markdown("### Recommended workflow")
     st.markdown("1. Load a synthetic sample or upload a CSV/Excel file.\n2. Inspect schema, nulls, duplicates, distributions and potential leakage.\n3. Apply only justified cleaning and feature engineering; Undo or Reset when needed.\n4. Select the relevant task, target, and models, then run the experiment.\n5. Compare metrics, inspect errors, export results, and document assumptions.")
