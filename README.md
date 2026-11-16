@@ -2,7 +2,7 @@
 
 
 <h1 align="center">Hi 👋, I'm <span style="color:#0A84FF">Neeraj Gaur</span></h1>
-<h3 align="center">AI-Assisted Testing | AI & Machine Learning & Data Science Enthusiast | Senior Test Manager</h3> 
+<h3 align="center">AI-Assisted Testing | AI & Machine Learning & Data Science Enthusiast | Test Management</h3> 
 
 --- 
 
@@ -175,11 +175,11 @@ Expertise includes:
 
 ## 🧭 Domain Expertise
 
-- 📡 **Telecom** – EE (Everything Everywhere), BT, Three UK, Colt, LLA/CWC  
-- 🏥 **US Healthcare** – United Health Group  
-- 🏦 **Banking & Capital Markets** – Wells Fargo, PIMCO, Barclays  
-- 🛡 **Insurance (P&C)** – AXA XL  
-- 🚛 **Logistics / Transport** – FedEx  
+- 📡 UK Telecom 
+- 🏥 US Healthcare  
+- 🏦 Banking & Capital Markets  
+- 🛡  Insurance (P&C)  
+- 🚛 Logistics / Transport  
 
 ---
 
@@ -194,15 +194,6 @@ Expertise includes:
 - AWS Partner – Data Analytics
 - Udemy - Python Bootcamp Beginner to Master Programming  
 
----
-
-## 🌟 Honors & Awards
-
-🏅 **Xtra Mile Award – Sogeti (2017)**  
-🏅 **Vendor Partnership Award – BT & EE**  
-🏅 **Bronze Award – Genpact Capital Markets (2016)**  
-🏅 **Order of Merit – Genpact (2014)**  
-🏅 **Multiple SPOT Awards (UHG, Mphasis)**  
 
 ## 📫 Connect With Me
 
